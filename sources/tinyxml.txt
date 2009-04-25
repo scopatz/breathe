@@ -2,13 +2,6 @@
 TinyXML Test Suite
 ==================
 
-.. _label:
-
-title
------
-
-`label`_
-
 .. doxygenindex::
    :path: ../examples/custom/tinyxml/xml
 
