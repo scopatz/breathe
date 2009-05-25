@@ -21,7 +21,7 @@
     <script type="text/javascript" src="static/doctools.js"></script>
     <link rel="top" title="BreatheExample v0.0.1 documentation" href="index.html" />
     <link rel="next" title="TinyXML Test Suite" href="tinyxml.html" />
-    <link rel="prev" title="Welcome to BreatheExample’s documentation!" href="index.html" /> 
+    <link rel="prev" title="doxygenfunction Directive Tests" href="function.html" /> 
   </head>
   <body>
     <div class="related">
@@ -34,7 +34,7 @@
           <a href="tinyxml.html" title="TinyXML Test Suite"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="index.html" title="Welcome to BreatheExample’s documentation!"
+          <a href="function.html" title="doxygenfunction Directive Tests"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">BreatheExample v0.0.1 documentation</a> &raquo;</li> 
       </ul>
@@ -55,21 +55,45 @@
 </blockquote>
 <p id="define_8h"><em>file</em> <strong>define.h</strong></p>
 <blockquote>
+<em>Defines</em><blockquote>
+<dl class="docutils">
+<dt> <strong>ABS</strong></dt>
+<dd></dd>
+<dt> <strong>MAX</strong></dt>
+<dd></dd>
+<dt> <strong>MIN</strong></dt>
+<dd></dd>
+</dl>
+</blockquote>
 </blockquote>
 <p id="class_test"><em>class</em> <strong>Test</strong></p>
 <blockquote>
+<em>Public Type</em><blockquote>
+<dl class="docutils">
+<dt> <strong>TEnum</strong></dt>
+<dd></dd>
+<dt> <strong>AnotherEnum</strong></dt>
+<dd></dd>
+</dl>
+</blockquote>
 </blockquote>
 <p id="enum_8h"><em>file</em> <strong>enum.h</strong></p>
 <blockquote>
 </blockquote>
 <p id="file_8h"><em>file</em> <strong>file.h</strong></p>
 <blockquote>
+<em>Variables</em><blockquote>
+<dl class="docutils">
+<dt><em>int</em>  <strong>globalValue</strong></dt>
+<dd>A global integer value. </dd>
+</dl>
+</blockquote>
 </blockquote>
 <p id="class_test"><em>class</em> <strong>Test</strong></p>
 <blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt><em>const char *</em>  <strong>member</strong>(<em>char</em> , <em>int</em> , )</dt>
+<dt><em>const char *</em>  <strong>member</strong>(<em>char</em> c, <em>int</em> n)</dt>
 <dd>A member function. </dd>
 </dl>
 </blockquote>
@@ -88,9 +112,27 @@
 </blockquote>
 <p id="class_string"><em>class</em> <strong>String</strong></p>
 <blockquote>
+<em>Friends</em><blockquote>
+<dl class="docutils">
+<dt><em>friend int</em>  <strong>strcmp</strong></dt>
+<dd></dd>
+</dl>
+</blockquote>
+<em>Related</em><blockquote>
+<dl class="docutils">
+<dt><em>void</em>  <strong>stringDebug</strong>()</dt>
+<dd></dd>
+</dl>
+</blockquote>
 </blockquote>
 <p id="relates_8cpp"><em>file</em> <strong>relates.cpp</strong></p>
 <blockquote>
+<em>Functions</em><blockquote>
+<dl class="docutils">
+<dt><em>int</em>  <strong>strcmp</strong>(<em>const </em> <a class="reference internal" href="#class_string">String</a> <em> &amp;</em> s1, <em>const </em> <a class="reference internal" href="#class_string">String</a> <em> &amp;</em> s2)</dt>
+<dd></dd>
+</dl>
+</blockquote>
 </blockquote>
 <p id="class_windows_n_t"><em>class</em> <strong>WindowsNT</strong></p>
 <blockquote>
@@ -111,9 +153,9 @@
 <blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt><em>void</em>  <strong>drawRect</strong>(<em>int</em> , <em>int</em> , <em>int</em> , <em>int</em> , )</dt>
+<dt><em>void</em>  <strong>drawRect</strong>(<em>int</em> x, <em>int</em> y, <em>int</em> w, <em>int</em> h)</dt>
 <dd></dd>
-<dt><em>void</em>  <strong>drawRect</strong>(<em>const Rect &amp;</em> , )</dt>
+<dt><em>void</em>  <strong>drawRect</strong>(<em>const Rect &amp;</em> r)</dt>
 <dd></dd>
 </dl>
 </blockquote>
@@ -153,15 +195,21 @@
 </blockquote>
 <p id="class_test"><em>class</em> <strong>Test</strong></p>
 <blockquote>
+<em>Public Type</em><blockquote>
+<dl class="docutils">
+<dt> <strong>TEnum</strong></dt>
+<dd>An enum. </dd>
+</dl>
+</blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>Test</strong>()</dt>
 <dd>A constructor. </dd>
 <dt> <strong>~Test</strong>()</dt>
 <dd>A destructor. </dd>
-<dt><em>int</em>  <strong>testMe</strong>(<em>int</em> , <em>const char *</em> , )</dt>
+<dt><em>int</em>  <strong>testMe</strong>(<em>int</em> a, <em>const char *</em> s)</dt>
 <dd>A normal member taking two arguments and returning an integer value. </dd>
-<dt><em>void</em>  <strong>testMeToo</strong>(<em>char</em> , <em>char</em> , )</dt>
+<dt><em>void</em>  <strong>testMeToo</strong>(<em>char</em> c1, <em>char</em> c2)</dt>
 <dd>A pure virtual member. </dd>
 </dl>
 </blockquote>
@@ -183,15 +231,21 @@
 </blockquote>
 <p id="class_test"><em>class</em> <strong>Test</strong></p>
 <blockquote>
+<em>Public Type</em><blockquote>
+<dl class="docutils">
+<dt> <strong>TEnum</strong></dt>
+<dd>An enum. </dd>
+</dl>
+</blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>Test</strong>()</dt>
 <dd>A constructor. </dd>
 <dt> <strong>~Test</strong>()</dt>
 <dd>A destructor. </dd>
-<dt><em>int</em>  <strong>testMe</strong>(<em>int</em> , <em>const char *</em> , )</dt>
+<dt><em>int</em>  <strong>testMe</strong>(<em>int</em> a, <em>const char *</em> s)</dt>
 <dd>a normal member taking two arguments and returning an integer value. </dd>
-<dt><em>void</em>  <strong>testMeToo</strong>(<em>char</em> , <em>char</em> , )</dt>
+<dt><em>void</em>  <strong>testMeToo</strong>(<em>char</em> c1, <em>char</em> c2)</dt>
 <dd>A pure virtual member. </dd>
 </dl>
 </blockquote>
@@ -213,24 +267,90 @@
 </blockquote>
 <p id="structcmd_8h"><em>file</em> <strong>structcmd.h</strong></p>
 <blockquote>
+<em>Defines</em><blockquote>
+<dl class="docutils">
+<dt> <strong>MAX</strong></dt>
+<dd>A macro that returns the maximum of  and . </dd>
+</dl>
+</blockquote>
+<em>Typedefs</em><blockquote>
+<dl class="docutils">
+<dt><em>unsigned int</em>  <strong>UINT32</strong></dt>
+<dd>A type definition for a . </dd>
+</dl>
+</blockquote>
+<em>Functions</em><blockquote>
+<dl class="docutils">
+<dt><em>int</em>  <strong>open</strong>(<em>const char *</em> pathname, <em>int</em> flags)</dt>
+<dd>Opens a file descriptor. </dd>
+<dt><em>int</em>  <strong>close</strong>(<em>int</em> fd)</dt>
+<dd>Closes the file descriptor . </dd>
+<dt><em>size_t</em>  <strong>write</strong>(<em>int</em> fd, <em>const char *</em> buf, <em>size_t</em> count)</dt>
+<dd>Writes  bytes from  to the filedescriptor . </dd>
+<dt><em>int</em>  <strong>read</strong>(<em>int</em> fd, <em>char *</em> buf, <em>size_t</em> count)</dt>
+<dd>Read bytes from a file descriptor. </dd>
+</dl>
+</blockquote>
+<em>Variables</em><blockquote>
+<dl class="docutils">
+<dt><em>int</em>  <strong>errno</strong></dt>
+<dd>Contains the last error code. </dd>
+</dl>
+</blockquote>
 </blockquote>
 <p id="class_test"><em>class</em> <strong>Test</strong></p>
 <blockquote>
+<em>Public Type</em><blockquote>
+<dl class="docutils">
+<dt> <strong>EType</strong></dt>
+<dd>An enum type. </dd>
+</dl>
+</blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>Test</strong>()</dt>
 <dd>constructor </dd>
 <dt> <strong>~Test</strong>()</dt>
 <dd>destructor </dd>
-<dt><em>void</em>  <strong>member</strong>(<em>int</em> , )</dt>
+<dt><em>void</em>  <strong>member</strong>(<em>int</em> )</dt>
 <dd>A member function. </dd>
-<dt><em>void</em>  <strong>member</strong>(<em>int</em> , <em>int</em> , )</dt>
+<dt><em>void</em>  <strong>member</strong>(<em>int</em> , <em>int</em> )</dt>
 <dd>An overloaded member function. </dd>
+</dl>
+</blockquote>
+<em>Protected Attributes</em><blockquote>
+<dl class="docutils">
+<dt><em>int</em>  <strong>var</strong></dt>
+<dd>A member variable. </dd>
 </dl>
 </blockquote>
 </blockquote>
 <p id="autolink_8cpp"><em>file</em> <strong>autolink.cpp</strong></p>
 <blockquote>
+<em>Defines</em><blockquote>
+<dl class="docutils">
+<dt> <strong>ABS</strong></dt>
+<dd></dd>
+</dl>
+</blockquote>
+<em>Typedefs</em><blockquote>
+<dl class="docutils">
+<dt><a class="reference internal" href="#class_test">Test</a>  <strong>B</strong></dt>
+<dd></dd>
+</dl>
+</blockquote>
+<em>Enums</em><blockquote>
+<dl class="docutils">
+<dt> <strong>GlobEnum</strong></dt>
+<dd></dd>
+</dl>
+</blockquote>
+<em>Variables</em><blockquote>
+<dl class="docutils">
+<dt><em>int</em>  <strong>globVar</strong></dt>
+<dd></dd>
+</dl>
+</blockquote>
 </blockquote>
 <p id="struct_coord_struct"><em>struct</em> <strong>CoordStruct</strong></p>
 <blockquote>
@@ -245,13 +365,37 @@
 </blockquote>
 <p id="restypedef_8cpp"><em>file</em> <strong>restypedef.cpp</strong></p>
 <blockquote>
+<em>Typedefs</em><blockquote>
+<dl class="docutils">
+<dt><a class="reference internal" href="#struct_coord_struct">CoordStruct</a>  <strong>Coord</strong></dt>
+<dd></dd>
+</dl>
+</blockquote>
+<em>Functions</em><blockquote>
+<dl class="docutils">
+<dt><a class="reference internal" href="#struct_coord_struct">Coord</a>  <strong>add</strong>(<a class="reference internal" href="#struct_coord_struct">Coord</a> c1, <a class="reference internal" href="#struct_coord_struct">Coord</a> c2)</dt>
+<dd></dd>
+</dl>
+</blockquote>
 </blockquote>
 <p id="class_test"><em>class</em> <strong>Test</strong></p>
 <blockquote>
+<em>Public Type</em><blockquote>
+<dl class="docutils">
+<dt> <strong>EnumType</strong></dt>
+<dd>An enum type. </dd>
+</dl>
+</blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt><em>void</em>  <strong>member</strong>()</dt>
 <dd>a member function. </dd>
+</dl>
+</blockquote>
+<em>Protected Attributes</em><blockquote>
+<dl class="docutils">
+<dt><em>int</em>  <strong>value</strong></dt>
+<dd></dd>
 </dl>
 </blockquote>
 </blockquote>
@@ -264,7 +408,7 @@
 <dl class="docutils">
 <dt> <strong>Test</strong>()</dt>
 <dd></dd>
-<dt> <strong>Test</strong>(<em>const </em> <a class="reference internal" href="#class_test">Test</a> <em> &amp;</em> , )</dt>
+<dt> <strong>Test</strong>(<em>const </em> <a class="reference internal" href="#class_test">Test</a> <em> &amp;</em> t)</dt>
 <dd></dd>
 </dl>
 </blockquote>
@@ -322,9 +466,29 @@
 </blockquote>
 <p id="group_8cpp"><em>file</em> <strong>group.cpp</strong></p>
 <blockquote>
+<em>Functions</em><blockquote>
+<dl class="docutils">
+<dt><em>void</em>  <strong>func</strong>()</dt>
+<dd>function in group 1 </dd>
+<dt><em>void</em>  <strong>func2</strong>()</dt>
+<dd>another function in group 1 </dd>
+<dt><em>void</em>  <strong>func3</strong>()</dt>
+<dd>yet another function in group 1 </dd>
+</dl>
+</blockquote>
 </blockquote>
 <p id="group__group1"><em>group</em> <strong>group1</strong></p>
 <blockquote>
+<em>Functions</em><blockquote>
+<dl class="docutils">
+<dt><em>void</em>  <strong>func</strong>()</dt>
+<dd>function in group 1 </dd>
+<dt><em>void</em>  <strong>func2</strong>()</dt>
+<dd>another function in group 1 </dd>
+<dt><em>void</em>  <strong>func3</strong>()</dt>
+<dd>yet another function in group 1 </dd>
+</dl>
+</blockquote>
 </blockquote>
 <p id="group__group2"><em>group</em> <strong>group2</strong></p>
 <blockquote>
@@ -400,6 +564,14 @@
 </blockquote>
 <p id="class_test"><em>class</em> <strong>Test</strong></p>
 <blockquote>
+<em>User Defined</em><blockquote>
+<dl class="docutils">
+<dt><em>void</em>  <strong>func1InGroup2</strong>()</dt>
+<dd>Function 1 in group 2. </dd>
+<dt><em>void</em>  <strong>func2InGroup2</strong>()</dt>
+<dd>Function 2 in group 2. </dd>
+</dl>
+</blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt><em>void</em>  <strong>ungroupedFunction</strong>()</dt>
@@ -409,6 +581,16 @@
 </blockquote>
 <p id="memgrp_8cpp"><em>file</em> <strong>memgrp.cpp</strong></p>
 <blockquote>
+<em>User Defined</em><blockquote>
+<dl class="docutils">
+<dt> <strong>A</strong></dt>
+<dd>one description for all members of this group (because DISTRIBUTE_GROUP_DOC is YES in the config file) </dd>
+<dt> <strong>B</strong></dt>
+<dd>one description for all members of this group (because DISTRIBUTE_GROUP_DOC is YES in the config file) </dd>
+<dt><em>void</em>  <strong>glob_func</strong>()</dt>
+<dd>one description for all members of this group (because DISTRIBUTE_GROUP_DOC is YES in the config file) </dd>
+</dl>
+</blockquote>
 </blockquote>
 <p id="classdocstring_1_1PyClass"><em>class</em> <strong>docstring::PyClass</strong></p>
 <blockquote>
@@ -429,6 +611,12 @@
 </blockquote>
 <p id="namespacedocstring"><em>namespace</em> <strong>docstring</strong></p>
 <blockquote>
+<em>Functions</em><blockquote>
+<dl class="docutils">
+<dt><em>def</em>  <strong>func</strong>()</dt>
+<dd></dd>
+</dl>
+</blockquote>
 </blockquote>
 <p id="docstring_8py"><em>file</em> <strong>docstring.py</strong></p>
 <blockquote>
@@ -443,6 +631,12 @@
 <dd>Documentation for a method. </dd>
 </dl>
 </blockquote>
+<em>Public Static Attributes</em><blockquote>
+<dl class="docutils">
+<dt><em>int</em>  <strong>classVar</strong></dt>
+<dd>A class variable. </dd>
+</dl>
+</blockquote>
 <em>Private Members</em><blockquote>
 <dl class="docutils">
 <dt> <strong>_memVar</strong></dt>
@@ -452,6 +646,12 @@
 </blockquote>
 <p id="namespacepyexample"><em>namespace</em> <strong>pyexample</strong></p>
 <blockquote>
+<em>Functions</em><blockquote>
+<dl class="docutils">
+<dt><em>def</em>  <strong>func</strong>()</dt>
+<dd>Documentation for a function. </dd>
+</dl>
+</blockquote>
 </blockquote>
 <p id="pyexample_8py"><em>file</em> <strong>pyexample.py</strong></p>
 <blockquote>
@@ -483,14 +683,20 @@
 </blockquote>
 <p id="struct_car"><em>struct</em> <strong>Car</strong></p>
 <blockquote>
+<em>Protected Attributes</em><blockquote>
+<dl class="docutils">
+<dt><a class="reference internal" href="#struct_vehicle">Vehicle</a>  <strong>base</strong></dt>
+<dd>Base class. </dd>
+</dl>
+</blockquote>
 </blockquote>
 <p id="struct_object"><em>struct</em> <strong>Object</strong></p>
 <blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#struct_object">Object</a> <em> *</em>  <strong>objRef</strong>(<a class="reference internal" href="#struct_object">Object</a> <em> *</em> , )</dt>
+<dt><a class="reference internal" href="#struct_object">Object</a> <em> *</em>  <strong>objRef</strong>(<a class="reference internal" href="#struct_object">Object</a> <em> *</em> obj)</dt>
 <dd></dd>
-<dt><a class="reference internal" href="#struct_object">Object</a> <em> *</em>  <strong>objUnref</strong>(<a class="reference internal" href="#struct_object">Object</a> <em> *</em> , )</dt>
+<dt><a class="reference internal" href="#struct_object">Object</a> <em> *</em>  <strong>objUnref</strong>(<a class="reference internal" href="#struct_object">Object</a> <em> *</em> obj)</dt>
 <dd></dd>
 </dl>
 </blockquote>
@@ -503,20 +709,38 @@
 </blockquote>
 <p id="struct_truck"><em>struct</em> <strong>Truck</strong></p>
 <blockquote>
+<em>Protected Attributes</em><blockquote>
+<dl class="docutils">
+<dt><a class="reference internal" href="#struct_vehicle">Vehicle</a>  <strong>base</strong></dt>
+<dd>Base class. </dd>
+</dl>
+</blockquote>
 </blockquote>
 <p id="struct_vehicle"><em>struct</em> <strong>Vehicle</strong></p>
 <blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt><em>void</em>  <strong>vehicleStart</strong>(<a class="reference internal" href="#struct_vehicle">Vehicle</a> <em> *</em> , )</dt>
+<dt><em>void</em>  <strong>vehicleStart</strong>(<a class="reference internal" href="#struct_vehicle">Vehicle</a> <em> *</em> obj)</dt>
 <dd></dd>
-<dt><em>void</em>  <strong>vehicleStop</strong>(<a class="reference internal" href="#struct_vehicle">Vehicle</a> <em> *</em> , )</dt>
+<dt><em>void</em>  <strong>vehicleStop</strong>(<a class="reference internal" href="#struct_vehicle">Vehicle</a> <em> *</em> obj)</dt>
 <dd></dd>
+</dl>
+</blockquote>
+<em>Protected Attributes</em><blockquote>
+<dl class="docutils">
+<dt><a class="reference internal" href="#struct_object">Object</a>  <strong>base</strong></dt>
+<dd>Base class. </dd>
 </dl>
 </blockquote>
 </blockquote>
 <p id="manual_8c"><em>file</em> <strong>manual.c</strong></p>
 <blockquote>
+<em>Functions</em><blockquote>
+<dl class="docutils">
+<dt><em>int</em>  <strong>main</strong>(<em>void</em> )</dt>
+<dd></dd>
+</dl>
+</blockquote>
 </blockquote>
 </div>
 
@@ -527,8 +751,8 @@
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
             <h4>Previous topic</h4>
-            <p class="topless"><a href="index.html"
-                                  title="previous chapter">Welcome to BreatheExample&#8217;s documentation!</a></p>
+            <p class="topless"><a href="function.html"
+                                  title="previous chapter">doxygenfunction Directive Tests</a></p>
             <h4>Next topic</h4>
             <p class="topless"><a href="tinyxml.html"
                                   title="next chapter">TinyXML Test Suite</a></p>
@@ -564,7 +788,7 @@
           <a href="tinyxml.html" title="TinyXML Test Suite"
              >next</a> |</li>
         <li class="right" >
-          <a href="index.html" title="Welcome to BreatheExample’s documentation!"
+          <a href="function.html" title="doxygenfunction Directive Tests"
              >previous</a> |</li>
         <li><a href="index.html">BreatheExample v0.0.1 documentation</a> &raquo;</li> 
       </ul>
