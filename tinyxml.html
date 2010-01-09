@@ -43,160 +43,392 @@
             
   <div class="section" id="tinyxml-test-suite">
 <h1>TinyXML Test Suite<a class="headerlink" href="#tinyxml-test-suite" title="Permalink to this headline">¶</a></h1>
-<p id="class_ti_xml_attribute"><em>class</em> <strong>TiXmlAttribute</strong></p>
+<p id="project26class_ti_xml_attribute"><em>class</em> <strong>TiXmlAttribute</strong></p>
 <blockquote>
+<p>
+<p>An attribute is a name-value pair. </p>
+    </p>
+<p>
+<p>Elements have an arbitrary number of attributes, each with a unique name.</p>
+<p>
+</p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlAttribute</strong>()</dt>
-<dd>Construct an empty attribute. </dd>
-<dt> <strong>TiXmlAttribute</strong>(<em>const std::string &amp;</em> _name, <em>const std::string &amp;</em> _value)</dt>
-<dd>std::string constructor. </dd>
-<dt> <strong>TiXmlAttribute</strong>(<em>const char *</em> _name, <em>const char *</em> _value)</dt>
-<dd>Construct an attribute with a name and value. </dd>
-<dt><em>const char *</em>  <strong>Name</strong>()</dt>
-<dd>Return the name of this attribute. </dd>
-<dt><em>const char *</em>  <strong>Value</strong>()</dt>
-<dd>Return the value of this attribute. </dd>
-<dt><em>const std::string &amp;</em>  <strong>ValueStr</strong>()</dt>
-<dd>Return the value of this attribute. </dd>
-<dt><em>int</em>  <strong>IntValue</strong>()</dt>
-<dd>Return the value of this attribute, converted to an integer. </dd>
-<dt><em>double</em>  <strong>DoubleValue</strong>()</dt>
-<dd>Return the value of this attribute, converted to a double. </dd>
-<dt><em>const TIXML_STRING &amp;</em>  <strong>NameTStr</strong>()</dt>
-<dd></dd>
-<dt><em>int</em>  <strong>QueryIntValue</strong>(<em>int *</em> _value)</dt>
-<dd>QueryIntValue examines the value string. </dd>
-<dt><em>int</em>  <strong>QueryDoubleValue</strong>(<em>double *</em> _value)</dt>
-<dd>QueryDoubleValue examines the value string. See . </dd>
-<dt><em>void</em>  <strong>SetName</strong>(<em>const char *</em> _name)</dt>
-<dd>Set the name of this attribute. </dd>
-<dt><em>void</em>  <strong>SetValue</strong>(<em>const char *</em> _value)</dt>
-<dd>Set the value. </dd>
-<dt><em>void</em>  <strong>SetIntValue</strong>(<em>int</em> _value)</dt>
-<dd>Set the value from an integer. </dd>
-<dt><em>void</em>  <strong>SetDoubleValue</strong>(<em>double</em> _value)</dt>
-<dd>Set the value from a double. </dd>
-<dt><em>void</em>  <strong>SetName</strong>(<em>const std::string &amp;</em> _name)</dt>
-<dd>STL std::string form. </dd>
-<dt><em>void</em>  <strong>SetValue</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd>STL std::string form. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>Next</strong>()</dt>
-<dd>Get the next sibling attribute in the DOM. Returns null at end. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>Next</strong>()</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>Previous</strong>()</dt>
-<dd>Get the previous sibling attribute in the DOM. Returns null at beginning. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>Previous</strong>()</dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>operator==</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> &amp;</em> rhs)</dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>operator&lt;</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> &amp;</em> rhs)</dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>operator&gt;</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> &amp;</em> rhs)</dt>
-<dd></dd>
-<dt><em>const char *</em>  <strong>Parse</strong>(<em>const char *</em> p, <em>TiXmlParsingData *</em> data, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>Print</strong>(<em>FILE *</em> cfile, <em>int</em> depth)</dt>
-<dd>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </dd>
-<dt><em>void</em>  <strong>Print</strong>(<em>FILE *</em> cfile, <em>int</em> depth, <em>TIXML_STRING *</em> str)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>SetDocument</strong>(<a class="reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> *</em> doc)</dt>
-<dd></dd>
+<dd><p class="first">
+<p>Construct an empty attribute. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlAttribute</strong>(const std::string &amp; _name, const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>std::string constructor. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlAttribute</strong>(const char * _name, const char * _value)</dt>
+<dd><p class="first">
+<p>Construct an attribute with a name and value. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>Name</strong>()</dt>
+<dd><p class="first">
+<p>Return the name of this attribute. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>Value</strong>()</dt>
+<dd><p class="first">
+<p>Return the value of this attribute. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const std::string &amp;  <strong>ValueStr</strong>()</dt>
+<dd><p class="first">
+<p>Return the value of this attribute. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>int  <strong>IntValue</strong>()</dt>
+<dd><p class="first">
+<p>Return the value of this attribute, converted to an integer. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>double  <strong>DoubleValue</strong>()</dt>
+<dd><p class="first">
+<p>Return the value of this attribute, converted to a double. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const TIXML_STRING &amp;  <strong>NameTStr</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>int  <strong>QueryIntValue</strong>(int * _value)</dt>
+<dd><p class="first">
+<p>QueryIntValue examines the value string. </p>
+        </p>
+<p class="last">
+<p>It is an alternative to the <a class="reference internal" href="#project26class_ti_xml_attribute_1a1a20ad59dc7e89a0ab265396360d50f"><em>IntValue()</em></a> method with richer error checking. If the value is an integer, it is stored in &#8216;value&#8217; and the call returns TIXML_SUCCESS. If it is not an integer, it returns TIXML_WRONG_TYPE.</p>
+<p>A specialized but useful call. Note that for success it returns 0, which is the opposite of almost all other TinyXml calls. </p>
+        </p>
+</dd>
+<dt>int  <strong>QueryDoubleValue</strong>(double * _value)</dt>
+<dd><p class="first">
+<p>QueryDoubleValue examines the value string. See <a class="reference internal" href="#project26class_ti_xml_attribute_1d6c93088ee21af41a107931223339344"><em>QueryIntValue()</em></a>. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetName</strong>(const char * _name)</dt>
+<dd><p class="first">
+<p>Set the name of this attribute. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetValue</strong>(const char * _value)</dt>
+<dd><p class="first">
+<p>Set the value. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetIntValue</strong>(int _value)</dt>
+<dd><p class="first">
+<p>Set the value from an integer. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetDoubleValue</strong>(double _value)</dt>
+<dd><p class="first">
+<p>Set the value from a double. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetName</strong>(const std::string &amp; _name)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetValue</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>Next</strong>()</dt>
+<dd><p class="first">
+<p>Get the next sibling attribute in the DOM. Returns null at end. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>Next</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>Previous</strong>()</dt>
+<dd><p class="first">
+<p>Get the previous sibling attribute in the DOM. Returns null at beginning. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>Previous</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>operator==</strong>(const  <a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  &amp; rhs)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>operator&lt;</strong>(const  <a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  &amp; rhs)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>operator&gt;</strong>(const  <a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  &amp; rhs)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>Parse</strong>(const char * p, TiXmlParsingData * data, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>Print</strong>(FILE * cfile, int depth)</dt>
+<dd><p class="first">
+<p>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </p>
+        </p>
+<p class="last">
+<p>) Either or both cfile and str can be null.</p>
+<p>This is a formatted print, and will insert tabs and newlines.</p>
+<p>(For an unformatted stream, use the &lt;&lt; operator.) </p>
+        </p>
+</dd>
+<dt>void  <strong>Print</strong>(FILE * cfile, int depth, TIXML_STRING * str)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetDocument</strong>(<a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>  * doc)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Private Functions</em><blockquote>
 <dl class="docutils">
-<dt> <strong>TiXmlAttribute</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> &amp;</em> )</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>operator=</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> &amp;</em> base)</dt>
-<dd></dd>
-</dl>
-</blockquote>
-<em>Private Functions</em><blockquote>
-<dl class="docutils docutils">
-<dt> <strong>TiXmlAttribute</strong>(<em>const </em> <a class="reference internal reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> &amp;</em> )</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>operator=</strong>(<em>const </em> <a class="reference internal reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> &amp;</em> base)</dt>
-<dd></dd>
+<dt> <strong>TiXmlAttribute</strong>(const  <a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  &amp; )</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>operator=</strong>(const  <a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  &amp; base)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Private Members</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> *</em>  <strong>document</strong></dt>
-<dd></dd>
-<dt><em>TIXML_STRING</em>  <strong>name</strong></dt>
-<dd></dd>
-<dt><em>TIXML_STRING</em>  <strong>value</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>prev</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>next</strong></dt>
-<dd></dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>  *  <strong>document</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>TIXML_STRING  <strong>name</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>TIXML_STRING  <strong>value</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>prev</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>next</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Friends</em><blockquote>
 <dl class="docutils">
-<dt><em>friend class</em>  <strong>TiXmlAttributeSet</strong></dt>
-<dd></dd>
+<dt>friend class  <strong>TiXmlAttributeSet</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="class_ti_xml_attribute_set"><em>class</em> <strong>TiXmlAttributeSet</strong></p>
+<p id="project26class_ti_xml_attribute_set"><em>class</em> <strong>TiXmlAttributeSet</strong></p>
 <blockquote>
+<p>
+    </p>
+<p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlAttributeSet</strong>()</dt>
-<dd></dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 <dt> <strong>~TiXmlAttributeSet</strong>()</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>Add</strong>(<a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em> attribute)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>Remove</strong>(<a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em> attribute)</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>First</strong>()</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>First</strong>()</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>Last</strong>()</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>Last</strong>()</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>Find</strong>(<em>const char *</em> _name)</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>Find</strong>(<em>const char *</em> _name)</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>Find</strong>(<em>const std::string &amp;</em> _name)</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>Find</strong>(<em>const std::string &amp;</em> _name)</dt>
-<dd></dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>Add</strong>(<a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  * attribute)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>Remove</strong>(<a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  * attribute)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>First</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>First</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>Last</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>Last</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>Find</strong>(const char * _name)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>Find</strong>(const char * _name)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>Find</strong>(const std::string &amp; _name)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>Find</strong>(const std::string &amp; _name)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Private Functions</em><blockquote>
 <dl class="docutils">
-<dt> <strong>TiXmlAttributeSet</strong>(<em>const TiXmlAttributeSet &amp;</em> )</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>operator=</strong>(<em>const TiXmlAttributeSet &amp;</em> )</dt>
-<dd></dd>
-</dl>
-</blockquote>
-<em>Private Functions</em><blockquote>
-<dl class="docutils docutils">
-<dt> <strong>TiXmlAttributeSet</strong>(<em>const TiXmlAttributeSet &amp;</em> )</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>operator=</strong>(<em>const TiXmlAttributeSet &amp;</em> )</dt>
-<dd></dd>
+<dt> <strong>TiXmlAttributeSet</strong>(const TiXmlAttributeSet &amp; )</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>operator=</strong>(const TiXmlAttributeSet &amp; )</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Private Members</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a>  <strong>sentinel</strong></dt>
-<dd></dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  <strong>sentinel</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="class_ti_xml_base"><em>class</em> <strong>TiXmlBase</strong></p>
+<p id="project26class_ti_xml_base"><em>class</em> <strong>TiXmlBase</strong></p>
 <blockquote>
+<p>
+<p><a class="reference internal" href="#project26class_ti_xml_base"><em>TiXmlBase</em></a> is a base class for every class in TinyXml. </p>
+    </p>
+<p>
+<p>It does little except to establish that TinyXml classes can be printed and provide some utility functions.</p>
+<p>In XML, the document and elements can contain other elements and other types of nodes.</p>
+<p> </p>
+    </p>
 <em>Public Type</em><blockquote>
 <dl class="docutils">
 </dl>
@@ -204,93 +436,224 @@
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlBase</strong>()</dt>
-<dd></dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 <dt> <strong>~TiXmlBase</strong>()</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>Print</strong>(<em>FILE *</em> cfile, <em>int</em> depth)</dt>
-<dd>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </dd>
-<dt><em>int</em>  <strong>Row</strong>()</dt>
-<dd>Return the position, in the original source file, of this node or attribute. </dd>
-<dt><em>int</em>  <strong>Column</strong>()</dt>
-<dd>See . </dd>
-<dt><em>void</em>  <strong>SetUserData</strong>(<em>void *</em> user)</dt>
-<dd>Set a pointer to arbitrary user data. </dd>
-<dt><em>void *</em>  <strong>GetUserData</strong>()</dt>
-<dd>Get a pointer to arbitrary user data. </dd>
-<dt><em>const void *</em>  <strong>GetUserData</strong>()</dt>
-<dd>Get a pointer to arbitrary user data. </dd>
-<dt><em>const char *</em>  <strong>Parse</strong>(<em>const char *</em> p, <em>TiXmlParsingData *</em> data, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>Print</strong>(FILE * cfile, int depth)</dt>
+<dd><p class="first">
+<p>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </p>
+        </p>
+<p class="last">
+<p>) Either or both cfile and str can be null.</p>
+<p>This is a formatted print, and will insert tabs and newlines.</p>
+<p>(For an unformatted stream, use the &lt;&lt; operator.) </p>
+        </p>
+</dd>
+<dt>int  <strong>Row</strong>()</dt>
+<dd><p class="first">
+<p>Return the position, in the original source file, of this node or attribute. </p>
+        </p>
+<p class="last">
+<p>The row and column are 1-based. (That is the first row and first column is 1,1). If the returns values are 0 or less, then the parser does not have a row and column value.</p>
+<p>Generally, the row and column value will be set when the TiXmlDocument::Load(), <a class="reference internal" href="#project26class_ti_xml_document_14c852a889c02cf251117fd1d9fe1845f"><em>TiXmlDocument::LoadFile()</em></a>, or any TiXmlNode::Parse() is called. It will NOT be set when the DOM was created from operator&gt;&gt;.</p>
+<p>The values reflect the initial load. Once the DOM is modified programmatically (by adding or changing nodes and attributes) the new values will NOT update to reflect changes in the document.</p>
+<p>There is a minor performance cost to computing the row and column. Computation can be disabled if <a class="reference internal" href="#project26class_ti_xml_document_151dac56316f89b35bdb7d0d433ba988e"><em>TiXmlDocument::SetTabSize()</em></a> is called with 0 as the value.</p>
+<p>
+</p>
+        </p>
+</dd>
+<dt>int  <strong>Column</strong>()</dt>
+<dd><p class="first">
+<p>See <a class="reference internal" href="#project26class_ti_xml_base_1024bceb070188df92c2a8d8852dd0853"><em>Row()</em></a>. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetUserData</strong>(void * user)</dt>
+<dd><p class="first">
+<p>Set a pointer to arbitrary user data. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void *  <strong>GetUserData</strong>()</dt>
+<dd><p class="first">
+<p>Get a pointer to arbitrary user data. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const void *  <strong>GetUserData</strong>()</dt>
+<dd><p class="first">
+<p>Get a pointer to arbitrary user data. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>Parse</strong>(const char * p, TiXmlParsingData * data, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Public Static Functons</em><blockquote>
 <dl class="docutils">
-<dt><em>void</em>  <strong>SetCondenseWhiteSpace</strong>(<em>bool</em> condense)</dt>
-<dd>The world does not agree on whether white space should be kept or not. </dd>
-<dt><em>bool</em>  <strong>IsWhiteSpaceCondensed</strong>()</dt>
-<dd>Return the current white space setting. </dd>
+<dt>void  <strong>SetCondenseWhiteSpace</strong>(bool condense)</dt>
+<dd><p class="first">
+<p>The world does not agree on whether white space should be kept or not. </p>
+        </p>
+<p class="last">
+<p>In order to make everyone happy, these global, static functions are provided to set whether or not TinyXml will condense all white space into a single space or not. The default is to condense. Note changing this value is not thread safe. </p>
+        </p>
+</dd>
+<dt>bool  <strong>IsWhiteSpaceCondensed</strong>()</dt>
+<dd><p class="first">
+<p>Return the current white space setting. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Public Static Attributes</em><blockquote>
 <dl class="docutils">
-<dt><em>const int</em>  <strong>utf8ByteTable</strong></dt>
-<dd></dd>
+<dt>const int  <strong>utf8ByteTable</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Protected Attributes</em><blockquote>
 <dl class="docutils">
-<dt><em>TiXmlCursor</em>  <strong>location</strong></dt>
-<dd></dd>
-<dt><em>void *</em>  <strong>userData</strong></dt>
-<dd>Field containing a generic user pointer. </dd>
+<dt>TiXmlCursor  <strong>location</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void *  <strong>userData</strong></dt>
+<dd><p class="first">
+<p>Field containing a generic user pointer. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Protected Static Functions</em><blockquote>
 <dl class="docutils">
-<dt><em>const char *</em>  <strong>SkipWhiteSpace</strong>(<em>const char *</em> , <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>IsWhiteSpace</strong>(<em>char</em> c)</dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>IsWhiteSpace</strong>(<em>int</em> c)</dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>StreamWhiteSpace</strong>(<em>std::istream *</em> in, <em>TIXML_STRING *</em> tag)</dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>StreamTo</strong>(<em>std::istream *</em> in, <em>int</em> character, <em>TIXML_STRING *</em> tag)</dt>
-<dd></dd>
-<dt><em>const char *</em>  <strong>ReadName</strong>(<em>const char *</em> p, <em>TIXML_STRING *</em> name, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>const char *</em>  <strong>ReadText</strong>(<em>const char *</em> in, <em>TIXML_STRING *</em> text, <em>bool</em> ignoreWhiteSpace, <em>const char *</em> endTag, <em>bool</em> ignoreCase, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>const char *</em>  <strong>GetEntity</strong>(<em>const char *</em> in, <em>char *</em> value, <em>int *</em> length, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>const char *</em>  <strong>GetChar</strong>(<em>const char *</em> p, <em>char *</em> _value, <em>int *</em> length, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>PutString</strong>(<em>const TIXML_STRING &amp;</em> str, <em>TIXML_STRING *</em> out)</dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>StringEqual</strong>(<em>const char *</em> p, <em>const char *</em> endTag, <em>bool</em> ignoreCase, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>int</em>  <strong>IsAlpha</strong>(<em>unsigned char</em> anyByte, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>int</em>  <strong>IsAlphaNum</strong>(<em>unsigned char</em> anyByte, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>int</em>  <strong>ToLower</strong>(<em>int</em> v, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>ConvertUTF32ToUTF8</strong>(<em>unsigned long</em> input, <em>char *</em> output, <em>int *</em> length)</dt>
-<dd></dd>
+<dt>const char *  <strong>SkipWhiteSpace</strong>(const char * , TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>IsWhiteSpace</strong>(char c)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>IsWhiteSpace</strong>(int c)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>StreamWhiteSpace</strong>(std::istream * in, TIXML_STRING * tag)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>StreamTo</strong>(std::istream * in, int character, TIXML_STRING * tag)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>ReadName</strong>(const char * p, TIXML_STRING * name, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>ReadText</strong>(const char * in, TIXML_STRING * text, bool ignoreWhiteSpace, const char * endTag, bool ignoreCase, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>GetEntity</strong>(const char * in, char * value, int * length, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>GetChar</strong>(const char * p, char * _value, int * length, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>PutString</strong>(const TIXML_STRING &amp; str, TIXML_STRING * out)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>StringEqual</strong>(const char * p, const char * endTag, bool ignoreCase, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>int  <strong>IsAlpha</strong>(unsigned char anyByte, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>int  <strong>IsAlphaNum</strong>(unsigned char anyByte, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>int  <strong>ToLower</strong>(int v, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>ConvertUTF32ToUTF8</strong>(unsigned long input, char * output, int * length)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Protected Static Attributes</em><blockquote>
 <dl class="docutils">
-<dt><em>const char *</em>  <strong>errorString</strong></dt>
-<dd></dd>
-</dl>
-</blockquote>
-<em>Private Functions</em><blockquote>
-<dl class="docutils">
-<dt> <strong>TiXmlBase</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_base">TiXmlBase</a> <em> &amp;</em> )</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>operator=</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_base">TiXmlBase</a> <em> &amp;</em> base)</dt>
-<dd></dd>
+<dt>const char *  <strong>errorString</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Private Types</em><blockquote>
@@ -298,858 +661,2486 @@
 </dl>
 </blockquote>
 <em>Private Functions</em><blockquote>
-<dl class="docutils docutils">
-<dt> <strong>TiXmlBase</strong>(<em>const </em> <a class="reference internal reference internal" href="#class_ti_xml_base">TiXmlBase</a> <em> &amp;</em> )</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>operator=</strong>(<em>const </em> <a class="reference internal reference internal" href="#class_ti_xml_base">TiXmlBase</a> <em> &amp;</em> base)</dt>
-<dd></dd>
+<dl class="docutils">
+<dt> <strong>TiXmlBase</strong>(const  <a class="reference internal" href="#project26class_ti_xml_base"><em>TiXmlBase</em></a>  &amp; )</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>operator=</strong>(const  <a class="reference internal" href="#project26class_ti_xml_base"><em>TiXmlBase</em></a>  &amp; base)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Private Static Attributes</em><blockquote>
 <dl class="docutils">
-<dt><em>Entity</em>  <strong>entity</strong></dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>condenseWhiteSpace</strong></dt>
-<dd></dd>
+<dt>Entity  <strong>entity</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>condenseWhiteSpace</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Friends</em><blockquote>
 <dl class="docutils">
-<dt><em>friend class</em>  <strong>TiXmlNode</strong></dt>
-<dd></dd>
-<dt><em>friend class</em>  <strong>TiXmlElement</strong></dt>
-<dd></dd>
-<dt><em>friend class</em>  <strong>TiXmlDocument</strong></dt>
-<dd></dd>
+<dt>friend class  <strong>TiXmlNode</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>friend class  <strong>TiXmlElement</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>friend class  <strong>TiXmlDocument</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="struct_ti_xml_base_1_1_entity"><em>struct</em> <strong>TiXmlBase::Entity</strong></p>
+<p id="project26struct_ti_xml_base_1_1_entity"><em>struct</em> <strong>TiXmlBase::Entity</strong></p>
 <blockquote>
+<p>
+    </p>
+<p>
+    </p>
 <em>Public Members</em><blockquote>
 <dl class="docutils">
-<dt><em>const char *</em>  <strong>str</strong></dt>
-<dd></dd>
-<dt><em>unsigned int</em>  <strong>strLength</strong></dt>
-<dd></dd>
-<dt><em>char</em>  <strong>chr</strong></dt>
-<dd></dd>
+<dt>const char *  <strong>str</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>unsigned int  <strong>strLength</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>char  <strong>chr</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="class_ti_xml_comment"><em>class</em> <strong>TiXmlComment</strong></p>
+<p id="project26class_ti_xml_comment"><em>class</em> <strong>TiXmlComment</strong></p>
 <blockquote>
+<p>
+<p>An XML comment. </p>
+    </p>
+<p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlComment</strong>()</dt>
-<dd>Constructs an empty comment. </dd>
-<dt> <strong>TiXmlComment</strong>(<em>const char *</em> _value)</dt>
-<dd>Construct a comment from text. </dd>
-<dt> <strong>TiXmlComment</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_comment">TiXmlComment</a> <em> &amp;</em> )</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>operator=</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_comment">TiXmlComment</a> <em> &amp;</em> base)</dt>
-<dd></dd>
+<dd><p class="first">
+<p>Constructs an empty comment. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlComment</strong>(const char * _value)</dt>
+<dd><p class="first">
+<p>Construct a comment from text. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlComment</strong>(const  <a class="reference internal" href="#project26class_ti_xml_comment"><em>TiXmlComment</em></a>  &amp; )</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>operator=</strong>(const  <a class="reference internal" href="#project26class_ti_xml_comment"><em>TiXmlComment</em></a>  &amp; base)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 <dt> <strong>~TiXmlComment</strong>()</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>Clone</strong>()</dt>
-<dd>Returns a copy of this Comment. </dd>
-<dt><em>void</em>  <strong>Print</strong>(<em>FILE *</em> cfile, <em>int</em> depth)</dt>
-<dd>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </dd>
-<dt><em>const char *</em>  <strong>Parse</strong>(<em>const char *</em> p, <em>TiXmlParsingData *</em> data, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_comment">TiXmlComment</a> <em> *</em>  <strong>ToComment</strong>()</dt>
-<dd>Cast to a more defined type. Will return null not of the requested type. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_comment">TiXmlComment</a> <em> *</em>  <strong>ToComment</strong>()</dt>
-<dd>Cast to a more defined type. Will return null not of the requested type. </dd>
-<dt><em>bool</em>  <strong>Accept</strong>(<a class="reference internal" href="#class_ti_xml_visitor">TiXmlVisitor</a> <em> *</em> visitor)</dt>
-<dd>Walk the XML tree visiting this node and all of its children. </dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Clone</strong>()</dt>
+<dd><p class="first">
+<p>Returns a copy of this Comment. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>Print</strong>(FILE * cfile, int depth)</dt>
+<dd><p class="first">
+<p>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </p>
+        </p>
+<p class="last">
+<p>) Either or both cfile and str can be null.</p>
+<p>This is a formatted print, and will insert tabs and newlines.</p>
+<p>(For an unformatted stream, use the &lt;&lt; operator.) </p>
+        </p>
+</dd>
+<dt>const char *  <strong>Parse</strong>(const char * p, TiXmlParsingData * data, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_comment"><em>TiXmlComment</em></a>  *  <strong>ToComment</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_comment"><em>TiXmlComment</em></a>  *  <strong>ToComment</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Accept</strong>(<a class="reference internal" href="#project26class_ti_xml_visitor"><em>TiXmlVisitor</em></a>  * visitor)</dt>
+<dd><p class="first">
+<p>Walk the XML tree visiting this node and all of its children. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Protected Functions</em><blockquote>
 <dl class="docutils">
-<dt><em>void</em>  <strong>CopyTo</strong>(<a class="reference internal" href="#class_ti_xml_comment">TiXmlComment</a> <em> *</em> target)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>StreamIn</strong>(<em>std::istream *</em> in, <em>TIXML_STRING *</em> tag)</dt>
-<dd></dd>
+<dt>void  <strong>CopyTo</strong>(<a class="reference internal" href="#project26class_ti_xml_comment"><em>TiXmlComment</em></a>  * target)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>StreamIn</strong>(std::istream * in, TIXML_STRING * tag)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="struct_ti_xml_cursor"><em>struct</em> <strong>TiXmlCursor</strong></p>
+<p id="project26struct_ti_xml_cursor"><em>struct</em> <strong>TiXmlCursor</strong></p>
 <blockquote>
+<p>
+    </p>
+<p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlCursor</strong>()</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>Clear</strong>()</dt>
-<dd></dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>Clear</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Public Members</em><blockquote>
 <dl class="docutils">
-<dt><em>int</em>  <strong>row</strong></dt>
-<dd></dd>
-<dt><em>int</em>  <strong>col</strong></dt>
-<dd></dd>
+<dt>int  <strong>row</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>int  <strong>col</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="class_ti_xml_declaration"><em>class</em> <strong>TiXmlDeclaration</strong></p>
+<p id="project26class_ti_xml_declaration"><em>class</em> <strong>TiXmlDeclaration</strong></p>
 <blockquote>
+<p>
+<p>In correct XML the declaration is the first entry in the file. </p>
+    </p>
+<p>
+<p></p>
+<p>TinyXml will happily read or write files without a declaration, however. There are 3 possible attributes to the declaration: version, encoding, and standalone.</p>
+<p>Note: In this version of the code, the attributes are handled as special cases, not generic attributes, simply because there can only be at most 3 and they are always the same. </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlDeclaration</strong>()</dt>
-<dd>Construct an empty declaration. </dd>
-<dt> <strong>TiXmlDeclaration</strong>(<em>const std::string &amp;</em> _version, <em>const std::string &amp;</em> _encoding, <em>const std::string &amp;</em> _standalone)</dt>
-<dd>Constructor. </dd>
-<dt> <strong>TiXmlDeclaration</strong>(<em>const char *</em> _version, <em>const char *</em> _encoding, <em>const char *</em> _standalone)</dt>
-<dd>Construct. </dd>
-<dt> <strong>TiXmlDeclaration</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_declaration">TiXmlDeclaration</a> <em> &amp;</em> copy)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>operator=</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_declaration">TiXmlDeclaration</a> <em> &amp;</em> copy)</dt>
-<dd></dd>
+<dd><p class="first">
+<p>Construct an empty declaration. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlDeclaration</strong>(const std::string &amp; _version, const std::string &amp; _encoding, const std::string &amp; _standalone)</dt>
+<dd><p class="first">
+<p>Constructor. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlDeclaration</strong>(const char * _version, const char * _encoding, const char * _standalone)</dt>
+<dd><p class="first">
+<p>Construct. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlDeclaration</strong>(const  <a class="reference internal" href="#project26class_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  &amp; copy)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>operator=</strong>(const  <a class="reference internal" href="#project26class_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  &amp; copy)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 <dt> <strong>~TiXmlDeclaration</strong>()</dt>
-<dd></dd>
-<dt><em>const char *</em>  <strong>Version</strong>()</dt>
-<dd>Version. Will return an empty string if none was found. </dd>
-<dt><em>const char *</em>  <strong>Encoding</strong>()</dt>
-<dd>Encoding. Will return an empty string if none was found. </dd>
-<dt><em>const char *</em>  <strong>Standalone</strong>()</dt>
-<dd>Is this a standalone document? </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>Clone</strong>()</dt>
-<dd>Creates a copy of this Declaration and returns it. </dd>
-<dt><em>void</em>  <strong>Print</strong>(<em>FILE *</em> cfile, <em>int</em> depth, <em>TIXML_STRING *</em> str)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>Print</strong>(<em>FILE *</em> cfile, <em>int</em> depth)</dt>
-<dd>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </dd>
-<dt><em>const char *</em>  <strong>Parse</strong>(<em>const char *</em> p, <em>TiXmlParsingData *</em> data, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_declaration">TiXmlDeclaration</a> <em> *</em>  <strong>ToDeclaration</strong>()</dt>
-<dd>Cast to a more defined type. Will return null not of the requested type. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_declaration">TiXmlDeclaration</a> <em> *</em>  <strong>ToDeclaration</strong>()</dt>
-<dd>Cast to a more defined type. Will return null not of the requested type. </dd>
-<dt><em>bool</em>  <strong>Accept</strong>(<a class="reference internal" href="#class_ti_xml_visitor">TiXmlVisitor</a> <em> *</em> visitor)</dt>
-<dd>Walk the XML tree visiting this node and all of its children. </dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>Version</strong>()</dt>
+<dd><p class="first">
+<p>Version. Will return an empty string if none was found. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>Encoding</strong>()</dt>
+<dd><p class="first">
+<p>Encoding. Will return an empty string if none was found. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>Standalone</strong>()</dt>
+<dd><p class="first">
+<p>Is this a standalone document? </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Clone</strong>()</dt>
+<dd><p class="first">
+<p>Creates a copy of this Declaration and returns it. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>Print</strong>(FILE * cfile, int depth, TIXML_STRING * str)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>Print</strong>(FILE * cfile, int depth)</dt>
+<dd><p class="first">
+<p>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </p>
+        </p>
+<p class="last">
+<p>) Either or both cfile and str can be null.</p>
+<p>This is a formatted print, and will insert tabs and newlines.</p>
+<p>(For an unformatted stream, use the &lt;&lt; operator.) </p>
+        </p>
+</dd>
+<dt>const char *  <strong>Parse</strong>(const char * p, TiXmlParsingData * data, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  *  <strong>ToDeclaration</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  *  <strong>ToDeclaration</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Accept</strong>(<a class="reference internal" href="#project26class_ti_xml_visitor"><em>TiXmlVisitor</em></a>  * visitor)</dt>
+<dd><p class="first">
+<p>Walk the XML tree visiting this node and all of its children. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Protected Functions</em><blockquote>
 <dl class="docutils">
-<dt><em>void</em>  <strong>CopyTo</strong>(<a class="reference internal" href="#class_ti_xml_declaration">TiXmlDeclaration</a> <em> *</em> target)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>StreamIn</strong>(<em>std::istream *</em> in, <em>TIXML_STRING *</em> tag)</dt>
-<dd></dd>
+<dt>void  <strong>CopyTo</strong>(<a class="reference internal" href="#project26class_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  * target)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>StreamIn</strong>(std::istream * in, TIXML_STRING * tag)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Private Members</em><blockquote>
 <dl class="docutils">
-<dt><em>TIXML_STRING</em>  <strong>version</strong></dt>
-<dd></dd>
-<dt><em>TIXML_STRING</em>  <strong>encoding</strong></dt>
-<dd></dd>
-<dt><em>TIXML_STRING</em>  <strong>standalone</strong></dt>
-<dd></dd>
+<dt>TIXML_STRING  <strong>version</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>TIXML_STRING  <strong>encoding</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>TIXML_STRING  <strong>standalone</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="class_ti_xml_document"><em>class</em> <strong>TiXmlDocument</strong></p>
+<p id="project26class_ti_xml_document"><em>class</em> <strong>TiXmlDocument</strong></p>
 <blockquote>
+<p>
+<p>Always the top level node. </p>
+    </p>
+<p>
+<p>A document binds together all the XML pieces. It can be saved, loaded, and printed to the screen. The &#8216;value&#8217; of a document node is the xml file name. </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlDocument</strong>()</dt>
-<dd>Create an empty document, that has no name. </dd>
-<dt> <strong>TiXmlDocument</strong>(<em>const char *</em> documentName)</dt>
-<dd>Create a document with a name. The name of the document is also the filename of the xml. </dd>
-<dt> <strong>TiXmlDocument</strong>(<em>const std::string &amp;</em> documentName)</dt>
-<dd>Constructor. </dd>
-<dt> <strong>TiXmlDocument</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> &amp;</em> copy)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>operator=</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> &amp;</em> copy)</dt>
-<dd></dd>
+<dd><p class="first">
+<p>Create an empty document, that has no name. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlDocument</strong>(const char * documentName)</dt>
+<dd><p class="first">
+<p>Create a document with a name. The name of the document is also the filename of the xml. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlDocument</strong>(const std::string &amp; documentName)</dt>
+<dd><p class="first">
+<p>Constructor. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlDocument</strong>(const  <a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>  &amp; copy)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>operator=</strong>(const  <a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>  &amp; copy)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 <dt> <strong>~TiXmlDocument</strong>()</dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>LoadFile</strong>(<em>TiXmlEncoding</em> encoding = <em>TIXML_DEFAULT_ENCODING</em> )</dt>
-<dd>Load a file using the current document value. </dd>
-<dt><em>bool</em>  <strong>SaveFile</strong>()</dt>
-<dd>Save a file using the current document value. Returns true if successful. </dd>
-<dt><em>bool</em>  <strong>LoadFile</strong>(<em>const char *</em> filename, <em>TiXmlEncoding</em> encoding = <em>TIXML_DEFAULT_ENCODING</em> )</dt>
-<dd>Load a file using the given filename. Returns true if successful. </dd>
-<dt><em>bool</em>  <strong>SaveFile</strong>(<em>const char *</em> filename)</dt>
-<dd>Save a file using the given filename. Returns true if successful. </dd>
-<dt><em>bool</em>  <strong>LoadFile</strong>(<em>FILE *</em> , <em>TiXmlEncoding</em> encoding = <em>TIXML_DEFAULT_ENCODING</em> )</dt>
-<dd>Load a file using the given FILE*. </dd>
-<dt><em>bool</em>  <strong>SaveFile</strong>(<em>FILE *</em> )</dt>
-<dd>Save a file using the given FILE*. Returns true if successful. </dd>
-<dt><em>bool</em>  <strong>LoadFile</strong>(<em>const std::string &amp;</em> filename, <em>TiXmlEncoding</em> encoding = <em>TIXML_DEFAULT_ENCODING</em> )</dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>SaveFile</strong>(<em>const std::string &amp;</em> filename)</dt>
-<dd>&lt; STL std::string version. </dd>
-<dt><em>const char *</em>  <strong>Parse</strong>(<em>const char *</em> p, <em>TiXmlParsingData *</em> data = <em>0</em> , <em>TiXmlEncoding</em> encoding = <em>TIXML_DEFAULT_ENCODING</em> )</dt>
-<dd>Parse the given null terminated block of xml data. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>RootElement</strong>()</dt>
-<dd>Get the root element &#8211; the only top level element &#8211; of the document. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>RootElement</strong>()</dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>Error</strong>()</dt>
-<dd>If an error occurs, Error will be set to true. </dd>
-<dt><em>const char *</em>  <strong>ErrorDesc</strong>()</dt>
-<dd>Contains a textual (english) description of the error if one occurs. </dd>
-<dt><em>int</em>  <strong>ErrorId</strong>()</dt>
-<dd>Generally, you probably want the error string (  ). </dd>
-<dt><em>int</em>  <strong>ErrorRow</strong>()</dt>
-<dd>Returns the location (if known) of the error. </dd>
-<dt><em>int</em>  <strong>ErrorCol</strong>()</dt>
-<dd>The column where the error occured. See . </dd>
-<dt><em>void</em>  <strong>SetTabSize</strong>(<em>int</em> _tabsize)</dt>
-<dd> allows the error reporting functions ( and ) to report the correct values for row and column. </dd>
-<dt><em>int</em>  <strong>TabSize</strong>()</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>ClearError</strong>()</dt>
-<dd>If you have handled the error, it can be reset with this call. </dd>
-<dt><em>void</em>  <strong>Print</strong>()</dt>
-<dd>Write the document to standard out using formatted printing (&#8220;pretty print&#8221;). </dd>
-<dt><em>void</em>  <strong>Print</strong>(<em>FILE *</em> cfile, <em>int</em> depth = <em>0</em> )</dt>
-<dd>Print this Document to a FILE stream. </dd>
-<dt><em>void</em>  <strong>SetError</strong>(<em>int</em> err, <em>const char *</em> errorLocation, <em>TiXmlParsingData *</em> prevData, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> *</em>  <strong>ToDocument</strong>()</dt>
-<dd>Cast to a more defined type. Will return null not of the requested type. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> *</em>  <strong>ToDocument</strong>()</dt>
-<dd>Cast to a more defined type. Will return null not of the requested type. </dd>
-<dt><em>bool</em>  <strong>Accept</strong>(<a class="reference internal" href="#class_ti_xml_visitor">TiXmlVisitor</a> <em> *</em> content)</dt>
-<dd>Walk the XML tree visiting this node and all of its children. </dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>LoadFile</strong>(TiXmlEncoding encoding = TIXML_DEFAULT_ENCODING )</dt>
+<dd><p class="first">
+<p>Load a file using the current document value. </p>
+        </p>
+<p class="last">
+<p>Returns true if successful. Will delete any existing document data before loading. </p>
+        </p>
+</dd>
+<dt>bool  <strong>SaveFile</strong>()</dt>
+<dd><p class="first">
+<p>Save a file using the current document value. Returns true if successful. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>LoadFile</strong>(const char * filename, TiXmlEncoding encoding = TIXML_DEFAULT_ENCODING )</dt>
+<dd><p class="first">
+<p>Load a file using the given filename. Returns true if successful. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>SaveFile</strong>(const char * filename)</dt>
+<dd><p class="first">
+<p>Save a file using the given filename. Returns true if successful. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>LoadFile</strong>(FILE * , TiXmlEncoding encoding = TIXML_DEFAULT_ENCODING )</dt>
+<dd><p class="first">
+<p>Load a file using the given FILE*. </p>
+        </p>
+<p class="last">
+<p>Returns true if successful. Note that this method doesn&#8217;t stream - the entire object pointed at by the FILE* will be interpreted as an XML file. TinyXML doesn&#8217;t stream in XML from the current file location. Streaming may be added in the future. </p>
+        </p>
+</dd>
+<dt>bool  <strong>SaveFile</strong>(FILE * )</dt>
+<dd><p class="first">
+<p>Save a file using the given FILE*. Returns true if successful. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>LoadFile</strong>(const std::string &amp; filename, TiXmlEncoding encoding = TIXML_DEFAULT_ENCODING )</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>SaveFile</strong>(const std::string &amp; filename)</dt>
+<dd><p class="first">
+<p>&lt; STL std::string version. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>Parse</strong>(const char * p, TiXmlParsingData * data = 0 , TiXmlEncoding encoding = TIXML_DEFAULT_ENCODING )</dt>
+<dd><p class="first">
+<p>Parse the given null terminated block of xml data. </p>
+        </p>
+<p class="last">
+<p>Passing in an encoding to this method (either TIXML_ENCODING_LEGACY or TIXML_ENCODING_UTF8 will force TinyXml to use that encoding, regardless of what TinyXml might otherwise try to detect. </p>
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>RootElement</strong>()</dt>
+<dd><p class="first">
+<p>Get the root element &#8211; the only top level element &#8211; of the document. </p>
+        </p>
+<p class="last">
+<p>In well formed XML, there should only be one. TinyXml is tolerant of multiple elements at the document level. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>RootElement</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Error</strong>()</dt>
+<dd><p class="first">
+<p>If an error occurs, Error will be set to true. </p>
+        </p>
+<p class="last">
+<p>Also,
+</p>
+        </p>
+</dd>
+<dt>const char *  <strong>ErrorDesc</strong>()</dt>
+<dd><p class="first">
+<p>Contains a textual (english) description of the error if one occurs. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>int  <strong>ErrorId</strong>()</dt>
+<dd><p class="first">
+<p>Generally, you probably want the error string ( <a class="reference internal" href="#project26class_ti_xml_document_19d0f689f6e09ea494ea547be8d79c25e"><em>ErrorDesc()</em></a> ). </p>
+        </p>
+<p class="last">
+<p>But if you prefer the ErrorId, this function will fetch it. </p>
+        </p>
+</dd>
+<dt>int  <strong>ErrorRow</strong>()</dt>
+<dd><p class="first">
+<p>Returns the location (if known) of the error. </p>
+        </p>
+<p class="last">
+<p>The first column is column 1, and the first row is row 1. A value of 0 means the row and column wasn&#8217;t applicable (memory errors, for example, have no row/column) or the parser lost the error. (An error in the error reporting, in that case.)</p>
+<p>
+</p>
+        </p>
+</dd>
+<dt>int  <strong>ErrorCol</strong>()</dt>
+<dd><p class="first">
+<p>The column where the error occured. See <a class="reference internal" href="#project26class_ti_xml_document_1f30efc75e804aa2e92fb8be3a8cb676e"><em>ErrorRow()</em></a>. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetTabSize</strong>(int _tabsize)</dt>
+<dd><p class="first">
+<p><a class="reference internal" href="#project26class_ti_xml_document_151dac56316f89b35bdb7d0d433ba988e"><em>SetTabSize()</em></a> allows the error reporting functions (<a class="reference internal" href="#project26class_ti_xml_document_1f30efc75e804aa2e92fb8be3a8cb676e"><em>ErrorRow()</em></a> and <a class="reference internal" href="#project26class_ti_xml_document_1a90bc630ee5203c6109ca5fad3323649"><em>ErrorCol()</em></a>) to report the correct values for row and column. </p>
+        </p>
+<p class="last">
+<p>It does not change the output or input in any way.</p>
+<p>By calling this method, with a tab size greater than 0, the row and column of each node and attribute is stored when the file is loaded. Very useful for tracking the DOM back in to the source file.</p>
+<p>The tab size is required for calculating the location of nodes. If not set, the default of 4 is used. The tabsize is set per document. Setting the tabsize to 0 disables row/column tracking.</p>
+<p>Note that row and column tracking is not supported when using operator&gt;&gt;.</p>
+<p>The tab size needs to be enabled before the parse or load. Correct usage: </p>
+<p>
+</p>
+        </p>
+</dd>
+<dt>int  <strong>TabSize</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>ClearError</strong>()</dt>
+<dd><p class="first">
+<p>If you have handled the error, it can be reset with this call. </p>
+        </p>
+<p class="last">
+<p>The error state is automatically cleared if you Parse a new XML block. </p>
+        </p>
+</dd>
+<dt>void  <strong>Print</strong>()</dt>
+<dd><p class="first">
+<p>Write the document to standard out using formatted printing (&#8220;pretty print&#8221;). </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>Print</strong>(FILE * cfile, int depth = 0 )</dt>
+<dd><p class="first">
+<p>Print this Document to a FILE stream. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetError</strong>(int err, const char * errorLocation, TiXmlParsingData * prevData, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>  *  <strong>ToDocument</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>  *  <strong>ToDocument</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Accept</strong>(<a class="reference internal" href="#project26class_ti_xml_visitor"><em>TiXmlVisitor</em></a>  * content)</dt>
+<dd><p class="first">
+<p>Walk the XML tree visiting this node and all of its children. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Protected Functions</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>Clone</strong>()</dt>
-<dd>Create an exact duplicate of this node and return it. </dd>
-<dt><em>void</em>  <strong>StreamIn</strong>(<em>std::istream *</em> in, <em>TIXML_STRING *</em> tag)</dt>
-<dd></dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Clone</strong>()</dt>
+<dd><p class="first">
+<p>Create an exact duplicate of this node and return it. </p>
+        </p>
+<p class="last">
+<p>The memory must be deleted by the caller. </p>
+        </p>
+</dd>
+<dt>void  <strong>StreamIn</strong>(std::istream * in, TIXML_STRING * tag)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Private Functions</em><blockquote>
 <dl class="docutils">
-<dt><em>void</em>  <strong>CopyTo</strong>(<a class="reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> *</em> target)</dt>
-<dd></dd>
-</dl>
-</blockquote>
-<em>Private Functions</em><blockquote>
-<dl class="docutils docutils">
-<dt><em>void</em>  <strong>CopyTo</strong>(<a class="reference internal reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> *</em> target)</dt>
-<dd></dd>
+<dt>void  <strong>CopyTo</strong>(<a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>  * target)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Private Members</em><blockquote>
 <dl class="docutils">
-<dt><em>bool</em>  <strong>error</strong></dt>
-<dd></dd>
-<dt><em>int</em>  <strong>errorId</strong></dt>
-<dd></dd>
-<dt><em>TIXML_STRING</em>  <strong>errorDesc</strong></dt>
-<dd></dd>
-<dt><em>int</em>  <strong>tabsize</strong></dt>
-<dd></dd>
-<dt><em>TiXmlCursor</em>  <strong>errorLocation</strong></dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>useMicrosoftBOM</strong></dt>
-<dd></dd>
+<dt>bool  <strong>error</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>int  <strong>errorId</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>TIXML_STRING  <strong>errorDesc</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>int  <strong>tabsize</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>TiXmlCursor  <strong>errorLocation</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>useMicrosoftBOM</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="class_ti_xml_element"><em>class</em> <strong>TiXmlElement</strong></p>
+<p id="project26class_ti_xml_element"><em>class</em> <strong>TiXmlElement</strong></p>
 <blockquote>
+<p>
+<p>The element is a container class. </p>
+    </p>
+<p>
+<p>It has a value, the element name, and can contain other elements, text, comments, and unknowns. Elements also contain an arbitrary number of attributes. </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt> <strong>TiXmlElement</strong>(<em>const char *</em> in_value)</dt>
-<dd>Construct an element. </dd>
-<dt> <strong>TiXmlElement</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd>std::string constructor. </dd>
-<dt> <strong>TiXmlElement</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> &amp;</em> )</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>operator=</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> &amp;</em> base)</dt>
-<dd></dd>
+<dt> <strong>TiXmlElement</strong>(const char * in_value)</dt>
+<dd><p class="first">
+<p>Construct an element. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlElement</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>std::string constructor. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlElement</strong>(const  <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  &amp; )</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>operator=</strong>(const  <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  &amp; base)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 <dt> <strong>~TiXmlElement</strong>()</dt>
-<dd></dd>
-<dt><em>const char *</em>  <strong>Attribute</strong>(<em>const char *</em> name)</dt>
-<dd>Given an attribute name,  returns the value for the attribute of that name, or null if none exists. </dd>
-<dt><em>const char *</em>  <strong>Attribute</strong>(<em>const char *</em> name, <em>int *</em> i)</dt>
-<dd>Given an attribute name,  returns the value for the attribute of that name, or null if none exists. </dd>
-<dt><em>const char *</em>  <strong>Attribute</strong>(<em>const char *</em> name, <em>double *</em> d)</dt>
-<dd>Given an attribute name,  returns the value for the attribute of that name, or null if none exists. </dd>
-<dt><em>int</em>  <strong>QueryIntAttribute</strong>(<em>const char *</em> name, <em>int *</em> _value)</dt>
-<dd>QueryIntAttribute examines the attribute - it is an alternative to the  method with richer error checking. </dd>
-<dt><em>int</em>  <strong>QueryDoubleAttribute</strong>(<em>const char *</em> name, <em>double *</em> _value)</dt>
-<dd>QueryDoubleAttribute examines the attribute - see . </dd>
-<dt><em>int</em>  <strong>QueryFloatAttribute</strong>(<em>const char *</em> name, <em>float *</em> _value)</dt>
-<dd>QueryFloatAttribute examines the attribute - see . </dd>
-<dt><em>int</em>  <strong>QueryValueAttribute</strong>(<em>const std::string &amp;</em> name, <em>T *</em> outValue)</dt>
-<dd>Template form of the attribute query which will try to read the attribute into the specified type. </dd>
-<dt><em>void</em>  <strong>SetAttribute</strong>(<em>const char *</em> name, <em>const char *</em> _value)</dt>
-<dd>Sets an attribute of name to a given value. </dd>
-<dt><em>const std::string *</em>  <strong>Attribute</strong>(<em>const std::string &amp;</em> name)</dt>
-<dd></dd>
-<dt><em>const std::string *</em>  <strong>Attribute</strong>(<em>const std::string &amp;</em> name, <em>int *</em> i)</dt>
-<dd></dd>
-<dt><em>const std::string *</em>  <strong>Attribute</strong>(<em>const std::string &amp;</em> name, <em>double *</em> d)</dt>
-<dd></dd>
-<dt><em>int</em>  <strong>QueryIntAttribute</strong>(<em>const std::string &amp;</em> name, <em>int *</em> _value)</dt>
-<dd></dd>
-<dt><em>int</em>  <strong>QueryDoubleAttribute</strong>(<em>const std::string &amp;</em> name, <em>double *</em> _value)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>SetAttribute</strong>(<em>const std::string &amp;</em> name, <em>const std::string &amp;</em> _value)</dt>
-<dd>STL std::string form. </dd>
-<dt><em>void</em>  <strong>SetAttribute</strong>(<em>const std::string &amp;</em> name, <em>int</em> _value)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>SetAttribute</strong>(<em>const char *</em> name, <em>int</em> value)</dt>
-<dd>Sets an attribute of name to a given value. </dd>
-<dt><em>void</em>  <strong>SetDoubleAttribute</strong>(<em>const char *</em> name, <em>double</em> value)</dt>
-<dd>Sets an attribute of name to a given value. </dd>
-<dt><em>void</em>  <strong>RemoveAttribute</strong>(<em>const char *</em> name)</dt>
-<dd>Deletes an attribute with the given name. </dd>
-<dt><em>void</em>  <strong>RemoveAttribute</strong>(<em>const std::string &amp;</em> name)</dt>
-<dd>STL std::string form. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>FirstAttribute</strong>()</dt>
-<dd>Access the first attribute in this element. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>FirstAttribute</strong>()</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>LastAttribute</strong>()</dt>
-<dd>Access the last attribute in this element. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em>  <strong>LastAttribute</strong>()</dt>
-<dd></dd>
-<dt><em>const char *</em>  <strong>GetText</strong>()</dt>
-<dd>Convenience function for easy access to the text inside an element. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>Clone</strong>()</dt>
-<dd>Creates a new Element and returns it - the returned element is a copy. </dd>
-<dt><em>void</em>  <strong>Print</strong>(<em>FILE *</em> cfile, <em>int</em> depth)</dt>
-<dd>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </dd>
-<dt><em>const char *</em>  <strong>Parse</strong>(<em>const char *</em> p, <em>TiXmlParsingData *</em> data, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>ToElement</strong>()</dt>
-<dd>Cast to a more defined type. Will return null not of the requested type. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>ToElement</strong>()</dt>
-<dd>Cast to a more defined type. Will return null not of the requested type. </dd>
-<dt><em>bool</em>  <strong>Accept</strong>(<a class="reference internal" href="#class_ti_xml_visitor">TiXmlVisitor</a> <em> *</em> visitor)</dt>
-<dd>Walk the XML tree visiting this node and all of its children. </dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>Attribute</strong>(const char * name)</dt>
+<dd><p class="first">
+<p>Given an attribute name, <a class="reference internal" href="#project26class_ti_xml_element_1e419a442a9701a62b0c3d8fd1cbdd12d"><em>Attribute()</em></a> returns the value for the attribute of that name, or null if none exists. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>Attribute</strong>(const char * name, int * i)</dt>
+<dd><p class="first">
+<p>Given an attribute name, <a class="reference internal" href="#project26class_ti_xml_element_1e419a442a9701a62b0c3d8fd1cbdd12d"><em>Attribute()</em></a> returns the value for the attribute of that name, or null if none exists. </p>
+        </p>
+<p class="last">
+<p>If the attribute exists and can be converted to an integer, the integer value will be put in the return &#8216;i&#8217;, if &#8216;i&#8217; is non-null. </p>
+        </p>
+</dd>
+<dt>const char *  <strong>Attribute</strong>(const char * name, double * d)</dt>
+<dd><p class="first">
+<p>Given an attribute name, <a class="reference internal" href="#project26class_ti_xml_element_1e419a442a9701a62b0c3d8fd1cbdd12d"><em>Attribute()</em></a> returns the value for the attribute of that name, or null if none exists. </p>
+        </p>
+<p class="last">
+<p>If the attribute exists and can be converted to an double, the double value will be put in the return &#8216;d&#8217;, if &#8216;d&#8217; is non-null. </p>
+        </p>
+</dd>
+<dt>int  <strong>QueryIntAttribute</strong>(const char * name, int * _value)</dt>
+<dd><p class="first">
+<p>QueryIntAttribute examines the attribute - it is an alternative to the <a class="reference internal" href="#project26class_ti_xml_element_1e419a442a9701a62b0c3d8fd1cbdd12d"><em>Attribute()</em></a> method with richer error checking. </p>
+        </p>
+<p class="last">
+<p>If the attribute is an integer, it is stored in &#8216;value&#8217; and the call returns TIXML_SUCCESS. If it is not an integer, it returns TIXML_WRONG_TYPE. If the attribute does not exist, then TIXML_NO_ATTRIBUTE is returned. </p>
+        </p>
+</dd>
+<dt>int  <strong>QueryDoubleAttribute</strong>(const char * name, double * _value)</dt>
+<dd><p class="first">
+<p>QueryDoubleAttribute examines the attribute - see <a class="reference internal" href="#project26class_ti_xml_element_1ea0bfe471380f281c5945770ddbf52b9"><em>QueryIntAttribute()</em></a>. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>int  <strong>QueryFloatAttribute</strong>(const char * name, float * _value)</dt>
+<dd><p class="first">
+<p>QueryFloatAttribute examines the attribute - see <a class="reference internal" href="#project26class_ti_xml_element_1ea0bfe471380f281c5945770ddbf52b9"><em>QueryIntAttribute()</em></a>. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>int  <strong>QueryValueAttribute</strong>(const std::string &amp; name, T * outValue)</dt>
+<dd><p class="first">
+<p>Template form of the attribute query which will try to read the attribute into the specified type. </p>
+        </p>
+<p class="last">
+<p>Very easy, very powerful, but be careful to make sure to call this with the correct type.</p>
+<p>
+</p>
+        </p>
+</dd>
+<dt>void  <strong>SetAttribute</strong>(const char * name, const char * _value)</dt>
+<dd><p class="first">
+<p>Sets an attribute of name to a given value. </p>
+        </p>
+<p class="last">
+<p>The attribute will be created if it does not exist, or changed if it does. </p>
+        </p>
+</dd>
+<dt>const std::string *  <strong>Attribute</strong>(const std::string &amp; name)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const std::string *  <strong>Attribute</strong>(const std::string &amp; name, int * i)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const std::string *  <strong>Attribute</strong>(const std::string &amp; name, double * d)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>int  <strong>QueryIntAttribute</strong>(const std::string &amp; name, int * _value)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>int  <strong>QueryDoubleAttribute</strong>(const std::string &amp; name, double * _value)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetAttribute</strong>(const std::string &amp; name, const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+<p>STL std::string form. </p>
+        </p>
+</dd>
+<dt>void  <strong>SetAttribute</strong>(const std::string &amp; name, int _value)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetAttribute</strong>(const char * name, int value)</dt>
+<dd><p class="first">
+<p>Sets an attribute of name to a given value. </p>
+        </p>
+<p class="last">
+<p>The attribute will be created if it does not exist, or changed if it does. </p>
+        </p>
+</dd>
+<dt>void  <strong>SetDoubleAttribute</strong>(const char * name, double value)</dt>
+<dd><p class="first">
+<p>Sets an attribute of name to a given value. </p>
+        </p>
+<p class="last">
+<p>The attribute will be created if it does not exist, or changed if it does. </p>
+        </p>
+</dd>
+<dt>void  <strong>RemoveAttribute</strong>(const char * name)</dt>
+<dd><p class="first">
+<p>Deletes an attribute with the given name. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>RemoveAttribute</strong>(const std::string &amp; name)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>FirstAttribute</strong>()</dt>
+<dd><p class="first">
+<p>Access the first attribute in this element. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>FirstAttribute</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>LastAttribute</strong>()</dt>
+<dd><p class="first">
+<p>Access the last attribute in this element. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>LastAttribute</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>GetText</strong>()</dt>
+<dd><p class="first">
+<p>Convenience function for easy access to the text inside an element. </p>
+        </p>
+<p class="last">
+<p>Although easy and concise, <a class="reference internal" href="#project26class_ti_xml_element_1f3282294986cdb216646ea1f67af2c87"><em>GetText()</em></a> is limited compared to getting the <a class="reference internal" href="#project26class_ti_xml_text"><em>TiXmlText</em></a> child and accessing it directly.</p>
+<p>If the first child of &#8216;this&#8217; is a <a class="reference internal" href="#project26class_ti_xml_text"><em>TiXmlText</em></a>, the <a class="reference internal" href="#project26class_ti_xml_element_1f3282294986cdb216646ea1f67af2c87"><em>GetText()</em></a> returns the character string of the Text node, else null is returned.</p>
+<p>This is a convenient method for getting the text of simple contained text: </p>
+<p>&#8216;str&#8217; will be a pointer to &#8220;This is text&#8221;.</p>
+<p>Note that this function can be misleading. If the element foo was created from this XML: </p>
+<p>then the value of str would be null. The first child node isn&#8217;t a text node, it is another element. From this XML:  <a class="reference internal" href="#project26class_ti_xml_element_1f3282294986cdb216646ea1f67af2c87"><em>GetText()</em></a> will return &#8220;This is &#8220;.</p>
+<p>WARNING: <a class="reference internal" href="#project26class_ti_xml_element_1f3282294986cdb216646ea1f67af2c87"><em>GetText()</em></a> accesses a child node - don&#8217;t become confused with the similarly named <a class="reference internal" href="#project26class_ti_xml_handle_19fc739c8a18d160006f82572fc143d13"><em>TiXmlHandle::Text()</em></a> and <a class="reference internal" href="#project26class_ti_xml_node_13ddfbcac78fbea041fad57e5c6d60a03"><em>TiXmlNode::ToText()</em></a> which are safe type casts on the referenced node. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Clone</strong>()</dt>
+<dd><p class="first">
+<p>Creates a new Element and returns it - the returned element is a copy. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>Print</strong>(FILE * cfile, int depth)</dt>
+<dd><p class="first">
+<p>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </p>
+        </p>
+<p class="last">
+<p>) Either or both cfile and str can be null.</p>
+<p>This is a formatted print, and will insert tabs and newlines.</p>
+<p>(For an unformatted stream, use the &lt;&lt; operator.) </p>
+        </p>
+</dd>
+<dt>const char *  <strong>Parse</strong>(const char * p, TiXmlParsingData * data, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>ToElement</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>ToElement</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Accept</strong>(<a class="reference internal" href="#project26class_ti_xml_visitor"><em>TiXmlVisitor</em></a>  * visitor)</dt>
+<dd><p class="first">
+<p>Walk the XML tree visiting this node and all of its children. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Protected Functions</em><blockquote>
 <dl class="docutils">
-<dt><em>void</em>  <strong>CopyTo</strong>(<a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em> target)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>ClearThis</strong>()</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>StreamIn</strong>(<em>std::istream *</em> in, <em>TIXML_STRING *</em> tag)</dt>
-<dd></dd>
-<dt><em>const char *</em>  <strong>ReadValue</strong>(<em>const char *</em> in, <em>TiXmlParsingData *</em> prevData, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
+<dt>void  <strong>CopyTo</strong>(<a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  * target)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>ClearThis</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>StreamIn</strong>(std::istream * in, TIXML_STRING * tag)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>ReadValue</strong>(const char * in, TiXmlParsingData * prevData, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Private Members</em><blockquote>
 <dl class="docutils">
-<dt><em>TiXmlAttributeSet</em>  <strong>attributeSet</strong></dt>
-<dd></dd>
+<dt>TiXmlAttributeSet  <strong>attributeSet</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="class_ti_xml_handle"><em>class</em> <strong>TiXmlHandle</strong></p>
+<p id="project26class_ti_xml_handle"><em>class</em> <strong>TiXmlHandle</strong></p>
 <blockquote>
+<p>
+<p>A <a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a> is a class that wraps a node pointer with null checks; this is an incredibly useful thing. </p>
+    </p>
+<p>
+<p>Note that <a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a> is not part of the TinyXml DOM structure. It is a separate utility class.</p>
+<p>Take an example: </p>
+<p>Assuming you want the value of &#8220;attributeB&#8221; in the 2nd &#8220;Child&#8221; element, it&#8217;s very easy to write a *lot* of code that looks like:</p>
+<p></p>
+<p>And that doesn&#8217;t even cover &#8220;else&#8221; cases. <a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a> addresses the verbosity of such code. A <a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a> checks for null pointers so it is perfectly safe and correct to use:</p>
+<p></p>
+<p>Which is MUCH more concise and useful.</p>
+<p>It is also safe to copy handles - internally they are nothing more than node pointers. </p>
+<p>What they should not be used for is iteration:</p>
+<p></p>
+<p>It seems reasonable, but it is in fact two embedded while loops. The Child method is a linear walk to find the element, so this code would iterate much more than it needs to. Instead, prefer:</p>
+<p> </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt> <strong>TiXmlHandle</strong>(<a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em> _node)</dt>
-<dd>Create a handle from any node (at any depth of the tree.) This can be a null pointer. </dd>
-<dt> <strong>TiXmlHandle</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_handle">TiXmlHandle</a> <em> &amp;</em> ref)</dt>
-<dd>Copy constructor. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_handle">TiXmlHandle</a>  <strong>operator=</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_handle">TiXmlHandle</a> <em> &amp;</em> ref)</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_handle">TiXmlHandle</a>  <strong>FirstChild</strong>()</dt>
-<dd>Return a handle to the first child node. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_handle">TiXmlHandle</a>  <strong>FirstChild</strong>(<em>const char *</em> value)</dt>
-<dd>Return a handle to the first child node with the given name. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_handle">TiXmlHandle</a>  <strong>FirstChildElement</strong>()</dt>
-<dd>Return a handle to the first child element. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_handle">TiXmlHandle</a>  <strong>FirstChildElement</strong>(<em>const char *</em> value)</dt>
-<dd>Return a handle to the first child element with the given name. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_handle">TiXmlHandle</a>  <strong>Child</strong>(<em>const char *</em> value, <em>int</em> index)</dt>
-<dd>Return a handle to the &#8220;index&#8221; child with the given name. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_handle">TiXmlHandle</a>  <strong>Child</strong>(<em>int</em> index)</dt>
-<dd>Return a handle to the &#8220;index&#8221; child. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_handle">TiXmlHandle</a>  <strong>ChildElement</strong>(<em>const char *</em> value, <em>int</em> index)</dt>
-<dd>Return a handle to the &#8220;index&#8221; child element with the given name. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_handle">TiXmlHandle</a>  <strong>ChildElement</strong>(<em>int</em> index)</dt>
-<dd>Return a handle to the &#8220;index&#8221; child element. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_handle">TiXmlHandle</a>  <strong>FirstChild</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_handle">TiXmlHandle</a>  <strong>FirstChildElement</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_handle">TiXmlHandle</a>  <strong>Child</strong>(<em>const std::string &amp;</em> _value, <em>int</em> index)</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_handle">TiXmlHandle</a>  <strong>ChildElement</strong>(<em>const std::string &amp;</em> _value, <em>int</em> index)</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>ToNode</strong>()</dt>
-<dd>Return the handle as a . </dd>
-<dt><a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>ToElement</strong>()</dt>
-<dd>Return the handle as a . </dd>
-<dt><a class="reference internal" href="#class_ti_xml_text">TiXmlText</a> <em> *</em>  <strong>ToText</strong>()</dt>
-<dd>Return the handle as a . </dd>
-<dt><a class="reference internal" href="#class_ti_xml_unknown">TiXmlUnknown</a> <em> *</em>  <strong>ToUnknown</strong>()</dt>
-<dd>Return the handle as a . </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>Node</strong>()</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>Element</strong>()</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_text">TiXmlText</a> <em> *</em>  <strong>Text</strong>()</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_unknown">TiXmlUnknown</a> <em> *</em>  <strong>Unknown</strong>()</dt>
-<dd></dd>
+<dt> <strong>TiXmlHandle</strong>(<a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  * _node)</dt>
+<dd><p class="first">
+<p>Create a handle from any node (at any depth of the tree.) This can be a null pointer. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlHandle</strong>(const  <a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a>  &amp; ref)</dt>
+<dd><p class="first">
+<p>Copy constructor. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>operator=</strong>(const  <a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a>  &amp; ref)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>FirstChild</strong>()</dt>
+<dd><p class="first">
+<p>Return a handle to the first child node. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>FirstChild</strong>(const char * value)</dt>
+<dd><p class="first">
+<p>Return a handle to the first child node with the given name. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>FirstChildElement</strong>()</dt>
+<dd><p class="first">
+<p>Return a handle to the first child element. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>FirstChildElement</strong>(const char * value)</dt>
+<dd><p class="first">
+<p>Return a handle to the first child element with the given name. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>Child</strong>(const char * value, int index)</dt>
+<dd><p class="first">
+<p>Return a handle to the &#8220;index&#8221; child with the given name. </p>
+        </p>
+<p class="last">
+<p>The first child is 0, the second 1, etc. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>Child</strong>(int index)</dt>
+<dd><p class="first">
+<p>Return a handle to the &#8220;index&#8221; child. </p>
+        </p>
+<p class="last">
+<p>The first child is 0, the second 1, etc. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>ChildElement</strong>(const char * value, int index)</dt>
+<dd><p class="first">
+<p>Return a handle to the &#8220;index&#8221; child element with the given name. </p>
+        </p>
+<p class="last">
+<p>The first child element is 0, the second 1, etc. Note that only TiXmlElements are indexed: other types are not counted. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>ChildElement</strong>(int index)</dt>
+<dd><p class="first">
+<p>Return a handle to the &#8220;index&#8221; child element. </p>
+        </p>
+<p class="last">
+<p>The first child element is 0, the second 1, etc. Note that only TiXmlElements are indexed: other types are not counted. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>FirstChild</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>FirstChildElement</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>Child</strong>(const std::string &amp; _value, int index)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>ChildElement</strong>(const std::string &amp; _value, int index)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>ToNode</strong>()</dt>
+<dd><p class="first">
+<p>Return the handle as a <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>. </p>
+        </p>
+<p class="last">
+<p>This may return null. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>ToElement</strong>()</dt>
+<dd><p class="first">
+<p>Return the handle as a <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>. </p>
+        </p>
+<p class="last">
+<p>This may return null. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_text"><em>TiXmlText</em></a>  *  <strong>ToText</strong>()</dt>
+<dd><p class="first">
+<p>Return the handle as a <a class="reference internal" href="#project26class_ti_xml_text"><em>TiXmlText</em></a>. </p>
+        </p>
+<p class="last">
+<p>This may return null. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_unknown"><em>TiXmlUnknown</em></a>  *  <strong>ToUnknown</strong>()</dt>
+<dd><p class="first">
+<p>Return the handle as a <a class="reference internal" href="#project26class_ti_xml_unknown"><em>TiXmlUnknown</em></a>. </p>
+        </p>
+<p class="last">
+<p>This may return null. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Node</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+<p></p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>Element</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+<p></p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_text"><em>TiXmlText</em></a>  *  <strong>Text</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+<p></p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_unknown"><em>TiXmlUnknown</em></a>  *  <strong>Unknown</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+<p></p>
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Private Members</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>node</strong></dt>
-<dd></dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>node</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="class_ti_xml_node"><em>class</em> <strong>TiXmlNode</strong></p>
+<p id="project26class_ti_xml_node"><em>class</em> <strong>TiXmlNode</strong></p>
 <blockquote>
+<p>
+<p>The parent class for everything in the Document Object Model. </p>
+    </p>
+<p>
+<p>(Except for attributes). Nodes have siblings, a parent, and children. A node can be in a document, or stand on its own. The type of a <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a> can be queried, and it can be cast to its more defined type. </p>
+    </p>
 <em>Public Type</em><blockquote>
 <dl class="docutils">
 <dt> <strong>NodeType</strong></dt>
-<dd>The types of XML nodes supported by TinyXml. </dd>
+<dd><p class="first">
+<p>The types of XML nodes supported by TinyXml. </p>
+        </p>
+<p class="last">
+<p>(All the unsupported types are picked up by UNKNOWN.) </p>
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>~TiXmlNode</strong>()</dt>
-<dd></dd>
-<dt><em>const char *</em>  <strong>Value</strong>()</dt>
-<dd>The meaning of &#8216;value&#8217; changes for the specific type of . </dd>
-<dt><em>const std::string &amp;</em>  <strong>ValueStr</strong>()</dt>
-<dd>Return  as a std::string. </dd>
-<dt><em>void</em>  <strong>SetValue</strong>(<em>const char *</em> _value)</dt>
-<dd>Changes the value of the node. </dd>
-<dt><em>void</em>  <strong>SetValue</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd>STL std::string form. </dd>
-<dt><em>void</em>  <strong>Clear</strong>()</dt>
-<dd>Delete all the children of this node. Does not affect &#8216;this&#8217;. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>Parent</strong>()</dt>
-<dd>One step up the DOM. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>Parent</strong>()</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>FirstChild</strong>()</dt>
-<dd>The first child of this node. Will be null if there are no children. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>FirstChild</strong>()</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>FirstChild</strong>(<em>const char *</em> value)</dt>
-<dd>The first child of this node with the matching &#8216;value&#8217;. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>FirstChild</strong>(<em>const char *</em> _value)</dt>
-<dd>The first child of this node with the matching &#8216;value&#8217;. Will be null if none found. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>LastChild</strong>()</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>LastChild</strong>()</dt>
-<dd>The last child of this node. Will be null if there are no children. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>LastChild</strong>(<em>const char *</em> value)</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>LastChild</strong>(<em>const char *</em> _value)</dt>
-<dd>The last child of this node matching &#8216;value&#8217;. Will be null if there are no children. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>FirstChild</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd>STL std::string form. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>FirstChild</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd>STL std::string form. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>LastChild</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd>STL std::string form. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>LastChild</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd>STL std::string form. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>IterateChildren</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em> previous)</dt>
-<dd>An alternate way to walk the children of a node. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>IterateChildren</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em> previous)</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>IterateChildren</strong>(<em>const char *</em> value, <em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em> previous)</dt>
-<dd>This flavor of IterateChildren searches for children with a particular &#8216;value&#8217;. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>IterateChildren</strong>(<em>const char *</em> _value, <em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em> previous)</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>IterateChildren</strong>(<em>const std::string &amp;</em> _value, <em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em> previous)</dt>
-<dd>STL std::string form. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>IterateChildren</strong>(<em>const std::string &amp;</em> _value, <em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em> previous)</dt>
-<dd>STL std::string form. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>InsertEndChild</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> &amp;</em> addThis)</dt>
-<dd>Add a new node related to this. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>LinkEndChild</strong>(<a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em> addThis)</dt>
-<dd>Add a new node related to this. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>InsertBeforeChild</strong>(<a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em> beforeThis, <em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> &amp;</em> addThis)</dt>
-<dd>Add a new node related to this. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>InsertAfterChild</strong>(<a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em> afterThis, <em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> &amp;</em> addThis)</dt>
-<dd>Add a new node related to this. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>ReplaceChild</strong>(<a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em> replaceThis, <em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> &amp;</em> withThis)</dt>
-<dd>Replace a child of this node. </dd>
-<dt><em>bool</em>  <strong>RemoveChild</strong>(<a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em> removeThis)</dt>
-<dd>Delete a child of this node. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>PreviousSibling</strong>()</dt>
-<dd>Navigate to a sibling node. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>PreviousSibling</strong>()</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>PreviousSibling</strong>(<em>const char *</em> )</dt>
-<dd>Navigate to a sibling node. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>PreviousSibling</strong>(<em>const char *</em> _prev)</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>PreviousSibling</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd>STL std::string form. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>PreviousSibling</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd>STL std::string form. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>NextSibling</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd>STL std::string form. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>NextSibling</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd>STL std::string form. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>NextSibling</strong>()</dt>
-<dd>Navigate to a sibling node. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>NextSibling</strong>()</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>NextSibling</strong>(<em>const char *</em> )</dt>
-<dd>Navigate to a sibling node with the given &#8216;value&#8217;. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>NextSibling</strong>(<em>const char *</em> _next)</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>NextSiblingElement</strong>()</dt>
-<dd>Convenience function to get through elements. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>NextSiblingElement</strong>()</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>NextSiblingElement</strong>(<em>const char *</em> )</dt>
-<dd>Convenience function to get through elements. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>NextSiblingElement</strong>(<em>const char *</em> _next)</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>NextSiblingElement</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd>STL std::string form. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>NextSiblingElement</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd>STL std::string form. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>FirstChildElement</strong>()</dt>
-<dd>Convenience function to get through elements. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>FirstChildElement</strong>()</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>FirstChildElement</strong>(<em>const char *</em> _value)</dt>
-<dd>Convenience function to get through elements. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>FirstChildElement</strong>(<em>const char *</em> _value)</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>FirstChildElement</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd>STL std::string form. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>FirstChildElement</strong>(<em>const std::string &amp;</em> _value)</dt>
-<dd>STL std::string form. </dd>
-<dt><em>int</em>  <strong>Type</strong>()</dt>
-<dd>Query the type (as an enumerated value, above) of this node. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> *</em>  <strong>GetDocument</strong>()</dt>
-<dd>Return a pointer to the Document this node lives in. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> *</em>  <strong>GetDocument</strong>()</dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>NoChildren</strong>()</dt>
-<dd>Returns true if this node has no children. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> *</em>  <strong>ToDocument</strong>()</dt>
-<dd>Cast to a more defined type. Will return null if not of the requested type. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>ToElement</strong>()</dt>
-<dd>Cast to a more defined type. Will return null if not of the requested type. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_comment">TiXmlComment</a> <em> *</em>  <strong>ToComment</strong>()</dt>
-<dd>Cast to a more defined type. Will return null if not of the requested type. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_unknown">TiXmlUnknown</a> <em> *</em>  <strong>ToUnknown</strong>()</dt>
-<dd>Cast to a more defined type. Will return null if not of the requested type. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_text">TiXmlText</a> <em> *</em>  <strong>ToText</strong>()</dt>
-<dd>Cast to a more defined type. Will return null if not of the requested type. </dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_declaration">TiXmlDeclaration</a> <em> *</em>  <strong>ToDeclaration</strong>()</dt>
-<dd>Cast to a more defined type. Will return null if not of the requested type. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> *</em>  <strong>ToDocument</strong>()</dt>
-<dd>Cast to a more defined type. Will return null if not of the requested type. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> *</em>  <strong>ToElement</strong>()</dt>
-<dd>Cast to a more defined type. Will return null if not of the requested type. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_comment">TiXmlComment</a> <em> *</em>  <strong>ToComment</strong>()</dt>
-<dd>Cast to a more defined type. Will return null if not of the requested type. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_unknown">TiXmlUnknown</a> <em> *</em>  <strong>ToUnknown</strong>()</dt>
-<dd>Cast to a more defined type. Will return null if not of the requested type. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_text">TiXmlText</a> <em> *</em>  <strong>ToText</strong>()</dt>
-<dd>Cast to a more defined type. Will return null if not of the requested type. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_declaration">TiXmlDeclaration</a> <em> *</em>  <strong>ToDeclaration</strong>()</dt>
-<dd>Cast to a more defined type. Will return null if not of the requested type. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>Clone</strong>()</dt>
-<dd>Create an exact duplicate of this node and return it. </dd>
-<dt><em>bool</em>  <strong>Accept</strong>(<a class="reference internal" href="#class_ti_xml_visitor">TiXmlVisitor</a> <em> *</em> visitor)</dt>
-<dd>Accept a hierchical visit the nodes in the TinyXML DOM. </dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>Value</strong>()</dt>
+<dd><p class="first">
+<p>The meaning of &#8216;value&#8217; changes for the specific type of <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>. </p>
+        </p>
+<p class="last">
+<p></p>
+<p>The subclasses will wrap this function. </p>
+        </p>
+</dd>
+<dt>const std::string &amp;  <strong>ValueStr</strong>()</dt>
+<dd><p class="first">
+<p>Return <a class="reference internal" href="#project26class_ti_xml_node_177943eb90d12c2892b1337a9f5918b41"><em>Value()</em></a> as a std::string. </p>
+        </p>
+<p class="last">
+<p>If you only use STL, this is more efficient than calling <a class="reference internal" href="#project26class_ti_xml_node_177943eb90d12c2892b1337a9f5918b41"><em>Value()</em></a>. Only available in STL mode. </p>
+        </p>
+</dd>
+<dt>void  <strong>SetValue</strong>(const char * _value)</dt>
+<dd><p class="first">
+<p>Changes the value of the node. </p>
+        </p>
+<p class="last">
+<p>Defined as:  </p>
+        </p>
+</dd>
+<dt>void  <strong>SetValue</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>Clear</strong>()</dt>
+<dd><p class="first">
+<p>Delete all the children of this node. Does not affect &#8216;this&#8217;. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Parent</strong>()</dt>
+<dd><p class="first">
+<p>One step up the DOM. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Parent</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>FirstChild</strong>()</dt>
+<dd><p class="first">
+<p>The first child of this node. Will be null if there are no children. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>FirstChild</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>FirstChild</strong>(const char * value)</dt>
+<dd><p class="first">
+<p>The first child of this node with the matching &#8216;value&#8217;. </p>
+        </p>
+<p class="last">
+<p>Will be null if none found. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>FirstChild</strong>(const char * _value)</dt>
+<dd><p class="first">
+<p>The first child of this node with the matching &#8216;value&#8217;. Will be null if none found. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>LastChild</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>LastChild</strong>()</dt>
+<dd><p class="first">
+<p>The last child of this node. Will be null if there are no children. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>LastChild</strong>(const char * value)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>LastChild</strong>(const char * _value)</dt>
+<dd><p class="first">
+<p>The last child of this node matching &#8216;value&#8217;. Will be null if there are no children. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>FirstChild</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>FirstChild</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>LastChild</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>LastChild</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>IterateChildren</strong>(const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  * previous)</dt>
+<dd><p class="first">
+<p>An alternate way to walk the children of a node. </p>
+        </p>
+<p class="last">
+<p>One way to iterate over nodes is: </p>
+<p>IterateChildren does the same thing with the syntax: </p>
+<p>IterateChildren takes the previous child as input and finds the next one. If the previous child is null, it returns the first. IterateChildren will return null when done. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>IterateChildren</strong>(const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  * previous)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>IterateChildren</strong>(const char * value, const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  * previous)</dt>
+<dd><p class="first">
+<p>This flavor of IterateChildren searches for children with a particular &#8216;value&#8217;. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>IterateChildren</strong>(const char * _value, const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  * previous)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>IterateChildren</strong>(const std::string &amp; _value, const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  * previous)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>IterateChildren</strong>(const std::string &amp; _value, const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  * previous)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>InsertEndChild</strong>(const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  &amp; addThis)</dt>
+<dd><p class="first">
+<p>Add a new node related to this. </p>
+        </p>
+<p class="last">
+<p>Adds a child past the LastChild. Returns a pointer to the new object or NULL if an error occured. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>LinkEndChild</strong>(<a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  * addThis)</dt>
+<dd><p class="first">
+<p>Add a new node related to this. </p>
+        </p>
+<p class="last">
+<p>Adds a child past the LastChild.</p>
+<p>NOTE: the node to be added is passed by pointer, and will be henceforth owned (and deleted) by tinyXml. This method is efficient and avoids an extra copy, but should be used with care as it uses a different memory model than the other insert functions.</p>
+<p>
+</p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>InsertBeforeChild</strong>(<a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  * beforeThis, const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  &amp; addThis)</dt>
+<dd><p class="first">
+<p>Add a new node related to this. </p>
+        </p>
+<p class="last">
+<p>Adds a child before the specified child. Returns a pointer to the new object or NULL if an error occured. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>InsertAfterChild</strong>(<a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  * afterThis, const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  &amp; addThis)</dt>
+<dd><p class="first">
+<p>Add a new node related to this. </p>
+        </p>
+<p class="last">
+<p>Adds a child after the specified child. Returns a pointer to the new object or NULL if an error occured. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>ReplaceChild</strong>(<a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  * replaceThis, const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  &amp; withThis)</dt>
+<dd><p class="first">
+<p>Replace a child of this node. </p>
+        </p>
+<p class="last">
+<p>Returns a pointer to the new object or NULL if an error occured. </p>
+        </p>
+</dd>
+<dt>bool  <strong>RemoveChild</strong>(<a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  * removeThis)</dt>
+<dd><p class="first">
+<p>Delete a child of this node. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>PreviousSibling</strong>()</dt>
+<dd><p class="first">
+<p>Navigate to a sibling node. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>PreviousSibling</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>PreviousSibling</strong>(const char * )</dt>
+<dd><p class="first">
+<p>Navigate to a sibling node. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>PreviousSibling</strong>(const char * _prev)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>PreviousSibling</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>PreviousSibling</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>NextSibling</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>NextSibling</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>NextSibling</strong>()</dt>
+<dd><p class="first">
+<p>Navigate to a sibling node. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>NextSibling</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>NextSibling</strong>(const char * )</dt>
+<dd><p class="first">
+<p>Navigate to a sibling node with the given &#8216;value&#8217;. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>NextSibling</strong>(const char * _next)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>NextSiblingElement</strong>()</dt>
+<dd><p class="first">
+<p>Convenience function to get through elements. </p>
+        </p>
+<p class="last">
+<p>Calls NextSibling and ToElement. Will skip all non-Element nodes. Returns 0 if there is not another element. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>NextSiblingElement</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>NextSiblingElement</strong>(const char * )</dt>
+<dd><p class="first">
+<p>Convenience function to get through elements. </p>
+        </p>
+<p class="last">
+<p>Calls NextSibling and ToElement. Will skip all non-Element nodes. Returns 0 if there is not another element. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>NextSiblingElement</strong>(const char * _next)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>NextSiblingElement</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>NextSiblingElement</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>FirstChildElement</strong>()</dt>
+<dd><p class="first">
+<p>Convenience function to get through elements. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>FirstChildElement</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>FirstChildElement</strong>(const char * _value)</dt>
+<dd><p class="first">
+<p>Convenience function to get through elements. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>FirstChildElement</strong>(const char * _value)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>FirstChildElement</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>FirstChildElement</strong>(const std::string &amp; _value)</dt>
+<dd><p class="first">
+<p>STL std::string form. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>int  <strong>Type</strong>()</dt>
+<dd><p class="first">
+<p>Query the type (as an enumerated value, above) of this node. </p>
+        </p>
+<p class="last">
+<p>The possible types are: DOCUMENT, ELEMENT, COMMENT, UNKNOWN, TEXT, and DECLARATION. </p>
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>  *  <strong>GetDocument</strong>()</dt>
+<dd><p class="first">
+<p>Return a pointer to the Document this node lives in. </p>
+        </p>
+<p class="last">
+<p>Returns null if not in a document. </p>
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>  *  <strong>GetDocument</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>NoChildren</strong>()</dt>
+<dd><p class="first">
+<p>Returns true if this node has no children. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>  *  <strong>ToDocument</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null if not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>ToElement</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null if not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_comment"><em>TiXmlComment</em></a>  *  <strong>ToComment</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null if not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_unknown"><em>TiXmlUnknown</em></a>  *  <strong>ToUnknown</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null if not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_text"><em>TiXmlText</em></a>  *  <strong>ToText</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null if not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  *  <strong>ToDeclaration</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null if not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>  *  <strong>ToDocument</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null if not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>ToElement</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null if not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_comment"><em>TiXmlComment</em></a>  *  <strong>ToComment</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null if not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_unknown"><em>TiXmlUnknown</em></a>  *  <strong>ToUnknown</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null if not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_text"><em>TiXmlText</em></a>  *  <strong>ToText</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null if not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  *  <strong>ToDeclaration</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null if not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Clone</strong>()</dt>
+<dd><p class="first">
+<p>Create an exact duplicate of this node and return it. </p>
+        </p>
+<p class="last">
+<p>The memory must be deleted by the caller. </p>
+        </p>
+</dd>
+<dt>bool  <strong>Accept</strong>(<a class="reference internal" href="#project26class_ti_xml_visitor"><em>TiXmlVisitor</em></a>  * visitor)</dt>
+<dd><p class="first">
+<p>Accept a hierchical visit the nodes in the TinyXML DOM. </p>
+        </p>
+<p class="last">
+<p>Every node in the XML tree will be conditionally visited and the host will be called back via the <a class="reference internal" href="#project26class_ti_xml_visitor"><em>TiXmlVisitor</em></a> interface.</p>
+<p>This is essentially a SAX interface for TinyXML. (Note however it doesn&#8217;t re-parse the XML for the callbacks, so the performance of TinyXML is unchanged by using this interface versus any other.)</p>
+<p>The interface has been based on ideas from:</p>
+<p>
+</p>
+<p>Which are both good references for &#8220;visiting&#8221;.</p>
+<p>An example of using <a class="reference internal" href="#project26class_ti_xml_node_1cc0f88b7462c6cb73809d410a4f5bb86"><em>Accept()</em></a>:  </p>
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Protected Functions</em><blockquote>
 <dl class="docutils">
-<dt> <strong>TiXmlNode</strong>(<a class="reference internal" href="#class_ti_xml_node_1836eded4920ab9e9ef28496f48cd95a2">NodeType</a> _type)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>CopyTo</strong>(<a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em> target)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>StreamIn</strong>(<em>std::istream *</em> in, <em>TIXML_STRING *</em> tag)</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>Identify</strong>(<em>const char *</em> start, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
+<dt> <strong>TiXmlNode</strong>(<a class="reference internal" href="#project26class_ti_xml_node_1836eded4920ab9e9ef28496f48cd95a2"><em>NodeType</em></a> _type)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>CopyTo</strong>(<a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  * target)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>StreamIn</strong>(std::istream * in, TIXML_STRING * tag)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Identify</strong>(const char * start, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Protected Attributes</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>parent</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_node_1836eded4920ab9e9ef28496f48cd95a2">NodeType</a>  <strong>type</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>firstChild</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>lastChild</strong></dt>
-<dd></dd>
-<dt><em>TIXML_STRING</em>  <strong>value</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>prev</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>next</strong></dt>
-<dd></dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>parent</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node_1836eded4920ab9e9ef28496f48cd95a2"><em>NodeType</em></a>  <strong>type</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>firstChild</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>lastChild</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>TIXML_STRING  <strong>value</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>prev</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>next</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Private Functions</em><blockquote>
 <dl class="docutils">
-<dt> <strong>TiXmlNode</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> &amp;</em> )</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>operator=</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> &amp;</em> base)</dt>
-<dd></dd>
-</dl>
-</blockquote>
-<em>Private Functions</em><blockquote>
-<dl class="docutils docutils">
-<dt> <strong>TiXmlNode</strong>(<em>const </em> <a class="reference internal reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> &amp;</em> )</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>operator=</strong>(<em>const </em> <a class="reference internal reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> &amp;</em> base)</dt>
-<dd></dd>
+<dt> <strong>TiXmlNode</strong>(const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  &amp; )</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>operator=</strong>(const  <a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  &amp; base)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Friends</em><blockquote>
 <dl class="docutils">
-<dt><em>friend class</em>  <strong>TiXmlDocument</strong></dt>
-<dd></dd>
-<dt><em>friend class</em>  <strong>TiXmlElement</strong></dt>
-<dd></dd>
-<dt><em>friend std::istream &amp;</em>  <strong>operator&gt;&gt;</strong></dt>
-<dd>An input stream operator, for every class. </dd>
-<dt><em>friend std::ostream &amp;</em>  <strong>operator&lt;&lt;</strong></dt>
-<dd>An output stream operator, for every class. </dd>
-<dt><em>friend std::string &amp;</em>  <strong>operator&lt;&lt;</strong></dt>
-<dd>Appends the XML node or attribute to a std::string. </dd>
+<dt>friend class  <strong>TiXmlDocument</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>friend class  <strong>TiXmlElement</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>friend std::istream &amp;  <strong>operator&gt;&gt;</strong></dt>
+<dd><p class="first">
+<p>An input stream operator, for every class. </p>
+        </p>
+<p class="last">
+<p>Tolerant of newlines and formatting, but doesn&#8217;t expect them. </p>
+        </p>
+</dd>
+<dt>friend std::ostream &amp;  <strong>operator&lt;&lt;</strong></dt>
+<dd><p class="first">
+<p>An output stream operator, for every class. </p>
+        </p>
+<p class="last">
+<p>Note that this outputs without any newlines or formatting, as opposed to <a class="reference internal" href="#project26class_ti_xml_base_10de56b3f2ef14c65091a3b916437b512"><em>Print()</em></a>, which includes tabs and new lines.</p>
+<p>The operator&lt;&lt; and operator&gt;&gt; are not completely symmetric. Writing a node to a stream is very well defined. You&#8217;ll get a nice stream of output, without any extra whitespace or newlines.</p>
+<p>But reading is not as well defined. (As it always is.) If you create a <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a> (for example) and read that from an input stream, the text needs to define an element or junk will result. This is true of all input streams, but it&#8217;s worth keeping in mind.</p>
+<p>A <a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a> will read nodes until it reads a root element, and all the children of that root element. </p>
+        </p>
+</dd>
+<dt>friend std::string &amp;  <strong>operator&lt;&lt;</strong></dt>
+<dd><p class="first">
+<p>Appends the XML node or attribute to a std::string. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="class_ti_xml_printer"><em>class</em> <strong>TiXmlPrinter</strong></p>
+<p id="project26class_ti_xml_printer"><em>class</em> <strong>TiXmlPrinter</strong></p>
 <blockquote>
+<p>
+<p>Print to memory functionality. </p>
+    </p>
+<p>
+<p>The <a class="reference internal" href="#project26class_ti_xml_printer"><em>TiXmlPrinter</em></a> is useful when you need to:</p>
+<p>
+</p>
+<p>When constructed, the <a class="reference internal" href="#project26class_ti_xml_printer"><em>TiXmlPrinter</em></a> is in its default &#8220;pretty printing&#8221; mode. Before calling Accept() you can call methods to control the printing of the XML document. After <a class="reference internal" href="#project26class_ti_xml_node_1cc0f88b7462c6cb73809d410a4f5bb86"><em>TiXmlNode::Accept()</em></a> is called, the printed document can be accessed via the <a class="reference internal" href="#project26class_ti_xml_printer_1859eede9597d3e0355b77757be48735e"><em>CStr()</em></a>, <a class="reference internal" href="#project26class_ti_xml_printer_13bd4daf44309b41f5813a833caa0d1c9"><em>Str()</em></a>, and <a class="reference internal" href="#project26class_ti_xml_printer_1d01375ae9199bd2f48252eaddce3039d"><em>Size()</em></a> methods.</p>
+<p><a class="reference internal" href="#project26class_ti_xml_printer"><em>TiXmlPrinter</em></a> uses the Visitor API.  </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlPrinter</strong>()</dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>VisitEnter</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> &amp;</em> )</dt>
-<dd>Visit a document. </dd>
-<dt><em>bool</em>  <strong>VisitExit</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> &amp;</em> )</dt>
-<dd>Visit a document. </dd>
-<dt><em>bool</em>  <strong>VisitEnter</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> &amp;</em> , <em>const </em> <a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em> )</dt>
-<dd>Visit an element. </dd>
-<dt><em>bool</em>  <strong>VisitExit</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> &amp;</em> )</dt>
-<dd>Visit an element. </dd>
-<dt><em>bool</em>  <strong>Visit</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_declaration">TiXmlDeclaration</a> <em> &amp;</em> )</dt>
-<dd>Visit a declaration. </dd>
-<dt><em>bool</em>  <strong>Visit</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_text">TiXmlText</a> <em> &amp;</em> )</dt>
-<dd>Visit a text node. </dd>
-<dt><em>bool</em>  <strong>Visit</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_comment">TiXmlComment</a> <em> &amp;</em> )</dt>
-<dd>Visit a comment node. </dd>
-<dt><em>bool</em>  <strong>Visit</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_unknown">TiXmlUnknown</a> <em> &amp;</em> )</dt>
-<dd>Visit an unknow node. </dd>
-<dt><em>void</em>  <strong>SetIndent</strong>(<em>const char *</em> _indent)</dt>
-<dd>Set the indent characters for printing. </dd>
-<dt><em>const char *</em>  <strong>Indent</strong>()</dt>
-<dd>Query the indention string. </dd>
-<dt><em>void</em>  <strong>SetLineBreak</strong>(<em>const char *</em> _lineBreak)</dt>
-<dd>Set the line breaking string. </dd>
-<dt><em>const char *</em>  <strong>LineBreak</strong>()</dt>
-<dd>Query the current line breaking string. </dd>
-<dt><em>void</em>  <strong>SetStreamPrinting</strong>()</dt>
-<dd>Switch over to &#8220;stream printing&#8221; which is the most dense formatting without linebreaks. </dd>
-<dt><em>const char *</em>  <strong>CStr</strong>()</dt>
-<dd>Return the result. </dd>
-<dt><em>size_t</em>  <strong>Size</strong>()</dt>
-<dd>Return the length of the result string. </dd>
-<dt><em>const std::string &amp;</em>  <strong>Str</strong>()</dt>
-<dd>Return the result. </dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>VisitEnter</strong>(const  <a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>  &amp; )</dt>
+<dd><p class="first">
+<p>Visit a document. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>VisitExit</strong>(const  <a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>  &amp; )</dt>
+<dd><p class="first">
+<p>Visit a document. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>VisitEnter</strong>(const  <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  &amp; , const  <a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  * )</dt>
+<dd><p class="first">
+<p>Visit an element. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>VisitExit</strong>(const  <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  &amp; )</dt>
+<dd><p class="first">
+<p>Visit an element. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#project26class_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  &amp; )</dt>
+<dd><p class="first">
+<p>Visit a declaration. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#project26class_ti_xml_text"><em>TiXmlText</em></a>  &amp; )</dt>
+<dd><p class="first">
+<p>Visit a text node. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#project26class_ti_xml_comment"><em>TiXmlComment</em></a>  &amp; )</dt>
+<dd><p class="first">
+<p>Visit a comment node. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#project26class_ti_xml_unknown"><em>TiXmlUnknown</em></a>  &amp; )</dt>
+<dd><p class="first">
+<p>Visit an unknow node. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetIndent</strong>(const char * _indent)</dt>
+<dd><p class="first">
+<p>Set the indent characters for printing. </p>
+        </p>
+<p class="last">
+<p>By default 4 spaces but tab () is also useful, or null/empty string for no indentation. </p>
+        </p>
+</dd>
+<dt>const char *  <strong>Indent</strong>()</dt>
+<dd><p class="first">
+<p>Query the indention string. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetLineBreak</strong>(const char * _lineBreak)</dt>
+<dd><p class="first">
+<p>Set the line breaking string. </p>
+        </p>
+<p class="last">
+<p>By default set to newline (
+). Some operating systems prefer other characters, or can be set to the null/empty string for no indenation. </p>
+        </p>
+</dd>
+<dt>const char *  <strong>LineBreak</strong>()</dt>
+<dd><p class="first">
+<p>Query the current line breaking string. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetStreamPrinting</strong>()</dt>
+<dd><p class="first">
+<p>Switch over to &#8220;stream printing&#8221; which is the most dense formatting without linebreaks. </p>
+        </p>
+<p class="last">
+<p>Common when the XML is needed for network transmission. </p>
+        </p>
+</dd>
+<dt>const char *  <strong>CStr</strong>()</dt>
+<dd><p class="first">
+<p>Return the result. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>size_t  <strong>Size</strong>()</dt>
+<dd><p class="first">
+<p>Return the length of the result string. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const std::string &amp;  <strong>Str</strong>()</dt>
+<dd><p class="first">
+<p>Return the result. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Private Functions</em><blockquote>
 <dl class="docutils">
-<dt><em>void</em>  <strong>DoIndent</strong>()</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>DoLineBreak</strong>()</dt>
-<dd></dd>
-</dl>
-</blockquote>
-<em>Private Functions</em><blockquote>
-<dl class="docutils docutils">
-<dt><em>void</em>  <strong>DoIndent</strong>()</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>DoLineBreak</strong>()</dt>
-<dd></dd>
+<dt>void  <strong>DoIndent</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>DoLineBreak</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Private Members</em><blockquote>
 <dl class="docutils">
-<dt><em>int</em>  <strong>depth</strong></dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>simpleTextPrint</strong></dt>
-<dd></dd>
-<dt><em>TIXML_STRING</em>  <strong>buffer</strong></dt>
-<dd></dd>
-<dt><em>TIXML_STRING</em>  <strong>indent</strong></dt>
-<dd></dd>
-<dt><em>TIXML_STRING</em>  <strong>lineBreak</strong></dt>
-<dd></dd>
+<dt>int  <strong>depth</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>simpleTextPrint</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>TIXML_STRING  <strong>buffer</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>TIXML_STRING  <strong>indent</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>TIXML_STRING  <strong>lineBreak</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="class_ti_xml_text"><em>class</em> <strong>TiXmlText</strong></p>
+<p id="project26class_ti_xml_text"><em>class</em> <strong>TiXmlText</strong></p>
 <blockquote>
+<p>
+<p>XML text. </p>
+    </p>
+<p>
+<p>A text node can have 2 ways to output the next. &#8220;normal&#8221; output and CDATA. It will default to the mode it was parsed from the XML file and you generally want to leave it alone, but you can change the output mode with <a class="reference internal" href="#project26class_ti_xml_text_1cb17ff7c5d09b2c839393445a3de5ea9"><em>SetCDATA()</em></a> and query it with <a class="reference internal" href="#project26class_ti_xml_text_1d1a6a6b83fa2271022dd97c072a2b586"><em>CDATA()</em></a>. </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt> <strong>TiXmlText</strong>(<em>const char *</em> initValue)</dt>
-<dd>Constructor for text element. </dd>
+<dt> <strong>TiXmlText</strong>(const char * initValue)</dt>
+<dd><p class="first">
+<p>Constructor for text element. </p>
+        </p>
+<p class="last">
+<p>By default, it is treated as normal, encoded text. If you want it be output as a CDATA text element, set the parameter _cdata to &#8216;true&#8217; </p>
+        </p>
+</dd>
 <dt> <strong>~TiXmlText</strong>()</dt>
-<dd></dd>
-<dt> <strong>TiXmlText</strong>(<em>const std::string &amp;</em> initValue)</dt>
-<dd>Constructor. </dd>
-<dt> <strong>TiXmlText</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_text">TiXmlText</a> <em> &amp;</em> copy)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>operator=</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_text">TiXmlText</a> <em> &amp;</em> base)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>Print</strong>(<em>FILE *</em> cfile, <em>int</em> depth)</dt>
-<dd>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </dd>
-<dt><em>bool</em>  <strong>CDATA</strong>()</dt>
-<dd>Queries whether this represents text using a CDATA section. </dd>
-<dt><em>void</em>  <strong>SetCDATA</strong>(<em>bool</em> _cdata)</dt>
-<dd>Turns on or off a CDATA representation of text. </dd>
-<dt><em>const char *</em>  <strong>Parse</strong>(<em>const char *</em> p, <em>TiXmlParsingData *</em> data, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_text">TiXmlText</a> <em> *</em>  <strong>ToText</strong>()</dt>
-<dd>Cast to a more defined type. Will return null not of the requested type. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_text">TiXmlText</a> <em> *</em>  <strong>ToText</strong>()</dt>
-<dd>Cast to a more defined type. Will return null not of the requested type. </dd>
-<dt><em>bool</em>  <strong>Accept</strong>(<a class="reference internal" href="#class_ti_xml_visitor">TiXmlVisitor</a> <em> *</em> content)</dt>
-<dd>Walk the XML tree visiting this node and all of its children. </dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlText</strong>(const std::string &amp; initValue)</dt>
+<dd><p class="first">
+<p>Constructor. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlText</strong>(const  <a class="reference internal" href="#project26class_ti_xml_text"><em>TiXmlText</em></a>  &amp; copy)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>operator=</strong>(const  <a class="reference internal" href="#project26class_ti_xml_text"><em>TiXmlText</em></a>  &amp; base)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>Print</strong>(FILE * cfile, int depth)</dt>
+<dd><p class="first">
+<p>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </p>
+        </p>
+<p class="last">
+<p>) Either or both cfile and str can be null.</p>
+<p>This is a formatted print, and will insert tabs and newlines.</p>
+<p>(For an unformatted stream, use the &lt;&lt; operator.) </p>
+        </p>
+</dd>
+<dt>bool  <strong>CDATA</strong>()</dt>
+<dd><p class="first">
+<p>Queries whether this represents text using a CDATA section. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>SetCDATA</strong>(bool _cdata)</dt>
+<dd><p class="first">
+<p>Turns on or off a CDATA representation of text. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const char *  <strong>Parse</strong>(const char * p, TiXmlParsingData * data, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_text"><em>TiXmlText</em></a>  *  <strong>ToText</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_text"><em>TiXmlText</em></a>  *  <strong>ToText</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Accept</strong>(<a class="reference internal" href="#project26class_ti_xml_visitor"><em>TiXmlVisitor</em></a>  * content)</dt>
+<dd><p class="first">
+<p>Walk the XML tree visiting this node and all of its children. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Protected Functions</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>Clone</strong>()</dt>
-<dd>[internal use] Creates a new Element and returns it. </dd>
-<dt><em>void</em>  <strong>CopyTo</strong>(<a class="reference internal" href="#class_ti_xml_text">TiXmlText</a> <em> *</em> target)</dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>Blank</strong>()</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>StreamIn</strong>(<em>std::istream *</em> in, <em>TIXML_STRING *</em> tag)</dt>
-<dd></dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Clone</strong>()</dt>
+<dd><p class="first">
+<p>[internal use] Creates a new Element and returns it. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>CopyTo</strong>(<a class="reference internal" href="#project26class_ti_xml_text"><em>TiXmlText</em></a>  * target)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Blank</strong>()</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>StreamIn</strong>(std::istream * in, TIXML_STRING * tag)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Private Members</em><blockquote>
 <dl class="docutils">
-<dt><em>bool</em>  <strong>cdata</strong></dt>
-<dd></dd>
+<dt>bool  <strong>cdata</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Friends</em><blockquote>
 <dl class="docutils">
-<dt><em>friend class</em>  <strong>TiXmlElement</strong></dt>
-<dd></dd>
+<dt>friend class  <strong>TiXmlElement</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="class_ti_xml_unknown"><em>class</em> <strong>TiXmlUnknown</strong></p>
+<p id="project26class_ti_xml_unknown"><em>class</em> <strong>TiXmlUnknown</strong></p>
 <blockquote>
+<p>
+<p>Any tag that tinyXml doesn&#8217;t recognize is saved as an unknown. </p>
+    </p>
+<p>
+<p>It is a tag of text, but should not be modified. It will be written back to the XML, unchanged, when the file is saved.</p>
+<p>DTD tags get thrown into TiXmlUnknowns. </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlUnknown</strong>()</dt>
-<dd></dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 <dt> <strong>~TiXmlUnknown</strong>()</dt>
-<dd></dd>
-<dt> <strong>TiXmlUnknown</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_unknown">TiXmlUnknown</a> <em> &amp;</em> copy)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>operator=</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_unknown">TiXmlUnknown</a> <em> &amp;</em> copy)</dt>
-<dd></dd>
-<dt><a class="reference internal" href="#class_ti_xml_node">TiXmlNode</a> <em> *</em>  <strong>Clone</strong>()</dt>
-<dd>Creates a copy of this Unknown and returns it. </dd>
-<dt><em>void</em>  <strong>Print</strong>(<em>FILE *</em> cfile, <em>int</em> depth)</dt>
-<dd>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </dd>
-<dt><em>const char *</em>  <strong>Parse</strong>(<em>const char *</em> p, <em>TiXmlParsingData *</em> data, <em>TiXmlEncoding</em> encoding)</dt>
-<dd></dd>
-<dt><em>const </em> <a class="reference internal" href="#class_ti_xml_unknown">TiXmlUnknown</a> <em> *</em>  <strong>ToUnknown</strong>()</dt>
-<dd>Cast to a more defined type. Will return null not of the requested type. </dd>
-<dt><a class="reference internal" href="#class_ti_xml_unknown">TiXmlUnknown</a> <em> *</em>  <strong>ToUnknown</strong>()</dt>
-<dd>Cast to a more defined type. Will return null not of the requested type. </dd>
-<dt><em>bool</em>  <strong>Accept</strong>(<a class="reference internal" href="#class_ti_xml_visitor">TiXmlVisitor</a> <em> *</em> content)</dt>
-<dd>Walk the XML tree visiting this node and all of its children. </dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt> <strong>TiXmlUnknown</strong>(const  <a class="reference internal" href="#project26class_ti_xml_unknown"><em>TiXmlUnknown</em></a>  &amp; copy)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>operator=</strong>(const  <a class="reference internal" href="#project26class_ti_xml_unknown"><em>TiXmlUnknown</em></a>  &amp; copy)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Clone</strong>()</dt>
+<dd><p class="first">
+<p>Creates a copy of this Unknown and returns it. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>Print</strong>(FILE * cfile, int depth)</dt>
+<dd><p class="first">
+<p>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </p>
+        </p>
+<p class="last">
+<p>) Either or both cfile and str can be null.</p>
+<p>This is a formatted print, and will insert tabs and newlines.</p>
+<p>(For an unformatted stream, use the &lt;&lt; operator.) </p>
+        </p>
+</dd>
+<dt>const char *  <strong>Parse</strong>(const char * p, TiXmlParsingData * data, TiXmlEncoding encoding)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const  <a class="reference internal" href="#project26class_ti_xml_unknown"><em>TiXmlUnknown</em></a>  *  <strong>ToUnknown</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt><a class="reference internal" href="#project26class_ti_xml_unknown"><em>TiXmlUnknown</em></a>  *  <strong>ToUnknown</strong>()</dt>
+<dd><p class="first">
+<p>Cast to a more defined type. Will return null not of the requested type. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Accept</strong>(<a class="reference internal" href="#project26class_ti_xml_visitor"><em>TiXmlVisitor</em></a>  * content)</dt>
+<dd><p class="first">
+<p>Walk the XML tree visiting this node and all of its children. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Protected Functions</em><blockquote>
 <dl class="docutils">
-<dt><em>void</em>  <strong>CopyTo</strong>(<a class="reference internal" href="#class_ti_xml_unknown">TiXmlUnknown</a> <em> *</em> target)</dt>
-<dd></dd>
-<dt><em>void</em>  <strong>StreamIn</strong>(<em>std::istream *</em> in, <em>TIXML_STRING *</em> tag)</dt>
-<dd></dd>
+<dt>void  <strong>CopyTo</strong>(<a class="reference internal" href="#project26class_ti_xml_unknown"><em>TiXmlUnknown</em></a>  * target)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>void  <strong>StreamIn</strong>(std::istream * in, TIXML_STRING * tag)</dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="class_ti_xml_visitor"><em>class</em> <strong>TiXmlVisitor</strong></p>
+<p id="project26class_ti_xml_visitor"><em>class</em> <strong>TiXmlVisitor</strong></p>
 <blockquote>
+<p>
+<p>If you call the Accept() method, it requires being passed a <a class="reference internal" href="#project26class_ti_xml_visitor"><em>TiXmlVisitor</em></a> class to handle callbacks. </p>
+    </p>
+<p>
+<p>For nodes that contain other nodes (Document, Element) you will get called with a VisitEnter/VisitExit pair. Nodes that are always leaves are simple called with <a class="reference internal" href="#project26class_ti_xml_visitor_1fad71c71ce6473fb9b4b64cd92de4a19"><em>Visit()</em></a>.</p>
+<p>If you return &#8216;true&#8217; from a Visit method, recursive parsing will continue. If you return false,  will be Visited.</p>
+<p>All flavors of Visit methods have a default implementation that returns &#8216;true&#8217; (continue visiting). You need to only override methods that are interesting to you.</p>
+<p>Generally Accept() is called on the <a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>, although all nodes suppert Visiting.</p>
+<p>You should never change the document from a callback.</p>
+<p>
+</p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>~TiXmlVisitor</strong>()</dt>
-<dd></dd>
-<dt><em>bool</em>  <strong>VisitEnter</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> &amp;</em> )</dt>
-<dd>Visit a document. </dd>
-<dt><em>bool</em>  <strong>VisitExit</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_document">TiXmlDocument</a> <em> &amp;</em> )</dt>
-<dd>Visit a document. </dd>
-<dt><em>bool</em>  <strong>VisitEnter</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> &amp;</em> , <em>const </em> <a class="reference internal" href="#class_ti_xml_attribute">TiXmlAttribute</a> <em> *</em> )</dt>
-<dd>Visit an element. </dd>
-<dt><em>bool</em>  <strong>VisitExit</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_element">TiXmlElement</a> <em> &amp;</em> )</dt>
-<dd>Visit an element. </dd>
-<dt><em>bool</em>  <strong>Visit</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_declaration">TiXmlDeclaration</a> <em> &amp;</em> )</dt>
-<dd>Visit a declaration. </dd>
-<dt><em>bool</em>  <strong>Visit</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_text">TiXmlText</a> <em> &amp;</em> )</dt>
-<dd>Visit a text node. </dd>
-<dt><em>bool</em>  <strong>Visit</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_comment">TiXmlComment</a> <em> &amp;</em> )</dt>
-<dd>Visit a comment node. </dd>
-<dt><em>bool</em>  <strong>Visit</strong>(<em>const </em> <a class="reference internal" href="#class_ti_xml_unknown">TiXmlUnknown</a> <em> &amp;</em> )</dt>
-<dd>Visit an unknow node. </dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>VisitEnter</strong>(const  <a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>  &amp; )</dt>
+<dd><p class="first">
+<p>Visit a document. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>VisitExit</strong>(const  <a class="reference internal" href="#project26class_ti_xml_document"><em>TiXmlDocument</em></a>  &amp; )</dt>
+<dd><p class="first">
+<p>Visit a document. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>VisitEnter</strong>(const  <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  &amp; , const  <a class="reference internal" href="#project26class_ti_xml_attribute"><em>TiXmlAttribute</em></a>  * )</dt>
+<dd><p class="first">
+<p>Visit an element. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>VisitExit</strong>(const  <a class="reference internal" href="#project26class_ti_xml_element"><em>TiXmlElement</em></a>  &amp; )</dt>
+<dd><p class="first">
+<p>Visit an element. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#project26class_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  &amp; )</dt>
+<dd><p class="first">
+<p>Visit a declaration. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#project26class_ti_xml_text"><em>TiXmlText</em></a>  &amp; )</dt>
+<dd><p class="first">
+<p>Visit a text node. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#project26class_ti_xml_comment"><em>TiXmlComment</em></a>  &amp; )</dt>
+<dd><p class="first">
+<p>Visit a comment node. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#project26class_ti_xml_unknown"><em>TiXmlUnknown</em></a>  &amp; )</dt>
+<dd><p class="first">
+<p>Visit an unknow node. </p>
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="tinyxml_8h"><em>file</em> <strong>tinyxml.h</strong></p>
+<p id="project26tinyxml_8h"><em>file</em> <strong>tinyxml.h</strong></p>
 <blockquote>
+<p>
+    </p>
+<p>
+    </p>
 <em>Defines</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TIXML_USE_STL</strong></dt>
-<dd></dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 <dt> <strong>TIXML_STRING</strong></dt>
-<dd></dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 <dt> <strong>TIXML_SAFE</strong></dt>
-<dd></dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Enums</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlEncoding</strong></dt>
-<dd></dd>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 <em>Variables</em><blockquote>
 <dl class="docutils">
-<dt><em>const int</em>  <strong>TIXML_MAJOR_VERSION</strong></dt>
-<dd></dd>
-<dt><em>const int</em>  <strong>TIXML_MINOR_VERSION</strong></dt>
-<dd></dd>
-<dt><em>const int</em>  <strong>TIXML_PATCH_VERSION</strong></dt>
-<dd></dd>
-<dt><em>const TiXmlEncoding</em>  <strong>TIXML_DEFAULT_ENCODING</strong></dt>
-<dd></dd>
+<dt>const int  <strong>TIXML_MAJOR_VERSION</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const int  <strong>TIXML_MINOR_VERSION</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const int  <strong>TIXML_PATCH_VERSION</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>const TiXmlEncoding  <strong>TIXML_DEFAULT_ENCODING</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
 </dl>
 </blockquote>
 </blockquote>
-<p id="deprecated"><em>page</em> <strong>deprecated</strong></p>
+<p id="project26deprecated"><em>page</em> <strong>deprecated</strong></p>
 <blockquote>
-</blockquote>
+
+<p> 
+</p>
+<p> 
+</p>
+<p> 
+</p>
+<p> 
+</p>
+    </blockquote>
 </div>
 
 
@@ -1197,7 +3188,7 @@
     </div>
     <div class="footer">
       &copy; Copyright 2009, Michael Jones.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.1.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.3.
     </div>
   </body>
 </html>

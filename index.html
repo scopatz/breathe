@@ -20,7 +20,7 @@
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <link rel="top" title="BreatheExample v0.0.1 documentation" href="" />
-    <link rel="next" title="doxygenfunction Directive Tests" href="function.html" /> 
+    <link rel="next" title="doxygenfunction Directive Example" href="function.html" /> 
   </head>
   <body>
     <div class="related">
@@ -30,7 +30,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="function.html" title="doxygenfunction Directive Tests"
+          <a href="function.html" title="doxygenfunction Directive Example"
              accesskey="N">next</a> |</li>
         <li><a href="">BreatheExample v0.0.1 documentation</a> &raquo;</li> 
       </ul>
@@ -73,11 +73,27 @@ referenced by it.</p>
 </div>
 <div class="section" id="doxygenfunction-directive">
 <h3>doxygenfunction Directive<a class="headerlink" href="#doxygenfunction-directive" title="Permalink to this headline">¶</a></h3>
-<p>This directive generates the appropriate output for a single function. Currently
-the function name is required to be unique in the project. There are plans for
-options for adding further criteria to narrow the search if there are multiple
-matches.</p>
+<p>This directive generates the appropriate output for a single function. The
+function name is required to be unique in the project.</p>
 <div class="highlight-python"><pre>.. doxygenfunction:: &lt;function name&gt;
+   :project: ...
+   :path: ...</pre>
+</div>
+</div>
+<div class="section" id="doxygenstruct-directive">
+<h3>doxygenstruct Directive<a class="headerlink" href="#doxygenstruct-directive" title="Permalink to this headline">¶</a></h3>
+<p>This directive generates the appropriate output for a single struct. The struct
+name is required to be unique in the project.</p>
+<div class="highlight-python"><pre>.. doxygenstruct:: &lt;struct name&gt;
+   :project: ...
+   :path: ...</pre>
+</div>
+</div>
+<div class="section" id="doxygenclass-directive">
+<h3>doxygenclass Directive<a class="headerlink" href="#doxygenclass-directive" title="Permalink to this headline">¶</a></h3>
+<p>This directive generates the appropriate output for a single class. It behaves
+the same as the doxygenstruct directive.</p>
+<div class="highlight-python"><pre>.. doxygenclass:: &lt;class name&gt;
    :project: ...
    :path: ...</pre>
 </div>
@@ -95,21 +111,20 @@ indicates which project should be used when the project is not specified on
 the directive.</dd>
 </dl>
 </div>
-<div class="section" id="test-pages">
-<h2>Test pages<a class="headerlink" href="#test-pages" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3>Directives<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-pages">
+<h2>Example pages<a class="headerlink" href="#example-pages" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li class="toctree-l1"><a class="reference external" href="function.html">doxygenfunction Directive Tests</a></li>
+<li class="toctree-l1"><a class="reference external" href="function.html">doxygenfunction Directive Example</a></li>
+<li class="toctree-l1"><a class="reference external" href="struct.html">doxygenstruct Directive Example</a></li>
+<li class="toctree-l1"><a class="reference external" href="class.html">doxygenclass Directive Example</a></li>
 </ul>
 </div>
-<div class="section" id="general">
-<h3>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="test-pages">
+<h2>Test Pages<a class="headerlink" href="#test-pages" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="doxygen.html">Doxygen Test Suite</a></li>
 <li class="toctree-l1"><a class="reference external" href="tinyxml.html">TinyXML Test Suite</a></li>
 </ul>
-</div>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
@@ -133,16 +148,15 @@ the directive.</dd>
 <li><a class="reference external" href="#directives">Directives</a><ul>
 <li><a class="reference external" href="#doxygenindex-directive">doxygenindex Directive</a></li>
 <li><a class="reference external" href="#doxygenfunction-directive">doxygenfunction Directive</a></li>
+<li><a class="reference external" href="#doxygenstruct-directive">doxygenstruct Directive</a></li>
+<li><a class="reference external" href="#doxygenclass-directive">doxygenclass Directive</a></li>
 </ul>
 </li>
 <li><a class="reference external" href="#config-values">Config Values</a></li>
-<li><a class="reference external" href="#test-pages">Test pages</a><ul>
-<li><a class="reference external" href="#id1">Directives</a><ul>
+<li><a class="reference external" href="#example-pages">Example pages</a><ul>
 </ul>
 </li>
-<li><a class="reference external" href="#general">General</a><ul>
-</ul>
-</li>
+<li><a class="reference external" href="#test-pages">Test Pages</a><ul>
 </ul>
 </li>
 </ul>
@@ -152,7 +166,7 @@ the directive.</dd>
 
             <h4>Next topic</h4>
             <p class="topless"><a href="function.html"
-                                  title="next chapter">doxygenfunction Directive Tests</a></p>
+                                  title="next chapter">doxygenfunction Directive Example</a></p>
             <h3>This Page</h3>
             <ul class="this-page-menu">
               <li><a href="sources/index.txt"
@@ -182,14 +196,14 @@ the directive.</dd>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="function.html" title="doxygenfunction Directive Tests"
+          <a href="function.html" title="doxygenfunction Directive Example"
              >next</a> |</li>
         <li><a href="">BreatheExample v0.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
       &copy; Copyright 2009, Michael Jones.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.1.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.3.
     </div>
   </body>
 </html>
