@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>doxygenstruct Directive Example &mdash; BreatheExample v0.0.1 documentation</title>
+    <title>doxygentypedef Directive Example &mdash; BreatheExample v0.0.1 documentation</title>
     <link rel="stylesheet" href="static/default.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -20,8 +20,8 @@
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <link rel="top" title="BreatheExample v0.0.1 documentation" href="index.html" />
-    <link rel="next" title="doxygentypedef Directive Example" href="typedef.html" />
-    <link rel="prev" title="doxygenfunction Directive Example" href="function.html" /> 
+    <link rel="next" title="doxygenenum Directive Example" href="enum.html" />
+    <link rel="prev" title="doxygenstruct Directive Example" href="struct.html" /> 
   </head>
   <body>
     <div class="related">
@@ -31,10 +31,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="typedef.html" title="doxygentypedef Directive Example"
+          <a href="enum.html" title="doxygenenum Directive Example"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="function.html" title="doxygenfunction Directive Example"
+          <a href="struct.html" title="doxygenstruct Directive Example"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">BreatheExample v0.0.1 documentation</a> &raquo;</li> 
       </ul>
@@ -45,52 +45,34 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="doxygenstruct-directive-example">
-<h1>doxygenstruct Directive Example<a class="headerlink" href="#doxygenstruct-directive-example" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="doxygentypedef-directive-example">
+<h1>doxygentypedef Directive Example<a class="headerlink" href="#doxygentypedef-directive-example" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="working-example">
 <h2>Working Example<a class="headerlink" href="#working-example" title="Permalink to this headline">¶</a></h2>
 <p>This should work:</p>
-<div class="highlight-python"><pre>.. doxygenstruct:: CoordStruct
-   :project: restypedef</pre>
+<div class="highlight-python"><pre>.. doxygentypedef:: UINT32
+   :project: structcmd</pre>
 </div>
 <p>It produces this output:</p>
-<p id="restypedefstruct_coord_struct"><em>struct</em> <strong>CoordStruct</strong></p>
-<blockquote>
-<p>
-    </p>
-<p>
-<p>A coordinate pair. </p>
-    </p>
-<em>Public Members</em><blockquote>
-<dl class="docutils">
-<dt>float  <strong>x</strong></dt>
+<dt>unsigned int  <strong>UINT32</strong></dt>
 <dd><p class="first">
+<p>A type definition for a . </p>
         </p>
 <p class="last">
-<p>The x coordinate </p>
+<p>Details. </p>
         </p>
 </dd>
-<dt>float  <strong>y</strong></dt>
-<dd><p class="first">
-        </p>
-<p class="last">
-<p>The y coordinate </p>
-        </p>
-</dd>
-</dl>
-</blockquote>
-</blockquote>
 </div>
 <div class="section" id="failing-example">
 <h2>Failing Example<a class="headerlink" href="#failing-example" title="Permalink to this headline">¶</a></h2>
 <p>This intentionally fails:</p>
-<div class="highlight-python"><pre>.. doxygenstruct:: made_up_struct
+<div class="highlight-python"><pre>.. doxygentypedef:: made_up_typedef
    :project: restypedef</pre>
 </div>
 <p>It produces the following warning message:</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">doxygenstruct: Cannot find struct &#8220;made_up_struct&#8221; in doxygen xml output</p>
+<p class="last">doxygentypedef: Cannot find typedef &#8220;made_up_typedef&#8221; in doxygen xml output</p>
 </div>
 </div>
 </div>
@@ -103,7 +85,7 @@
         <div class="sphinxsidebarwrapper">
             <h3><a href="index.html">Table Of Contents</a></h3>
             <ul>
-<li><a class="reference external" href="#">doxygenstruct Directive Example</a><ul>
+<li><a class="reference external" href="#">doxygentypedef Directive Example</a><ul>
 <li><a class="reference external" href="#working-example">Working Example</a></li>
 <li><a class="reference external" href="#failing-example">Failing Example</a></li>
 </ul>
@@ -111,14 +93,14 @@
 </ul>
 
             <h4>Previous topic</h4>
-            <p class="topless"><a href="function.html"
-                                  title="previous chapter">doxygenfunction Directive Example</a></p>
+            <p class="topless"><a href="struct.html"
+                                  title="previous chapter">doxygenstruct Directive Example</a></p>
             <h4>Next topic</h4>
-            <p class="topless"><a href="typedef.html"
-                                  title="next chapter">doxygentypedef Directive Example</a></p>
+            <p class="topless"><a href="enum.html"
+                                  title="next chapter">doxygenenum Directive Example</a></p>
             <h3>This Page</h3>
             <ul class="this-page-menu">
-              <li><a href="sources/struct.txt"
+              <li><a href="sources/typedef.txt"
                      rel="nofollow">Show Source</a></li>
             </ul>
           <div id="searchbox" style="display: none">
@@ -145,10 +127,10 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="typedef.html" title="doxygentypedef Directive Example"
+          <a href="enum.html" title="doxygenenum Directive Example"
              >next</a> |</li>
         <li class="right" >
-          <a href="function.html" title="doxygenfunction Directive Example"
+          <a href="struct.html" title="doxygenstruct Directive Example"
              >previous</a> |</li>
         <li><a href="index.html">BreatheExample v0.0.1 documentation</a> &raquo;</li> 
       </ul>
