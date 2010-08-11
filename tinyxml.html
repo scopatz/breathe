@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '#',
+        URL_ROOT:    '',
         VERSION:     '0.0.1',
         COLLAPSE_MODINDEX: false,
         FILE_SUFFIX: '.html',
@@ -43,71 +43,93 @@
             
   <div class="section" id="tinyxml-test-suite">
 <h1>TinyXML Test Suite<a class="headerlink" href="#tinyxml-test-suite" title="Permalink to this headline">¶</a></h1>
+<p id="tinyxmlstruct_ti_xml_base_1_1_entity"><em>struct</em> <strong>TiXmlBase::Entity</strong></p>
+<blockquote>
+<p>
+    </p>
+<p>
+    </p>
+<em>Public Members</em><blockquote>
+<dl class="docutils">
+<dt>const char *  <strong>str</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>unsigned int  <strong>strLength</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+<dt>char  <strong>chr</strong></dt>
+<dd><p class="first">
+        </p>
+<p class="last">
+        </p>
+</dd>
+</dl>
+</blockquote>
+</blockquote>
 <p id="tinyxmlclass_ti_xml_attribute"><em>class</em> <strong>TiXmlAttribute</strong></p>
 <blockquote>
 <p>
-<p>An attribute is a name-value pair. </p>
-    </p>
+An attribute is a name-value pair.     </p>
 <p>
-<p>Elements have an arbitrary number of attributes, each with a unique name.</p>
-<p>
-</p>
+Elements have an arbitrary number of attributes, each with a unique name.
+<dl class="docutils">
+<dt><em>Note</em></dt>
+<dd>The attributes are not TiXmlNodes, since they are not part of the tinyXML document object model. There are other suggested ways to look at this problem. </dd>
+</dl>
     </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlAttribute</strong>()</dt>
 <dd><p class="first">
-<p>Construct an empty attribute. </p>
-        </p>
+Construct an empty attribute.         </p>
 <p class="last">
         </p>
 </dd>
 <dt> <strong>TiXmlAttribute</strong>(const std::string &amp; _name, const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>std::string constructor. </p>
-        </p>
+std::string constructor.         </p>
 <p class="last">
         </p>
 </dd>
 <dt> <strong>TiXmlAttribute</strong>(const char * _name, const char * _value)</dt>
 <dd><p class="first">
-<p>Construct an attribute with a name and value. </p>
-        </p>
+Construct an attribute with a name and value.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const char *  <strong>Name</strong>()</dt>
 <dd><p class="first">
-<p>Return the name of this attribute. </p>
-        </p>
+Return the name of this attribute.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const char *  <strong>Value</strong>()</dt>
 <dd><p class="first">
-<p>Return the value of this attribute. </p>
-        </p>
+Return the value of this attribute.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const std::string &amp;  <strong>ValueStr</strong>()</dt>
 <dd><p class="first">
-<p>Return the value of this attribute. </p>
-        </p>
+Return the value of this attribute.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>int  <strong>IntValue</strong>()</dt>
 <dd><p class="first">
-<p>Return the value of this attribute, converted to an integer. </p>
-        </p>
+Return the value of this attribute, converted to an integer.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>double  <strong>DoubleValue</strong>()</dt>
 <dd><p class="first">
-<p>Return the value of this attribute, converted to a double. </p>
-        </p>
+Return the value of this attribute, converted to a double.         </p>
 <p class="last">
         </p>
 </dd>
@@ -119,66 +141,55 @@
 </dd>
 <dt>int  <strong>QueryIntValue</strong>(int * _value)</dt>
 <dd><p class="first">
-<p>QueryIntValue examines the value string. </p>
-        </p>
+QueryIntValue examines the value string.         </p>
 <p class="last">
-<p>It is an alternative to the <a class="reference internal" href="#tinyxmlclass_ti_xml_attribute_100cdfae44eb5062080a201d4c2dcdf8b"><em>IntValue()</em></a> method with richer error checking. If the value is an integer, it is stored in &#8216;value&#8217; and the call returns TIXML_SUCCESS. If it is not an integer, it returns TIXML_WRONG_TYPE.</p>
-<p>A specialized but useful call. Note that for success it returns 0, which is the opposite of almost all other TinyXml calls. </p>
-        </p>
+It is an alternative to the <a class="reference internal" href="#tinyxmlclass_ti_xml_attribute_1aa1a20ad59dc7e89a0ab265396360d50f"><em>IntValue()</em></a> method with richer error checking. If the value is an integer, it is stored in &#8216;value&#8217; and the call returns TIXML_SUCCESS. If it is not an integer, it returns TIXML_WRONG_TYPE.A specialized but useful call. Note that for success it returns 0, which is the opposite of almost all other TinyXml calls.         </p>
 </dd>
 <dt>int  <strong>QueryDoubleValue</strong>(double * _value)</dt>
 <dd><p class="first">
-<p>QueryDoubleValue examines the value string. See <a class="reference internal" href="#tinyxmlclass_ti_xml_attribute_1f3cff713dc7067dc9a371f80a8ed1119"><em>QueryIntValue()</em></a>. </p>
-        </p>
+QueryDoubleValue examines the value string. See <a class="reference internal" href="#tinyxmlclass_ti_xml_attribute_1ad6c93088ee21af41a107931223339344"><em>QueryIntValue()</em></a>.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>SetName</strong>(const char * _name)</dt>
 <dd><p class="first">
-<p>Set the name of this attribute. </p>
-        </p>
+Set the name of this attribute.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>SetValue</strong>(const char * _value)</dt>
 <dd><p class="first">
-<p>Set the value. </p>
-        </p>
+Set the value.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>SetIntValue</strong>(int _value)</dt>
 <dd><p class="first">
-<p>Set the value from an integer. </p>
-        </p>
+Set the value from an integer.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>SetDoubleValue</strong>(double _value)</dt>
 <dd><p class="first">
-<p>Set the value from a double. </p>
-        </p>
+Set the value from a double.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>SetName</strong>(const std::string &amp; _name)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>SetValue</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>Next</strong>()</dt>
 <dd><p class="first">
-<p>Get the next sibling attribute in the DOM. Returns null at end. </p>
-        </p>
+Get the next sibling attribute in the DOM. Returns null at end.         </p>
 <p class="last">
         </p>
 </dd>
@@ -190,8 +201,7 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>Previous</strong>()</dt>
 <dd><p class="first">
-<p>Get the previous sibling attribute in the DOM. Returns null at beginning. </p>
-        </p>
+Get the previous sibling attribute in the DOM. Returns null at beginning.         </p>
 <p class="last">
         </p>
 </dd>
@@ -227,13 +237,9 @@
 </dd>
 <dt>void  <strong>Print</strong>(FILE * cfile, int depth)</dt>
 <dd><p class="first">
-<p>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </p>
-        </p>
+All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode.         </p>
 <p class="last">
-<p>) Either or both cfile and str can be null.</p>
-<p>This is a formatted print, and will insert tabs and newlines.</p>
-<p>(For an unformatted stream, use the &lt;&lt; operator.) </p>
-        </p>
+) Either or both cfile and str can be null.This is a formatted print, and will insert tabs and newlines.(For an unformatted stream, use the &lt;&lt; operator.)         </p>
 </dd>
 <dt>void  <strong>Print</strong>(FILE * cfile, int depth, TIXML_STRING * str)</dt>
 <dd><p class="first">
@@ -394,13 +400,13 @@
 </blockquote>
 <em>Private Functions</em><blockquote>
 <dl class="docutils">
-<dt> <strong>TiXmlAttributeSet</strong>(const TiXmlAttributeSet &amp; )</dt>
+<dt> <strong>TiXmlAttributeSet</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_attribute_set"><em>TiXmlAttributeSet</em></a>  &amp; )</dt>
 <dd><p class="first">
         </p>
 <p class="last">
         </p>
 </dd>
-<dt>void  <strong>operator=</strong>(const TiXmlAttributeSet &amp; )</dt>
+<dt>void  <strong>operator=</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_attribute_set"><em>TiXmlAttributeSet</em></a>  &amp; )</dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -422,13 +428,9 @@
 <p id="tinyxmlclass_ti_xml_base"><em>class</em> <strong>TiXmlBase</strong></p>
 <blockquote>
 <p>
-<p><a class="reference internal" href="#tinyxmlclass_ti_xml_base"><em>TiXmlBase</em></a> is a base class for every class in TinyXml. </p>
-    </p>
+<a class="reference internal" href="#tinyxmlclass_ti_xml_base"><em>TiXmlBase</em></a> is a base class for every class in TinyXml.     </p>
 <p>
-<p>It does little except to establish that TinyXml classes can be printed and provide some utility functions.</p>
-<p>In XML, the document and elements can contain other elements and other types of nodes.</p>
-<p> </p>
-    </p>
+It does little except to establish that TinyXml classes can be printed and provide some utility functions.In XML, the document and elements can contain other elements and other types of nodes.     </p>
 <em>Public Type</em><blockquote>
 <dl class="docutils">
 <dt> <strong>&#64;1</strong></dt>
@@ -447,7 +449,7 @@
 <p class="last">
         </p>
 </dd>
-<dt>virtual  <strong>~TiXmlBase</strong>()</dt>
+<dt> <strong>~TiXmlBase</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -455,52 +457,42 @@
 </dd>
 <dt>void  <strong>Print</strong>(FILE * cfile, int depth)</dt>
 <dd><p class="first">
-<p>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </p>
-        </p>
+All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode.         </p>
 <p class="last">
-<p>) Either or both cfile and str can be null.</p>
-<p>This is a formatted print, and will insert tabs and newlines.</p>
-<p>(For an unformatted stream, use the &lt;&lt; operator.) </p>
-        </p>
+) Either or both cfile and str can be null.This is a formatted print, and will insert tabs and newlines.(For an unformatted stream, use the &lt;&lt; operator.)         </p>
 </dd>
 <dt>int  <strong>Row</strong>()</dt>
 <dd><p class="first">
-<p>Return the position, in the original source file, of this node or attribute. </p>
-        </p>
+Return the position, in the original source file, of this node or attribute.         </p>
 <p class="last">
-<p>The row and column are 1-based. (That is the first row and first column is 1,1). If the returns values are 0 or less, then the parser does not have a row and column value.</p>
-<p>Generally, the row and column value will be set when the TiXmlDocument::Load(), <a class="reference internal" href="#tinyxmlclass_ti_xml_document_1e8829bf3f7fd662c25fb36765368f52a"><em>TiXmlDocument::LoadFile()</em></a>, or any TiXmlNode::Parse() is called. It will NOT be set when the DOM was created from operator&gt;&gt;.</p>
-<p>The values reflect the initial load. Once the DOM is modified programmatically (by adding or changing nodes and attributes) the new values will NOT update to reflect changes in the document.</p>
-<p>There is a minor performance cost to computing the row and column. Computation can be disabled if <a class="reference internal" href="#tinyxmlclass_ti_xml_document_10df5f22d62a56902183566c87c24e040"><em>TiXmlDocument::SetTabSize()</em></a> is called with 0 as the value.</p>
-<p>
-</p>
+The row and column are 1-based. (That is the first row and first column is 1,1). If the returns values are 0 or less, then the parser does not have a row and column value.Generally, the row and column value will be set when the TiXmlDocument::Load(), <a class="reference internal" href="#tinyxmlclass_ti_xml_document_1a4c852a889c02cf251117fd1d9fe1845f"><em>TiXmlDocument::LoadFile()</em></a>, or any TiXmlNode::Parse() is called. It will NOT be set when the DOM was created from operator&gt;&gt;.The values reflect the initial load. Once the DOM is modified programmatically (by adding or changing nodes and attributes) the new values will NOT update to reflect changes in the document.There is a minor performance cost to computing the row and column. Computation can be disabled if <a class="reference internal" href="#tinyxmlclass_ti_xml_document_1a51dac56316f89b35bdb7d0d433ba988e"><em>TiXmlDocument::SetTabSize()</em></a> is called with 0 as the value.
+<dl class="docutils">
+<dt><em>See</em></dt>
+<dd><a class="reference internal" href="#tinyxmlclass_ti_xml_document_1a51dac56316f89b35bdb7d0d433ba988e"><em>TiXmlDocument::SetTabSize()</em></a> </dd>
+</dl>
         </p>
 </dd>
 <dt>int  <strong>Column</strong>()</dt>
 <dd><p class="first">
-<p>See <a class="reference internal" href="#tinyxmlclass_ti_xml_base_1c0c7e4758bc97bd2ec56291e08f3d117"><em>Row()</em></a>. </p>
-        </p>
+See <a class="reference internal" href="#tinyxmlclass_ti_xml_base_1a024bceb070188df92c2a8d8852dd0853"><em>Row()</em></a>.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>SetUserData</strong>(void * user)</dt>
 <dd><p class="first">
-<p>Set a pointer to arbitrary user data. </p>
-        </p>
+Set a pointer to arbitrary user data.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void *  <strong>GetUserData</strong>()</dt>
 <dd><p class="first">
-<p>Get a pointer to arbitrary user data. </p>
-        </p>
+Get a pointer to arbitrary user data.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const void *  <strong>GetUserData</strong>()</dt>
 <dd><p class="first">
-<p>Get a pointer to arbitrary user data. </p>
-        </p>
+Get a pointer to arbitrary user data.         </p>
 <p class="last">
         </p>
 </dd>
@@ -516,16 +508,13 @@
 <dl class="docutils">
 <dt>void  <strong>SetCondenseWhiteSpace</strong>(bool condense)</dt>
 <dd><p class="first">
-<p>The world does not agree on whether white space should be kept or not. </p>
-        </p>
+The world does not agree on whether white space should be kept or not.         </p>
 <p class="last">
-<p>In order to make everyone happy, these global, static functions are provided to set whether or not TinyXml will condense all white space into a single space or not. The default is to condense. Note changing this value is not thread safe. </p>
-        </p>
+In order to make everyone happy, these global, static functions are provided to set whether or not TinyXml will condense all white space into a single space or not. The default is to condense. Note changing this value is not thread safe.         </p>
 </dd>
 <dt>bool  <strong>IsWhiteSpaceCondensed</strong>()</dt>
 <dd><p class="first">
-<p>Return the current white space setting. </p>
-        </p>
+Return the current white space setting.         </p>
 <p class="last">
         </p>
 </dd>
@@ -543,7 +532,7 @@
 </blockquote>
 <em>Protected Attributes</em><blockquote>
 <dl class="docutils">
-<dt>TiXmlCursor  <strong>location</strong></dt>
+<dt><a class="reference internal" href="#tinyxmlstruct_ti_xml_cursor"><em>TiXmlCursor</em></a>  <strong>location</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -551,8 +540,7 @@
 </dd>
 <dt>void *  <strong>userData</strong></dt>
 <dd><p class="first">
-<p>Field containing a generic user pointer. </p>
-        </p>
+Field containing a generic user pointer.         </p>
 <p class="last">
         </p>
 </dd>
@@ -727,55 +715,23 @@
 </dl>
 </blockquote>
 </blockquote>
-<p id="tinyxmlstruct_ti_xml_base_1_1_entity"><em>struct</em> <strong>TiXmlBase::Entity</strong></p>
-<blockquote>
-<p>
-    </p>
-<p>
-    </p>
-<em>Public Members</em><blockquote>
-<dl class="docutils">
-<dt>const char *  <strong>str</strong></dt>
-<dd><p class="first">
-        </p>
-<p class="last">
-        </p>
-</dd>
-<dt>unsigned int  <strong>strLength</strong></dt>
-<dd><p class="first">
-        </p>
-<p class="last">
-        </p>
-</dd>
-<dt>char  <strong>chr</strong></dt>
-<dd><p class="first">
-        </p>
-<p class="last">
-        </p>
-</dd>
-</dl>
-</blockquote>
-</blockquote>
 <p id="tinyxmlclass_ti_xml_comment"><em>class</em> <strong>TiXmlComment</strong></p>
 <blockquote>
 <p>
-<p>An XML comment. </p>
-    </p>
+An XML comment.     </p>
 <p>
     </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlComment</strong>()</dt>
 <dd><p class="first">
-<p>Constructs an empty comment. </p>
-        </p>
+Constructs an empty comment.         </p>
 <p class="last">
         </p>
 </dd>
 <dt> <strong>TiXmlComment</strong>(const char * _value)</dt>
 <dd><p class="first">
-<p>Construct a comment from text. </p>
-        </p>
+Construct a comment from text.         </p>
 <p class="last">
         </p>
 </dd>
@@ -791,7 +747,7 @@
 <p class="last">
         </p>
 </dd>
-<dt>virtual  <strong>~TiXmlComment</strong>()</dt>
+<dt> <strong>~TiXmlComment</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -799,20 +755,15 @@
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Clone</strong>()</dt>
 <dd><p class="first">
-<p>Returns a copy of this Comment. </p>
-        </p>
+Returns a copy of this Comment.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>Print</strong>(FILE * cfile, int depth)</dt>
 <dd><p class="first">
-<p>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </p>
-        </p>
+All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode.         </p>
 <p class="last">
-<p>) Either or both cfile and str can be null.</p>
-<p>This is a formatted print, and will insert tabs and newlines.</p>
-<p>(For an unformatted stream, use the &lt;&lt; operator.) </p>
-        </p>
+) Either or both cfile and str can be null.This is a formatted print, and will insert tabs and newlines.(For an unformatted stream, use the &lt;&lt; operator.)         </p>
 </dd>
 <dt>const char *  <strong>Parse</strong>(const char * p, TiXmlParsingData * data, TiXmlEncoding encoding)</dt>
 <dd><p class="first">
@@ -822,22 +773,19 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_comment"><em>TiXmlComment</em></a>  *  <strong>ToComment</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_comment"><em>TiXmlComment</em></a>  *  <strong>ToComment</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>Accept</strong>(<a class="reference internal" href="#tinyxmlclass_ti_xml_visitor"><em>TiXmlVisitor</em></a>  * visitor)</dt>
 <dd><p class="first">
-<p>Walk the XML tree visiting this node and all of its children. </p>
-        </p>
+Walk the XML tree visiting this node and all of its children.         </p>
 <p class="last">
         </p>
 </dd>
@@ -902,33 +850,26 @@
 <p id="tinyxmlclass_ti_xml_declaration"><em>class</em> <strong>TiXmlDeclaration</strong></p>
 <blockquote>
 <p>
-<p>In correct XML the declaration is the first entry in the file. </p>
-    </p>
+In correct XML the declaration is the first entry in the file.     </p>
 <p>
-<p></p>
-<p>TinyXml will happily read or write files without a declaration, however. There are 3 possible attributes to the declaration: version, encoding, and standalone.</p>
-<p>Note: In this version of the code, the attributes are handled as special cases, not generic attributes, simply because there can only be at most 3 and they are always the same. </p>
-    </p>
+TinyXml will happily read or write files without a declaration, however. There are 3 possible attributes to the declaration: version, encoding, and standalone.Note: In this version of the code, the attributes are handled as special cases, not generic attributes, simply because there can only be at most 3 and they are always the same.     </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlDeclaration</strong>()</dt>
 <dd><p class="first">
-<p>Construct an empty declaration. </p>
-        </p>
+Construct an empty declaration.         </p>
 <p class="last">
         </p>
 </dd>
 <dt> <strong>TiXmlDeclaration</strong>(const std::string &amp; _version, const std::string &amp; _encoding, const std::string &amp; _standalone)</dt>
 <dd><p class="first">
-<p>Constructor. </p>
-        </p>
+Constructor.         </p>
 <p class="last">
         </p>
 </dd>
 <dt> <strong>TiXmlDeclaration</strong>(const char * _version, const char * _encoding, const char * _standalone)</dt>
 <dd><p class="first">
-<p>Construct. </p>
-        </p>
+Construct.         </p>
 <p class="last">
         </p>
 </dd>
@@ -944,7 +885,7 @@
 <p class="last">
         </p>
 </dd>
-<dt>virtual  <strong>~TiXmlDeclaration</strong>()</dt>
+<dt> <strong>~TiXmlDeclaration</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -952,29 +893,25 @@
 </dd>
 <dt>const char *  <strong>Version</strong>()</dt>
 <dd><p class="first">
-<p>Version. Will return an empty string if none was found. </p>
-        </p>
+Version. Will return an empty string if none was found.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const char *  <strong>Encoding</strong>()</dt>
 <dd><p class="first">
-<p>Encoding. Will return an empty string if none was found. </p>
-        </p>
+Encoding. Will return an empty string if none was found.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const char *  <strong>Standalone</strong>()</dt>
 <dd><p class="first">
-<p>Is this a standalone document? </p>
-        </p>
+Is this a standalone document?         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Clone</strong>()</dt>
 <dd><p class="first">
-<p>Creates a copy of this Declaration and returns it. </p>
-        </p>
+Creates a copy of this Declaration and returns it.         </p>
 <p class="last">
         </p>
 </dd>
@@ -986,13 +923,9 @@
 </dd>
 <dt>void  <strong>Print</strong>(FILE * cfile, int depth)</dt>
 <dd><p class="first">
-<p>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </p>
-        </p>
+All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode.         </p>
 <p class="last">
-<p>) Either or both cfile and str can be null.</p>
-<p>This is a formatted print, and will insert tabs and newlines.</p>
-<p>(For an unformatted stream, use the &lt;&lt; operator.) </p>
-        </p>
+) Either or both cfile and str can be null.This is a formatted print, and will insert tabs and newlines.(For an unformatted stream, use the &lt;&lt; operator.)         </p>
 </dd>
 <dt>const char *  <strong>Parse</strong>(const char * p, TiXmlParsingData * data, TiXmlEncoding encoding)</dt>
 <dd><p class="first">
@@ -1002,22 +935,19 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  *  <strong>ToDeclaration</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  *  <strong>ToDeclaration</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>Accept</strong>(<a class="reference internal" href="#tinyxmlclass_ti_xml_visitor"><em>TiXmlVisitor</em></a>  * visitor)</dt>
 <dd><p class="first">
-<p>Walk the XML tree visiting this node and all of its children. </p>
-        </p>
+Walk the XML tree visiting this node and all of its children.         </p>
 <p class="last">
         </p>
 </dd>
@@ -1065,31 +995,26 @@
 <p id="tinyxmlclass_ti_xml_document"><em>class</em> <strong>TiXmlDocument</strong></p>
 <blockquote>
 <p>
-<p>Always the top level node. </p>
-    </p>
+Always the top level node.     </p>
 <p>
-<p>A document binds together all the XML pieces. It can be saved, loaded, and printed to the screen. The &#8216;value&#8217; of a document node is the xml file name. </p>
-    </p>
+A document binds together all the XML pieces. It can be saved, loaded, and printed to the screen. The &#8216;value&#8217; of a document node is the xml file name.     </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlDocument</strong>()</dt>
 <dd><p class="first">
-<p>Create an empty document, that has no name. </p>
-        </p>
+Create an empty document, that has no name.         </p>
 <p class="last">
         </p>
 </dd>
 <dt> <strong>TiXmlDocument</strong>(const char * documentName)</dt>
 <dd><p class="first">
-<p>Create a document with a name. The name of the document is also the filename of the xml. </p>
-        </p>
+Create a document with a name. The name of the document is also the filename of the xml.         </p>
 <p class="last">
         </p>
 </dd>
 <dt> <strong>TiXmlDocument</strong>(const std::string &amp; documentName)</dt>
 <dd><p class="first">
-<p>Constructor. </p>
-        </p>
+Constructor.         </p>
 <p class="last">
         </p>
 </dd>
@@ -1105,7 +1030,7 @@
 <p class="last">
         </p>
 </dd>
-<dt>virtual  <strong>~TiXmlDocument</strong>()</dt>
+<dt> <strong>~TiXmlDocument</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -1113,45 +1038,37 @@
 </dd>
 <dt>bool  <strong>LoadFile</strong>(TiXmlEncoding encoding = TIXML_DEFAULT_ENCODING )</dt>
 <dd><p class="first">
-<p>Load a file using the current document value. </p>
-        </p>
+Load a file using the current document value.         </p>
 <p class="last">
-<p>Returns true if successful. Will delete any existing document data before loading. </p>
-        </p>
+Returns true if successful. Will delete any existing document data before loading.         </p>
 </dd>
 <dt>bool  <strong>SaveFile</strong>()</dt>
 <dd><p class="first">
-<p>Save a file using the current document value. Returns true if successful. </p>
-        </p>
+Save a file using the current document value. Returns true if successful.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>LoadFile</strong>(const char * filename, TiXmlEncoding encoding = TIXML_DEFAULT_ENCODING )</dt>
 <dd><p class="first">
-<p>Load a file using the given filename. Returns true if successful. </p>
-        </p>
+Load a file using the given filename. Returns true if successful.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>SaveFile</strong>(const char * filename)</dt>
 <dd><p class="first">
-<p>Save a file using the given filename. Returns true if successful. </p>
-        </p>
+Save a file using the given filename. Returns true if successful.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>LoadFile</strong>(FILE * , TiXmlEncoding encoding = TIXML_DEFAULT_ENCODING )</dt>
 <dd><p class="first">
-<p>Load a file using the given FILE*. </p>
-        </p>
+Load a file using the given FILE*.         </p>
 <p class="last">
-<p>Returns true if successful. Note that this method doesn&#8217;t stream - the entire object pointed at by the FILE* will be interpreted as an XML file. TinyXML doesn&#8217;t stream in XML from the current file location. Streaming may be added in the future. </p>
-        </p>
+Returns true if successful. Note that this method doesn&#8217;t stream - the entire object pointed at by the FILE* will be interpreted as an XML file. TinyXML doesn&#8217;t stream in XML from the current file location. Streaming may be added in the future.         </p>
 </dd>
 <dt>bool  <strong>SaveFile</strong>(FILE * )</dt>
 <dd><p class="first">
-<p>Save a file using the given FILE*. Returns true if successful. </p>
-        </p>
+Save a file using the given FILE*. Returns true if successful.         </p>
 <p class="last">
         </p>
 </dd>
@@ -1163,26 +1080,21 @@
 </dd>
 <dt>bool  <strong>SaveFile</strong>(const std::string &amp; filename)</dt>
 <dd><p class="first">
-<p>&lt; STL std::string version. </p>
-        </p>
+&lt; STL std::string version.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const char *  <strong>Parse</strong>(const char * p, TiXmlParsingData * data = 0 , TiXmlEncoding encoding = TIXML_DEFAULT_ENCODING )</dt>
 <dd><p class="first">
-<p>Parse the given null terminated block of xml data. </p>
-        </p>
+Parse the given null terminated block of xml data.         </p>
 <p class="last">
-<p>Passing in an encoding to this method (either TIXML_ENCODING_LEGACY or TIXML_ENCODING_UTF8 will force TinyXml to use that encoding, regardless of what TinyXml might otherwise try to detect. </p>
-        </p>
+Passing in an encoding to this method (either TIXML_ENCODING_LEGACY or TIXML_ENCODING_UTF8 will force TinyXml to use that encoding, regardless of what TinyXml might otherwise try to detect.         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>RootElement</strong>()</dt>
 <dd><p class="first">
-<p>Get the root element &#8211; the only top level element &#8211; of the document. </p>
-        </p>
+Get the root element &#8211; the only top level element &#8211; of the document.         </p>
 <p class="last">
-<p>In well formed XML, there should only be one. TinyXml is tolerant of multiple elements at the document level. </p>
-        </p>
+In well formed XML, there should only be one. TinyXml is tolerant of multiple elements at the document level.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>RootElement</strong>()</dt>
 <dd><p class="first">
@@ -1192,57 +1104,49 @@
 </dd>
 <dt>bool  <strong>Error</strong>()</dt>
 <dd><p class="first">
-<p>If an error occurs, Error will be set to true. </p>
-        </p>
+If an error occurs, Error will be set to true.         </p>
 <p class="last">
-<p>Also,
-</p>
+Also,
         </p>
 </dd>
 <dt>const char *  <strong>ErrorDesc</strong>()</dt>
 <dd><p class="first">
-<p>Contains a textual (english) description of the error if one occurs. </p>
-        </p>
+Contains a textual (english) description of the error if one occurs.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>int  <strong>ErrorId</strong>()</dt>
 <dd><p class="first">
-<p>Generally, you probably want the error string ( <a class="reference internal" href="#tinyxmlclass_ti_xml_document_105198c99f0c0405d92536d0a0ff16842"><em>ErrorDesc()</em></a> ). </p>
-        </p>
+Generally, you probably want the error string ( <a class="reference internal" href="#tinyxmlclass_ti_xml_document_1a9d0f689f6e09ea494ea547be8d79c25e"><em>ErrorDesc()</em></a> ).         </p>
 <p class="last">
-<p>But if you prefer the ErrorId, this function will fetch it. </p>
-        </p>
+But if you prefer the ErrorId, this function will fetch it.         </p>
 </dd>
 <dt>int  <strong>ErrorRow</strong>()</dt>
 <dd><p class="first">
-<p>Returns the location (if known) of the error. </p>
-        </p>
+Returns the location (if known) of the error.         </p>
 <p class="last">
-<p>The first column is column 1, and the first row is row 1. A value of 0 means the row and column wasn&#8217;t applicable (memory errors, for example, have no row/column) or the parser lost the error. (An error in the error reporting, in that case.)</p>
-<p>
-</p>
+The first column is column 1, and the first row is row 1. A value of 0 means the row and column wasn&#8217;t applicable (memory errors, for example, have no row/column) or the parser lost the error. (An error in the error reporting, in that case.)
+<dl class="docutils">
+<dt><em>See</em></dt>
+<dd><a class="reference internal" href="#tinyxmlclass_ti_xml_document_1a51dac56316f89b35bdb7d0d433ba988e"><em>SetTabSize</em></a>, <a class="reference internal" href="#tinyxmlclass_ti_xml_base_1a024bceb070188df92c2a8d8852dd0853"><em>Row</em></a>, <a class="reference internal" href="#tinyxmlclass_ti_xml_base_1ab54bfb9b70fe6dd276e7b279cab7f003"><em>Column</em></a> </dd>
+</dl>
         </p>
 </dd>
 <dt>int  <strong>ErrorCol</strong>()</dt>
 <dd><p class="first">
-<p>The column where the error occured. See <a class="reference internal" href="#tinyxmlclass_ti_xml_document_1d64e60cb79544cf940836bb4305a2d2f"><em>ErrorRow()</em></a>. </p>
-        </p>
+The column where the error occured. See <a class="reference internal" href="#tinyxmlclass_ti_xml_document_1af30efc75e804aa2e92fb8be3a8cb676e"><em>ErrorRow()</em></a>.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>SetTabSize</strong>(int _tabsize)</dt>
 <dd><p class="first">
-<p><a class="reference internal" href="#tinyxmlclass_ti_xml_document_10df5f22d62a56902183566c87c24e040"><em>SetTabSize()</em></a> allows the error reporting functions (<a class="reference internal" href="#tinyxmlclass_ti_xml_document_1d64e60cb79544cf940836bb4305a2d2f"><em>ErrorRow()</em></a> and <a class="reference internal" href="#tinyxmlclass_ti_xml_document_1d31a8e3dd89b711a839f7ad957443b96"><em>ErrorCol()</em></a>) to report the correct values for row and column. </p>
-        </p>
+<a class="reference internal" href="#tinyxmlclass_ti_xml_document_1a51dac56316f89b35bdb7d0d433ba988e"><em>SetTabSize()</em></a> allows the error reporting functions (<a class="reference internal" href="#tinyxmlclass_ti_xml_document_1af30efc75e804aa2e92fb8be3a8cb676e"><em>ErrorRow()</em></a> and <a class="reference internal" href="#tinyxmlclass_ti_xml_document_1aa90bc630ee5203c6109ca5fad3323649"><em>ErrorCol()</em></a>) to report the correct values for row and column.         </p>
 <p class="last">
-<p>It does not change the output or input in any way.</p>
-<p>By calling this method, with a tab size greater than 0, the row and column of each node and attribute is stored when the file is loaded. Very useful for tracking the DOM back in to the source file.</p>
-<p>The tab size is required for calculating the location of nodes. If not set, the default of 4 is used. The tabsize is set per document. Setting the tabsize to 0 disables row/column tracking.</p>
-<p>Note that row and column tracking is not supported when using operator&gt;&gt;.</p>
-<p>The tab size needs to be enabled before the parse or load. Correct usage: </p>
-<p>
-</p>
+It does not change the output or input in any way.By calling this method, with a tab size greater than 0, the row and column of each node and attribute is stored when the file is loaded. Very useful for tracking the DOM back in to the source file.The tab size is required for calculating the location of nodes. If not set, the default of 4 is used. The tabsize is set per document. Setting the tabsize to 0 disables row/column tracking.Note that row and column tracking is not supported when using operator&gt;&gt;.The tab size needs to be enabled before the parse or load. Correct usage: 
+<dl class="docutils">
+<dt><em>See</em></dt>
+<dd><a class="reference internal" href="#tinyxmlclass_ti_xml_base_1a024bceb070188df92c2a8d8852dd0853"><em>Row</em></a>, <a class="reference internal" href="#tinyxmlclass_ti_xml_base_1ab54bfb9b70fe6dd276e7b279cab7f003"><em>Column</em></a> </dd>
+</dl>
         </p>
 </dd>
 <dt>int  <strong>TabSize</strong>()</dt>
@@ -1253,23 +1157,19 @@
 </dd>
 <dt>void  <strong>ClearError</strong>()</dt>
 <dd><p class="first">
-<p>If you have handled the error, it can be reset with this call. </p>
-        </p>
+If you have handled the error, it can be reset with this call.         </p>
 <p class="last">
-<p>The error state is automatically cleared if you Parse a new XML block. </p>
-        </p>
+The error state is automatically cleared if you Parse a new XML block.         </p>
 </dd>
 <dt>void  <strong>Print</strong>()</dt>
 <dd><p class="first">
-<p>Write the document to standard out using formatted printing (&#8220;pretty print&#8221;). </p>
-        </p>
+Write the document to standard out using formatted printing (&#8220;pretty print&#8221;).         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>Print</strong>(FILE * cfile, int depth = 0 )</dt>
 <dd><p class="first">
-<p>Print this Document to a FILE stream. </p>
-        </p>
+Print this Document to a FILE stream.         </p>
 <p class="last">
         </p>
 </dd>
@@ -1281,22 +1181,19 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a>  *  <strong>ToDocument</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a>  *  <strong>ToDocument</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>Accept</strong>(<a class="reference internal" href="#tinyxmlclass_ti_xml_visitor"><em>TiXmlVisitor</em></a>  * content)</dt>
 <dd><p class="first">
-<p>Walk the XML tree visiting this node and all of its children. </p>
-        </p>
+Walk the XML tree visiting this node and all of its children.         </p>
 <p class="last">
         </p>
 </dd>
@@ -1306,11 +1203,9 @@
 <dl class="docutils">
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Clone</strong>()</dt>
 <dd><p class="first">
-<p>Create an exact duplicate of this node and return it. </p>
-        </p>
+Create an exact duplicate of this node and return it.         </p>
 <p class="last">
-<p>The memory must be deleted by the caller. </p>
-        </p>
+The memory must be deleted by the caller.         </p>
 </dd>
 <dt>void  <strong>StreamIn</strong>(std::istream * in, TIXML_STRING * tag)</dt>
 <dd><p class="first">
@@ -1356,7 +1251,7 @@
 <p class="last">
         </p>
 </dd>
-<dt>TiXmlCursor  <strong>errorLocation</strong></dt>
+<dt><a class="reference internal" href="#tinyxmlstruct_ti_xml_cursor"><em>TiXmlCursor</em></a>  <strong>errorLocation</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -1374,24 +1269,20 @@
 <p id="tinyxmlclass_ti_xml_element"><em>class</em> <strong>TiXmlElement</strong></p>
 <blockquote>
 <p>
-<p>The element is a container class. </p>
-    </p>
+The element is a container class.     </p>
 <p>
-<p>It has a value, the element name, and can contain other elements, text, comments, and unknowns. Elements also contain an arbitrary number of attributes. </p>
-    </p>
+It has a value, the element name, and can contain other elements, text, comments, and unknowns. Elements also contain an arbitrary number of attributes.     </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlElement</strong>(const char * in_value)</dt>
 <dd><p class="first">
-<p>Construct an element. </p>
-        </p>
+Construct an element.         </p>
 <p class="last">
         </p>
 </dd>
 <dt> <strong>TiXmlElement</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>std::string constructor. </p>
-        </p>
+std::string constructor.         </p>
 <p class="last">
         </p>
 </dd>
@@ -1407,7 +1298,7 @@
 <p class="last">
         </p>
 </dd>
-<dt>virtual  <strong>~TiXmlElement</strong>()</dt>
+<dt> <strong>~TiXmlElement</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -1415,66 +1306,56 @@
 </dd>
 <dt>const char *  <strong>Attribute</strong>(const char * name)</dt>
 <dd><p class="first">
-<p>Given an attribute name, <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1eab3c80a058cda6cc9cbfc39c5b52f70"><em>Attribute()</em></a> returns the value for the attribute of that name, or null if none exists. </p>
-        </p>
+Given an attribute name, <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1ae419a442a9701a62b0c3d8fd1cbdd12d"><em>Attribute()</em></a> returns the value for the attribute of that name, or null if none exists.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const char *  <strong>Attribute</strong>(const char * name, int * i)</dt>
 <dd><p class="first">
-<p>Given an attribute name, <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1eab3c80a058cda6cc9cbfc39c5b52f70"><em>Attribute()</em></a> returns the value for the attribute of that name, or null if none exists. </p>
-        </p>
+Given an attribute name, <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1ae419a442a9701a62b0c3d8fd1cbdd12d"><em>Attribute()</em></a> returns the value for the attribute of that name, or null if none exists.         </p>
 <p class="last">
-<p>If the attribute exists and can be converted to an integer, the integer value will be put in the return &#8216;i&#8217;, if &#8216;i&#8217; is non-null. </p>
-        </p>
+If the attribute exists and can be converted to an integer, the integer value will be put in the return &#8216;i&#8217;, if &#8216;i&#8217; is non-null.         </p>
 </dd>
 <dt>const char *  <strong>Attribute</strong>(const char * name, double * d)</dt>
 <dd><p class="first">
-<p>Given an attribute name, <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1eab3c80a058cda6cc9cbfc39c5b52f70"><em>Attribute()</em></a> returns the value for the attribute of that name, or null if none exists. </p>
-        </p>
+Given an attribute name, <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1ae419a442a9701a62b0c3d8fd1cbdd12d"><em>Attribute()</em></a> returns the value for the attribute of that name, or null if none exists.         </p>
 <p class="last">
-<p>If the attribute exists and can be converted to an double, the double value will be put in the return &#8216;d&#8217;, if &#8216;d&#8217; is non-null. </p>
-        </p>
+If the attribute exists and can be converted to an double, the double value will be put in the return &#8216;d&#8217;, if &#8216;d&#8217; is non-null.         </p>
 </dd>
 <dt>int  <strong>QueryIntAttribute</strong>(const char * name, int * _value)</dt>
 <dd><p class="first">
-<p>QueryIntAttribute examines the attribute - it is an alternative to the <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1eab3c80a058cda6cc9cbfc39c5b52f70"><em>Attribute()</em></a> method with richer error checking. </p>
-        </p>
+QueryIntAttribute examines the attribute - it is an alternative to the <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1ae419a442a9701a62b0c3d8fd1cbdd12d"><em>Attribute()</em></a> method with richer error checking.         </p>
 <p class="last">
-<p>If the attribute is an integer, it is stored in &#8216;value&#8217; and the call returns TIXML_SUCCESS. If it is not an integer, it returns TIXML_WRONG_TYPE. If the attribute does not exist, then TIXML_NO_ATTRIBUTE is returned. </p>
-        </p>
+If the attribute is an integer, it is stored in &#8216;value&#8217; and the call returns TIXML_SUCCESS. If it is not an integer, it returns TIXML_WRONG_TYPE. If the attribute does not exist, then TIXML_NO_ATTRIBUTE is returned.         </p>
 </dd>
 <dt>int  <strong>QueryDoubleAttribute</strong>(const char * name, double * _value)</dt>
 <dd><p class="first">
-<p>QueryDoubleAttribute examines the attribute - see <a class="reference internal" href="#tinyxmlclass_ti_xml_element_15d365676b3d51d7d7298712684b4fae1"><em>QueryIntAttribute()</em></a>. </p>
-        </p>
+QueryDoubleAttribute examines the attribute - see <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1aea0bfe471380f281c5945770ddbf52b9"><em>QueryIntAttribute()</em></a>.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>int  <strong>QueryFloatAttribute</strong>(const char * name, float * _value)</dt>
 <dd><p class="first">
-<p>QueryFloatAttribute examines the attribute - see <a class="reference internal" href="#tinyxmlclass_ti_xml_element_15d365676b3d51d7d7298712684b4fae1"><em>QueryIntAttribute()</em></a>. </p>
-        </p>
+QueryFloatAttribute examines the attribute - see <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1aea0bfe471380f281c5945770ddbf52b9"><em>QueryIntAttribute()</em></a>.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>int  <strong>QueryValueAttribute</strong>(const std::string &amp; name, T * outValue)</dt>
 <dd><p class="first">
-<p>Template form of the attribute query which will try to read the attribute into the specified type. </p>
-        </p>
+Template form of the attribute query which will try to read the attribute into the specified type.         </p>
 <p class="last">
-<p>Very easy, very powerful, but be careful to make sure to call this with the correct type.</p>
-<p>
-</p>
+Very easy, very powerful, but be careful to make sure to call this with the correct type.
+<dl class="docutils">
+<dt><em>Return</em></dt>
+<dd>TIXML_SUCCESS, TIXML_WRONG_TYPE, or TIXML_NO_ATTRIBUTE </dd>
+</dl>
         </p>
 </dd>
 <dt>void  <strong>SetAttribute</strong>(const char * name, const char * _value)</dt>
 <dd><p class="first">
-<p>Sets an attribute of name to a given value. </p>
-        </p>
+Sets an attribute of name to a given value.         </p>
 <p class="last">
-<p>The attribute will be created if it does not exist, or changed if it does. </p>
-        </p>
+The attribute will be created if it does not exist, or changed if it does.         </p>
 </dd>
 <dt>const std::string *  <strong>Attribute</strong>(const std::string &amp; name)</dt>
 <dd><p class="first">
@@ -1508,10 +1389,9 @@
 </dd>
 <dt>void  <strong>SetAttribute</strong>(const std::string &amp; name, const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>STL std::string form. STL std::string form. </p>
         </p>
 <p class="last">
-        </p>
+STL std::string form.         </p>
 </dd>
 <dt>void  <strong>SetAttribute</strong>(const std::string &amp; name, int _value)</dt>
 <dd><p class="first">
@@ -1521,38 +1401,31 @@
 </dd>
 <dt>void  <strong>SetAttribute</strong>(const char * name, int value)</dt>
 <dd><p class="first">
-<p>Sets an attribute of name to a given value. </p>
-        </p>
+Sets an attribute of name to a given value.         </p>
 <p class="last">
-<p>The attribute will be created if it does not exist, or changed if it does. </p>
-        </p>
+The attribute will be created if it does not exist, or changed if it does.         </p>
 </dd>
 <dt>void  <strong>SetDoubleAttribute</strong>(const char * name, double value)</dt>
 <dd><p class="first">
-<p>Sets an attribute of name to a given value. </p>
-        </p>
+Sets an attribute of name to a given value.         </p>
 <p class="last">
-<p>The attribute will be created if it does not exist, or changed if it does. </p>
-        </p>
+The attribute will be created if it does not exist, or changed if it does.         </p>
 </dd>
 <dt>void  <strong>RemoveAttribute</strong>(const char * name)</dt>
 <dd><p class="first">
-<p>Deletes an attribute with the given name. </p>
-        </p>
+Deletes an attribute with the given name.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>RemoveAttribute</strong>(const std::string &amp; name)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>FirstAttribute</strong>()</dt>
 <dd><p class="first">
-<p>Access the first attribute in this element. </p>
-        </p>
+Access the first attribute in this element.         </p>
 <p class="last">
         </p>
 </dd>
@@ -1564,8 +1437,7 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_attribute"><em>TiXmlAttribute</em></a>  *  <strong>LastAttribute</strong>()</dt>
 <dd><p class="first">
-<p>Access the last attribute in this element. </p>
-        </p>
+Access the last attribute in this element.         </p>
 <p class="last">
         </p>
 </dd>
@@ -1577,34 +1449,21 @@
 </dd>
 <dt>const char *  <strong>GetText</strong>()</dt>
 <dd><p class="first">
-<p>Convenience function for easy access to the text inside an element. </p>
-        </p>
+Convenience function for easy access to the text inside an element.         </p>
 <p class="last">
-<p>Although easy and concise, <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1cba65e5b087083d6d3baf68b40cb9b03"><em>GetText()</em></a> is limited compared to getting the <a class="reference internal" href="#tinyxmlclass_ti_xml_text"><em>TiXmlText</em></a> child and accessing it directly.</p>
-<p>If the first child of &#8216;this&#8217; is a <a class="reference internal" href="#tinyxmlclass_ti_xml_text"><em>TiXmlText</em></a>, the <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1cba65e5b087083d6d3baf68b40cb9b03"><em>GetText()</em></a> returns the character string of the Text node, else null is returned.</p>
-<p>This is a convenient method for getting the text of simple contained text: </p>
-<p>&#8216;str&#8217; will be a pointer to &#8220;This is text&#8221;.</p>
-<p>Note that this function can be misleading. If the element foo was created from this XML: </p>
-<p>then the value of str would be null. The first child node isn&#8217;t a text node, it is another element. From this XML:  <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1cba65e5b087083d6d3baf68b40cb9b03"><em>GetText()</em></a> will return &#8220;This is &#8220;.</p>
-<p>WARNING: <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1cba65e5b087083d6d3baf68b40cb9b03"><em>GetText()</em></a> accesses a child node - don&#8217;t become confused with the similarly named <a class="reference internal" href="#tinyxmlclass_ti_xml_handle_11c0ecb044392f1bfbe4ae56b6e2a6f4b"><em>TiXmlHandle::Text()</em></a> and <a class="reference internal" href="#tinyxmlclass_ti_xml_node_17ab506af4766ec33d5ad81e95c3982f5"><em>TiXmlNode::ToText()</em></a> which are safe type casts on the referenced node. </p>
-        </p>
+Although easy and concise, <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1af3282294986cdb216646ea1f67af2c87"><em>GetText()</em></a> is limited compared to getting the <a class="reference internal" href="#tinyxmlclass_ti_xml_text"><em>TiXmlText</em></a> child and accessing it directly.If the first child of &#8216;this&#8217; is a <a class="reference internal" href="#tinyxmlclass_ti_xml_text"><em>TiXmlText</em></a>, the <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1af3282294986cdb216646ea1f67af2c87"><em>GetText()</em></a> returns the character string of the Text node, else null is returned.This is a convenient method for getting the text of simple contained text: &#8216;str&#8217; will be a pointer to &#8220;This is text&#8221;.Note that this function can be misleading. If the element foo was created from this XML: then the value of str would be null. The first child node isn&#8217;t a text node, it is another element. From this XML:  <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1af3282294986cdb216646ea1f67af2c87"><em>GetText()</em></a> will return &#8220;This is &#8220;.WARNING: <a class="reference internal" href="#tinyxmlclass_ti_xml_element_1af3282294986cdb216646ea1f67af2c87"><em>GetText()</em></a> accesses a child node - don&#8217;t become confused with the similarly named <a class="reference internal" href="#tinyxmlclass_ti_xml_handle_1a9fc739c8a18d160006f82572fc143d13"><em>TiXmlHandle::Text()</em></a> and <a class="reference internal" href="#tinyxmlclass_ti_xml_node_1a3ddfbcac78fbea041fad57e5c6d60a03"><em>TiXmlNode::ToText()</em></a> which are safe type casts on the referenced node.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Clone</strong>()</dt>
 <dd><p class="first">
-<p>Creates a new Element and returns it - the returned element is a copy. </p>
-        </p>
+Creates a new Element and returns it - the returned element is a copy.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>Print</strong>(FILE * cfile, int depth)</dt>
 <dd><p class="first">
-<p>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </p>
-        </p>
+All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode.         </p>
 <p class="last">
-<p>) Either or both cfile and str can be null.</p>
-<p>This is a formatted print, and will insert tabs and newlines.</p>
-<p>(For an unformatted stream, use the &lt;&lt; operator.) </p>
-        </p>
+) Either or both cfile and str can be null.This is a formatted print, and will insert tabs and newlines.(For an unformatted stream, use the &lt;&lt; operator.)         </p>
 </dd>
 <dt>const char *  <strong>Parse</strong>(const char * p, TiXmlParsingData * data, TiXmlEncoding encoding)</dt>
 <dd><p class="first">
@@ -1614,22 +1473,19 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>ToElement</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>ToElement</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>Accept</strong>(<a class="reference internal" href="#tinyxmlclass_ti_xml_visitor"><em>TiXmlVisitor</em></a>  * visitor)</dt>
 <dd><p class="first">
-<p>Walk the XML tree visiting this node and all of its children. </p>
-        </p>
+Walk the XML tree visiting this node and all of its children.         </p>
 <p class="last">
         </p>
 </dd>
@@ -1665,7 +1521,7 @@
 </blockquote>
 <em>Private Members</em><blockquote>
 <dl class="docutils">
-<dt>TiXmlAttributeSet  <strong>attributeSet</strong></dt>
+<dt><a class="reference internal" href="#tinyxmlclass_ti_xml_attribute_set"><em>TiXmlAttributeSet</em></a>  <strong>attributeSet</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -1677,35 +1533,20 @@
 <p id="tinyxmlclass_ti_xml_handle"><em>class</em> <strong>TiXmlHandle</strong></p>
 <blockquote>
 <p>
-<p>A <a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a> is a class that wraps a node pointer with null checks; this is an incredibly useful thing. </p>
-    </p>
+A <a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a> is a class that wraps a node pointer with null checks; this is an incredibly useful thing.     </p>
 <p>
-<p>Note that <a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a> is not part of the TinyXml DOM structure. It is a separate utility class.</p>
-<p>Take an example: </p>
-<p>Assuming you want the value of &#8220;attributeB&#8221; in the 2nd &#8220;Child&#8221; element, it&#8217;s very easy to write a *lot* of code that looks like:</p>
-<p></p>
-<p>And that doesn&#8217;t even cover &#8220;else&#8221; cases. <a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a> addresses the verbosity of such code. A <a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a> checks for null pointers so it is perfectly safe and correct to use:</p>
-<p></p>
-<p>Which is MUCH more concise and useful.</p>
-<p>It is also safe to copy handles - internally they are nothing more than node pointers. </p>
-<p>What they should not be used for is iteration:</p>
-<p></p>
-<p>It seems reasonable, but it is in fact two embedded while loops. The Child method is a linear walk to find the element, so this code would iterate much more than it needs to. Instead, prefer:</p>
-<p> </p>
-    </p>
+Note that <a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a> is not part of the TinyXml DOM structure. It is a separate utility class.Take an example: Assuming you want the value of &#8220;attributeB&#8221; in the 2nd &#8220;Child&#8221; element, it&#8217;s very easy to write a *lot* of code that looks like:And that doesn&#8217;t even cover &#8220;else&#8221; cases. <a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a> addresses the verbosity of such code. A <a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a> checks for null pointers so it is perfectly safe and correct to use:Which is MUCH more concise and useful.It is also safe to copy handles - internally they are nothing more than node pointers. What they should not be used for is iteration:It seems reasonable, but it is in fact two embedded while loops. The Child method is a linear walk to find the element, so this code would iterate much more than it needs to. Instead, prefer:     </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlHandle</strong>(<a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  * _node)</dt>
 <dd><p class="first">
-<p>Create a handle from any node (at any depth of the tree.) This can be a null pointer. </p>
-        </p>
+Create a handle from any node (at any depth of the tree.) This can be a null pointer.         </p>
 <p class="last">
         </p>
 </dd>
 <dt> <strong>TiXmlHandle</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a>  &amp; ref)</dt>
 <dd><p class="first">
-<p>Copy constructor. </p>
-        </p>
+Copy constructor.         </p>
 <p class="last">
         </p>
 </dd>
@@ -1717,63 +1558,51 @@
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>FirstChild</strong>()</dt>
 <dd><p class="first">
-<p>Return a handle to the first child node. </p>
-        </p>
+Return a handle to the first child node.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>FirstChild</strong>(const char * value)</dt>
 <dd><p class="first">
-<p>Return a handle to the first child node with the given name. </p>
-        </p>
+Return a handle to the first child node with the given name.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>FirstChildElement</strong>()</dt>
 <dd><p class="first">
-<p>Return a handle to the first child element. </p>
-        </p>
+Return a handle to the first child element.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>FirstChildElement</strong>(const char * value)</dt>
 <dd><p class="first">
-<p>Return a handle to the first child element with the given name. </p>
-        </p>
+Return a handle to the first child element with the given name.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>Child</strong>(const char * value, int index)</dt>
 <dd><p class="first">
-<p>Return a handle to the &#8220;index&#8221; child with the given name. </p>
-        </p>
+Return a handle to the &#8220;index&#8221; child with the given name.         </p>
 <p class="last">
-<p>The first child is 0, the second 1, etc. </p>
-        </p>
+The first child is 0, the second 1, etc.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>Child</strong>(int index)</dt>
 <dd><p class="first">
-<p>Return a handle to the &#8220;index&#8221; child. </p>
-        </p>
+Return a handle to the &#8220;index&#8221; child.         </p>
 <p class="last">
-<p>The first child is 0, the second 1, etc. </p>
-        </p>
+The first child is 0, the second 1, etc.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>ChildElement</strong>(const char * value, int index)</dt>
 <dd><p class="first">
-<p>Return a handle to the &#8220;index&#8221; child element with the given name. </p>
-        </p>
+Return a handle to the &#8220;index&#8221; child element with the given name.         </p>
 <p class="last">
-<p>The first child element is 0, the second 1, etc. Note that only TiXmlElements are indexed: other types are not counted. </p>
-        </p>
+The first child element is 0, the second 1, etc. Note that only TiXmlElements are indexed: other types are not counted.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>ChildElement</strong>(int index)</dt>
 <dd><p class="first">
-<p>Return a handle to the &#8220;index&#8221; child element. </p>
-        </p>
+Return a handle to the &#8220;index&#8221; child element.         </p>
 <p class="last">
-<p>The first child element is 0, the second 1, etc. Note that only TiXmlElements are indexed: other types are not counted. </p>
-        </p>
+The first child element is 0, the second 1, etc. Note that only TiXmlElements are indexed: other types are not counted.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_handle"><em>TiXmlHandle</em></a>  <strong>FirstChild</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
@@ -1801,62 +1630,50 @@
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>ToNode</strong>()</dt>
 <dd><p class="first">
-<p>Return the handle as a <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>. </p>
-        </p>
+Return the handle as a <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>.         </p>
 <p class="last">
-<p>This may return null. </p>
-        </p>
+This may return null.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>ToElement</strong>()</dt>
 <dd><p class="first">
-<p>Return the handle as a <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>. </p>
-        </p>
+Return the handle as a <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>.         </p>
 <p class="last">
-<p>This may return null. </p>
-        </p>
+This may return null.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_text"><em>TiXmlText</em></a>  *  <strong>ToText</strong>()</dt>
 <dd><p class="first">
-<p>Return the handle as a <a class="reference internal" href="#tinyxmlclass_ti_xml_text"><em>TiXmlText</em></a>. </p>
-        </p>
+Return the handle as a <a class="reference internal" href="#tinyxmlclass_ti_xml_text"><em>TiXmlText</em></a>.         </p>
 <p class="last">
-<p>This may return null. </p>
-        </p>
+This may return null.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_unknown"><em>TiXmlUnknown</em></a>  *  <strong>ToUnknown</strong>()</dt>
 <dd><p class="first">
-<p>Return the handle as a <a class="reference internal" href="#tinyxmlclass_ti_xml_unknown"><em>TiXmlUnknown</em></a>. </p>
-        </p>
+Return the handle as a <a class="reference internal" href="#tinyxmlclass_ti_xml_unknown"><em>TiXmlUnknown</em></a>.         </p>
 <p class="last">
-<p>This may return null. </p>
-        </p>
+This may return null.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Node</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-<p></p>
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>Element</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-<p></p>
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_text"><em>TiXmlText</em></a>  *  <strong>Text</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-<p></p>
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_unknown"><em>TiXmlUnknown</em></a>  *  <strong>Unknown</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-<p></p>
         </p>
 </dd>
 </dl>
@@ -1875,26 +1692,22 @@
 <p id="tinyxmlclass_ti_xml_node"><em>class</em> <strong>TiXmlNode</strong></p>
 <blockquote>
 <p>
-<p>The parent class for everything in the Document Object Model. </p>
-    </p>
+The parent class for everything in the Document Object Model.     </p>
 <p>
-<p>(Except for attributes). Nodes have siblings, a parent, and children. A node can be in a document, or stand on its own. The type of a <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a> can be queried, and it can be cast to its more defined type. </p>
-    </p>
+(Except for attributes). Nodes have siblings, a parent, and children. A node can be in a document, or stand on its own. The type of a <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a> can be queried, and it can be cast to its more defined type.     </p>
 <em>Public Type</em><blockquote>
 <dl class="docutils">
 <dt> <strong>NodeType</strong></dt>
 <dd><p class="first">
-<p>The types of XML nodes supported by TinyXml. </p>
-        </p>
+The types of XML nodes supported by TinyXml.         </p>
 <p class="last">
-<p>(All the unsupported types are picked up by UNKNOWN.) </p>
-        </p>
+(All the unsupported types are picked up by UNKNOWN.)         </p>
 </dd>
 </dl>
 </blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt>virtual  <strong>~TiXmlNode</strong>()</dt>
+<dt> <strong>~TiXmlNode</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -1902,47 +1715,37 @@
 </dd>
 <dt>const char *  <strong>Value</strong>()</dt>
 <dd><p class="first">
-<p>The meaning of &#8216;value&#8217; changes for the specific type of <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>. </p>
-        </p>
+The meaning of &#8216;value&#8217; changes for the specific type of <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>.         </p>
 <p class="last">
-<p></p>
-<p>The subclasses will wrap this function. </p>
-        </p>
+The subclasses will wrap this function.         </p>
 </dd>
 <dt>const std::string &amp;  <strong>ValueStr</strong>()</dt>
 <dd><p class="first">
-<p>Return <a class="reference internal" href="#tinyxmlclass_ti_xml_node_14c79c12325fad8bfb0e3e4903d679c48"><em>Value()</em></a> as a std::string. </p>
-        </p>
+Return <a class="reference internal" href="#tinyxmlclass_ti_xml_node_1a77943eb90d12c2892b1337a9f5918b41"><em>Value()</em></a> as a std::string.         </p>
 <p class="last">
-<p>If you only use STL, this is more efficient than calling <a class="reference internal" href="#tinyxmlclass_ti_xml_node_14c79c12325fad8bfb0e3e4903d679c48"><em>Value()</em></a>. Only available in STL mode. </p>
-        </p>
+If you only use STL, this is more efficient than calling <a class="reference internal" href="#tinyxmlclass_ti_xml_node_1a77943eb90d12c2892b1337a9f5918b41"><em>Value()</em></a>. Only available in STL mode.         </p>
 </dd>
 <dt>void  <strong>SetValue</strong>(const char * _value)</dt>
 <dd><p class="first">
-<p>Changes the value of the node. </p>
-        </p>
+Changes the value of the node.         </p>
 <p class="last">
-<p>Defined as:  </p>
-        </p>
+Defined as:          </p>
 </dd>
 <dt>void  <strong>SetValue</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>Clear</strong>()</dt>
 <dd><p class="first">
-<p>Delete all the children of this node. Does not affect &#8216;this&#8217;. </p>
-        </p>
+Delete all the children of this node. Does not affect &#8216;this&#8217;.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Parent</strong>()</dt>
 <dd><p class="first">
-<p>One step up the DOM. </p>
-        </p>
+One step up the DOM.         </p>
 <p class="last">
         </p>
 </dd>
@@ -1954,8 +1757,7 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>FirstChild</strong>()</dt>
 <dd><p class="first">
-<p>The first child of this node. Will be null if there are no children. </p>
-        </p>
+The first child of this node. Will be null if there are no children.         </p>
 <p class="last">
         </p>
 </dd>
@@ -1967,16 +1769,13 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>FirstChild</strong>(const char * value)</dt>
 <dd><p class="first">
-<p>The first child of this node with the matching &#8216;value&#8217;. </p>
-        </p>
+The first child of this node with the matching &#8216;value&#8217;.         </p>
 <p class="last">
-<p>Will be null if none found. </p>
-        </p>
+Will be null if none found.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>FirstChild</strong>(const char * _value)</dt>
 <dd><p class="first">
-<p>The first child of this node with the matching &#8216;value&#8217;. Will be null if none found. </p>
-        </p>
+The first child of this node with the matching &#8216;value&#8217;. Will be null if none found.         </p>
 <p class="last">
         </p>
 </dd>
@@ -1988,8 +1787,7 @@
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>LastChild</strong>()</dt>
 <dd><p class="first">
-<p>The last child of this node. Will be null if there are no children. </p>
-        </p>
+The last child of this node. Will be null if there are no children.         </p>
 <p class="last">
         </p>
 </dd>
@@ -2001,48 +1799,39 @@
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>LastChild</strong>(const char * _value)</dt>
 <dd><p class="first">
-<p>The last child of this node matching &#8216;value&#8217;. Will be null if there are no children. </p>
-        </p>
+The last child of this node matching &#8216;value&#8217;. Will be null if there are no children.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>FirstChild</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>FirstChild</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>LastChild</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>LastChild</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>IterateChildren</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  * previous)</dt>
 <dd><p class="first">
-<p>An alternate way to walk the children of a node. </p>
-        </p>
+An alternate way to walk the children of a node.         </p>
 <p class="last">
-<p>One way to iterate over nodes is: </p>
-<p>IterateChildren does the same thing with the syntax: </p>
-<p>IterateChildren takes the previous child as input and finds the next one. If the previous child is null, it returns the first. IterateChildren will return null when done. </p>
-        </p>
+One way to iterate over nodes is: IterateChildren does the same thing with the syntax: IterateChildren takes the previous child as input and finds the next one. If the previous child is null, it returns the first. IterateChildren will return null when done.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>IterateChildren</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  * previous)</dt>
 <dd><p class="first">
@@ -2052,8 +1841,7 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>IterateChildren</strong>(const char * value, const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  * previous)</dt>
 <dd><p class="first">
-<p>This flavor of IterateChildren searches for children with a particular &#8216;value&#8217;. </p>
-        </p>
+This flavor of IterateChildren searches for children with a particular &#8216;value&#8217;.         </p>
 <p class="last">
         </p>
 </dd>
@@ -2065,72 +1853,60 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>IterateChildren</strong>(const std::string &amp; _value, const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  * previous)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>IterateChildren</strong>(const std::string &amp; _value, const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  * previous)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>InsertEndChild</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  &amp; addThis)</dt>
 <dd><p class="first">
-<p>Add a new node related to this. </p>
-        </p>
+Add a new node related to this.         </p>
 <p class="last">
-<p>Adds a child past the LastChild. Returns a pointer to the new object or NULL if an error occured. </p>
-        </p>
+Adds a child past the LastChild. Returns a pointer to the new object or NULL if an error occured.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>LinkEndChild</strong>(<a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  * addThis)</dt>
 <dd><p class="first">
-<p>Add a new node related to this. </p>
-        </p>
+Add a new node related to this.         </p>
 <p class="last">
-<p>Adds a child past the LastChild.</p>
-<p>NOTE: the node to be added is passed by pointer, and will be henceforth owned (and deleted) by tinyXml. This method is efficient and avoids an extra copy, but should be used with care as it uses a different memory model than the other insert functions.</p>
-<p>
-</p>
+Adds a child past the LastChild.NOTE: the node to be added is passed by pointer, and will be henceforth owned (and deleted) by tinyXml. This method is efficient and avoids an extra copy, but should be used with care as it uses a different memory model than the other insert functions.
+<dl class="docutils">
+<dt><em>See</em></dt>
+<dd><a class="reference internal" href="#tinyxmlclass_ti_xml_node_1ad7d4630e1a2a916edda16be22448a8ba"><em>InsertEndChild</em></a> </dd>
+</dl>
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>InsertBeforeChild</strong>(<a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  * beforeThis, const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  &amp; addThis)</dt>
 <dd><p class="first">
-<p>Add a new node related to this. </p>
-        </p>
+Add a new node related to this.         </p>
 <p class="last">
-<p>Adds a child before the specified child. Returns a pointer to the new object or NULL if an error occured. </p>
-        </p>
+Adds a child before the specified child. Returns a pointer to the new object or NULL if an error occured.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>InsertAfterChild</strong>(<a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  * afterThis, const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  &amp; addThis)</dt>
 <dd><p class="first">
-<p>Add a new node related to this. </p>
-        </p>
+Add a new node related to this.         </p>
 <p class="last">
-<p>Adds a child after the specified child. Returns a pointer to the new object or NULL if an error occured. </p>
-        </p>
+Adds a child after the specified child. Returns a pointer to the new object or NULL if an error occured.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>ReplaceChild</strong>(<a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  * replaceThis, const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  &amp; withThis)</dt>
 <dd><p class="first">
-<p>Replace a child of this node. </p>
-        </p>
+Replace a child of this node.         </p>
 <p class="last">
-<p>Returns a pointer to the new object or NULL if an error occured. </p>
-        </p>
+Returns a pointer to the new object or NULL if an error occured.         </p>
 </dd>
 <dt>bool  <strong>RemoveChild</strong>(<a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  * removeThis)</dt>
 <dd><p class="first">
-<p>Delete a child of this node. </p>
-        </p>
+Delete a child of this node.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>PreviousSibling</strong>()</dt>
 <dd><p class="first">
-<p>Navigate to a sibling node. </p>
-        </p>
+Navigate to a sibling node.         </p>
 <p class="last">
         </p>
 </dd>
@@ -2142,8 +1918,7 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>PreviousSibling</strong>(const char * )</dt>
 <dd><p class="first">
-<p>Navigate to a sibling node. </p>
-        </p>
+Navigate to a sibling node.         </p>
 <p class="last">
         </p>
 </dd>
@@ -2155,36 +1930,31 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>PreviousSibling</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>PreviousSibling</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>NextSibling</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>NextSibling</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>NextSibling</strong>()</dt>
 <dd><p class="first">
-<p>Navigate to a sibling node. </p>
-        </p>
+Navigate to a sibling node.         </p>
 <p class="last">
         </p>
 </dd>
@@ -2196,8 +1966,7 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>NextSibling</strong>(const char * )</dt>
 <dd><p class="first">
-<p>Navigate to a sibling node with the given &#8216;value&#8217;. </p>
-        </p>
+Navigate to a sibling node with the given &#8216;value&#8217;.         </p>
 <p class="last">
         </p>
 </dd>
@@ -2209,11 +1978,9 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>NextSiblingElement</strong>()</dt>
 <dd><p class="first">
-<p>Convenience function to get through elements. </p>
-        </p>
+Convenience function to get through elements.         </p>
 <p class="last">
-<p>Calls NextSibling and ToElement. Will skip all non-Element nodes. Returns 0 if there is not another element. </p>
-        </p>
+Calls NextSibling and ToElement. Will skip all non-Element nodes. Returns 0 if there is not another element.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>NextSiblingElement</strong>()</dt>
 <dd><p class="first">
@@ -2223,11 +1990,9 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>NextSiblingElement</strong>(const char * )</dt>
 <dd><p class="first">
-<p>Convenience function to get through elements. </p>
-        </p>
+Convenience function to get through elements.         </p>
 <p class="last">
-<p>Calls NextSibling and ToElement. Will skip all non-Element nodes. Returns 0 if there is not another element. </p>
-        </p>
+Calls NextSibling and ToElement. Will skip all non-Element nodes. Returns 0 if there is not another element.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>NextSiblingElement</strong>(const char * _next)</dt>
 <dd><p class="first">
@@ -2237,22 +2002,19 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>NextSiblingElement</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>NextSiblingElement</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>FirstChildElement</strong>()</dt>
 <dd><p class="first">
-<p>Convenience function to get through elements. </p>
-        </p>
+Convenience function to get through elements.         </p>
 <p class="last">
         </p>
 </dd>
@@ -2264,8 +2026,7 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>FirstChildElement</strong>(const char * _value)</dt>
 <dd><p class="first">
-<p>Convenience function to get through elements. </p>
-        </p>
+Convenience function to get through elements.         </p>
 <p class="last">
         </p>
 </dd>
@@ -2277,33 +2038,27 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>FirstChildElement</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>FirstChildElement</strong>(const std::string &amp; _value)</dt>
 <dd><p class="first">
-<p>STL std::string form. </p>
-        </p>
+STL std::string form.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>int  <strong>Type</strong>()</dt>
 <dd><p class="first">
-<p>Query the type (as an enumerated value, above) of this node. </p>
-        </p>
+Query the type (as an enumerated value, above) of this node.         </p>
 <p class="last">
-<p>The possible types are: DOCUMENT, ELEMENT, COMMENT, UNKNOWN, TEXT, and DECLARATION. </p>
-        </p>
+The possible types are: DOCUMENT, ELEMENT, COMMENT, UNKNOWN, TEXT, and DECLARATION.         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a>  *  <strong>GetDocument</strong>()</dt>
 <dd><p class="first">
-<p>Return a pointer to the Document this node lives in. </p>
-        </p>
+Return a pointer to the Document this node lives in.         </p>
 <p class="last">
-<p>Returns null if not in a document. </p>
-        </p>
+Returns null if not in a document.         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a>  *  <strong>GetDocument</strong>()</dt>
 <dd><p class="first">
@@ -2313,122 +2068,100 @@
 </dd>
 <dt>bool  <strong>NoChildren</strong>()</dt>
 <dd><p class="first">
-<p>Returns true if this node has no children. </p>
-        </p>
+Returns true if this node has no children.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a>  *  <strong>ToDocument</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null if not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null if not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>ToElement</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null if not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null if not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_comment"><em>TiXmlComment</em></a>  *  <strong>ToComment</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null if not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null if not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_unknown"><em>TiXmlUnknown</em></a>  *  <strong>ToUnknown</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null if not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null if not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_text"><em>TiXmlText</em></a>  *  <strong>ToText</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null if not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null if not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  *  <strong>ToDeclaration</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null if not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null if not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a>  *  <strong>ToDocument</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null if not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null if not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  *  <strong>ToElement</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null if not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null if not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_comment"><em>TiXmlComment</em></a>  *  <strong>ToComment</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null if not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null if not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_unknown"><em>TiXmlUnknown</em></a>  *  <strong>ToUnknown</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null if not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null if not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_text"><em>TiXmlText</em></a>  *  <strong>ToText</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null if not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null if not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  *  <strong>ToDeclaration</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null if not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null if not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Clone</strong>()</dt>
 <dd><p class="first">
-<p>Create an exact duplicate of this node and return it. </p>
-        </p>
+Create an exact duplicate of this node and return it.         </p>
 <p class="last">
-<p>The memory must be deleted by the caller. </p>
-        </p>
+The memory must be deleted by the caller.         </p>
 </dd>
 <dt>bool  <strong>Accept</strong>(<a class="reference internal" href="#tinyxmlclass_ti_xml_visitor"><em>TiXmlVisitor</em></a>  * visitor)</dt>
 <dd><p class="first">
-<p>Accept a hierchical visit the nodes in the TinyXML DOM. </p>
-        </p>
+Accept a hierchical visit the nodes in the TinyXML DOM.         </p>
 <p class="last">
-<p>Every node in the XML tree will be conditionally visited and the host will be called back via the <a class="reference internal" href="#tinyxmlclass_ti_xml_visitor"><em>TiXmlVisitor</em></a> interface.</p>
-<p>This is essentially a SAX interface for TinyXML. (Note however it doesn&#8217;t re-parse the XML for the callbacks, so the performance of TinyXML is unchanged by using this interface versus any other.)</p>
-<p>The interface has been based on ideas from:</p>
-<p>
-</p>
-<p>Which are both good references for &#8220;visiting&#8221;.</p>
-<p>An example of using <a class="reference internal" href="#tinyxmlclass_ti_xml_node_188fb20f829de2ceb6e27de253b10dc50"><em>Accept()</em></a>:  </p>
-        </p>
+Every node in the XML tree will be conditionally visited and the host will be called back via the <a class="reference internal" href="#tinyxmlclass_ti_xml_visitor"><em>TiXmlVisitor</em></a> interface.This is essentially a SAX interface for TinyXML. (Note however it doesn&#8217;t re-parse the XML for the callbacks, so the performance of TinyXML is unchanged by using this interface versus any other.)The interface has been based on ideas from:
+Which are both good references for &#8220;visiting&#8221;.An example of using <a class="reference internal" href="#tinyxmlclass_ti_xml_node_1acc0f88b7462c6cb73809d410a4f5bb86"><em>Accept()</em></a>:          </p>
 </dd>
 </dl>
 </blockquote>
 <em>Protected Functions</em><blockquote>
 <dl class="docutils">
-<dt> <strong>TiXmlNode</strong>(<a class="reference internal" href="#tinyxmlclass_ti_xml_node_1235401d0e3efe48bbe6053c3d03ace3e"><em>NodeType</em></a> _type)</dt>
+<dt> <strong>TiXmlNode</strong>(<a class="reference internal" href="#tinyxmlclass_ti_xml_node_1a836eded4920ab9e9ef28496f48cd95a2"><em>NodeType</em></a> _type)</dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -2462,7 +2195,7 @@
 <p class="last">
         </p>
 </dd>
-<dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node_1235401d0e3efe48bbe6053c3d03ace3e"><em>NodeType</em></a>  <strong>type</strong></dt>
+<dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node_1a836eded4920ab9e9ef28496f48cd95a2"><em>NodeType</em></a>  <strong>type</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -2532,27 +2265,19 @@
 </dd>
 <dt>friend std::istream &amp;  <strong>operator&gt;&gt;</strong></dt>
 <dd><p class="first">
-<p>An input stream operator, for every class. </p>
-        </p>
+An input stream operator, for every class.         </p>
 <p class="last">
-<p>Tolerant of newlines and formatting, but doesn&#8217;t expect them. </p>
-        </p>
+Tolerant of newlines and formatting, but doesn&#8217;t expect them.         </p>
 </dd>
 <dt>friend std::ostream &amp;  <strong>operator&lt;&lt;</strong></dt>
 <dd><p class="first">
-<p>An output stream operator, for every class. </p>
-        </p>
+An output stream operator, for every class.         </p>
 <p class="last">
-<p>Note that this outputs without any newlines or formatting, as opposed to <a class="reference internal" href="#tinyxmlclass_ti_xml_base_11719c9b4e80f9a1ba648a92e7cad4091"><em>Print()</em></a>, which includes tabs and new lines.</p>
-<p>The operator&lt;&lt; and operator&gt;&gt; are not completely symmetric. Writing a node to a stream is very well defined. You&#8217;ll get a nice stream of output, without any extra whitespace or newlines.</p>
-<p>But reading is not as well defined. (As it always is.) If you create a <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a> (for example) and read that from an input stream, the text needs to define an element or junk will result. This is true of all input streams, but it&#8217;s worth keeping in mind.</p>
-<p>A <a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a> will read nodes until it reads a root element, and all the children of that root element. </p>
-        </p>
+Note that this outputs without any newlines or formatting, as opposed to <a class="reference internal" href="#tinyxmlclass_ti_xml_base_1a0de56b3f2ef14c65091a3b916437b512"><em>Print()</em></a>, which includes tabs and new lines.The operator&lt;&lt; and operator&gt;&gt; are not completely symmetric. Writing a node to a stream is very well defined. You&#8217;ll get a nice stream of output, without any extra whitespace or newlines.But reading is not as well defined. (As it always is.) If you create a <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a> (for example) and read that from an input stream, the text needs to define an element or junk will result. This is true of all input streams, but it&#8217;s worth keeping in mind.A <a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a> will read nodes until it reads a root element, and all the children of that root element.         </p>
 </dd>
 <dt>friend std::string &amp;  <strong>operator&lt;&lt;</strong></dt>
 <dd><p class="first">
-<p>Appends the XML node or attribute to a std::string. </p>
-        </p>
+Appends the XML node or attribute to a std::string.         </p>
 <p class="last">
         </p>
 </dd>
@@ -2562,15 +2287,10 @@
 <p id="tinyxmlclass_ti_xml_printer"><em>class</em> <strong>TiXmlPrinter</strong></p>
 <blockquote>
 <p>
-<p>Print to memory functionality. </p>
-    </p>
+Print to memory functionality.     </p>
 <p>
-<p>The <a class="reference internal" href="#tinyxmlclass_ti_xml_printer"><em>TiXmlPrinter</em></a> is useful when you need to:</p>
-<p>
-</p>
-<p>When constructed, the <a class="reference internal" href="#tinyxmlclass_ti_xml_printer"><em>TiXmlPrinter</em></a> is in its default &#8220;pretty printing&#8221; mode. Before calling Accept() you can call methods to control the printing of the XML document. After <a class="reference internal" href="#tinyxmlclass_ti_xml_node_188fb20f829de2ceb6e27de253b10dc50"><em>TiXmlNode::Accept()</em></a> is called, the printed document can be accessed via the <a class="reference internal" href="#tinyxmlclass_ti_xml_printer_191272847d726d8a76e62ce5d04488ded"><em>CStr()</em></a>, <a class="reference internal" href="#tinyxmlclass_ti_xml_printer_1370437d6c471acf7f7beaaa2fd6b233c"><em>Str()</em></a>, and <a class="reference internal" href="#tinyxmlclass_ti_xml_printer_11c62191346233fd0fc9349ba986bc23b"><em>Size()</em></a> methods.</p>
-<p><a class="reference internal" href="#tinyxmlclass_ti_xml_printer"><em>TiXmlPrinter</em></a> uses the Visitor API.  </p>
-    </p>
+The <a class="reference internal" href="#tinyxmlclass_ti_xml_printer"><em>TiXmlPrinter</em></a> is useful when you need to:
+When constructed, the <a class="reference internal" href="#tinyxmlclass_ti_xml_printer"><em>TiXmlPrinter</em></a> is in its default &#8220;pretty printing&#8221; mode. Before calling Accept() you can call methods to control the printing of the XML document. After <a class="reference internal" href="#tinyxmlclass_ti_xml_node_1acc0f88b7462c6cb73809d410a4f5bb86"><em>TiXmlNode::Accept()</em></a> is called, the printed document can be accessed via the <a class="reference internal" href="#tinyxmlclass_ti_xml_printer_1a859eede9597d3e0355b77757be48735e"><em>CStr()</em></a>, <a class="reference internal" href="#tinyxmlclass_ti_xml_printer_1a3bd4daf44309b41f5813a833caa0d1c9"><em>Str()</em></a>, and <a class="reference internal" href="#tinyxmlclass_ti_xml_printer_1ad01375ae9199bd2f48252eaddce3039d"><em>Size()</em></a> methods.<a class="reference internal" href="#tinyxmlclass_ti_xml_printer"><em>TiXmlPrinter</em></a> uses the Visitor API.      </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlPrinter</strong>()</dt>
@@ -2579,119 +2299,100 @@
 <p class="last">
         </p>
 </dd>
-<dt>bool  <strong>VisitEnter</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a>  &amp; doc)</dt>
+<dt>bool  <strong>VisitEnter</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a>  &amp; )</dt>
 <dd><p class="first">
-<p>Visit a document. </p>
-        </p>
+Visit a document.         </p>
 <p class="last">
         </p>
 </dd>
-<dt>bool  <strong>VisitExit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a>  &amp; doc)</dt>
+<dt>bool  <strong>VisitExit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a>  &amp; )</dt>
 <dd><p class="first">
-<p>Visit a document. </p>
-        </p>
+Visit a document.         </p>
 <p class="last">
         </p>
 </dd>
-<dt>bool  <strong>VisitEnter</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  &amp; element, const  <a class="reference internal" href="#tinyxmlclass_ti_xml_attribute"><em>TiXmlAttribute</em></a>  * firstAttribute)</dt>
+<dt>bool  <strong>VisitEnter</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  &amp; , const  <a class="reference internal" href="#tinyxmlclass_ti_xml_attribute"><em>TiXmlAttribute</em></a>  * )</dt>
 <dd><p class="first">
-<p>Visit an element. </p>
-        </p>
+Visit an element.         </p>
 <p class="last">
         </p>
 </dd>
-<dt>bool  <strong>VisitExit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  &amp; element)</dt>
+<dt>bool  <strong>VisitExit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  &amp; )</dt>
 <dd><p class="first">
-<p>Visit an element. </p>
-        </p>
+Visit an element.         </p>
 <p class="last">
         </p>
 </dd>
-<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  &amp; declaration)</dt>
+<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  &amp; )</dt>
 <dd><p class="first">
-<p>Visit a declaration. </p>
-        </p>
+Visit a declaration.         </p>
 <p class="last">
         </p>
 </dd>
-<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_text"><em>TiXmlText</em></a>  &amp; text)</dt>
+<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_text"><em>TiXmlText</em></a>  &amp; )</dt>
 <dd><p class="first">
-<p>Visit a text node. </p>
-        </p>
+Visit a text node.         </p>
 <p class="last">
         </p>
 </dd>
-<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_comment"><em>TiXmlComment</em></a>  &amp; comment)</dt>
+<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_comment"><em>TiXmlComment</em></a>  &amp; )</dt>
 <dd><p class="first">
-<p>Visit a comment node. </p>
-        </p>
+Visit a comment node.         </p>
 <p class="last">
         </p>
 </dd>
-<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_unknown"><em>TiXmlUnknown</em></a>  &amp; unknown)</dt>
+<dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_unknown"><em>TiXmlUnknown</em></a>  &amp; )</dt>
 <dd><p class="first">
-<p>Visit an unknow node. </p>
-        </p>
+Visit an unknow node.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>SetIndent</strong>(const char * _indent)</dt>
 <dd><p class="first">
-<p>Set the indent characters for printing. </p>
-        </p>
+Set the indent characters for printing.         </p>
 <p class="last">
-<p>By default 4 spaces but tab () is also useful, or null/empty string for no indentation. </p>
-        </p>
+By default 4 spaces but tab () is also useful, or null/empty string for no indentation.         </p>
 </dd>
 <dt>const char *  <strong>Indent</strong>()</dt>
 <dd><p class="first">
-<p>Query the indention string. </p>
-        </p>
+Query the indention string.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>SetLineBreak</strong>(const char * _lineBreak)</dt>
 <dd><p class="first">
-<p>Set the line breaking string. </p>
-        </p>
+Set the line breaking string.         </p>
 <p class="last">
-<p>By default set to newline (
-). Some operating systems prefer other characters, or can be set to the null/empty string for no indenation. </p>
-        </p>
+By default set to newline (
+). Some operating systems prefer other characters, or can be set to the null/empty string for no indenation.         </p>
 </dd>
 <dt>const char *  <strong>LineBreak</strong>()</dt>
 <dd><p class="first">
-<p>Query the current line breaking string. </p>
-        </p>
+Query the current line breaking string.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>SetStreamPrinting</strong>()</dt>
 <dd><p class="first">
-<p>Switch over to &#8220;stream printing&#8221; which is the most dense formatting without linebreaks. </p>
-        </p>
+Switch over to &#8220;stream printing&#8221; which is the most dense formatting without linebreaks.         </p>
 <p class="last">
-<p>Common when the XML is needed for network transmission. </p>
-        </p>
+Common when the XML is needed for network transmission.         </p>
 </dd>
 <dt>const char *  <strong>CStr</strong>()</dt>
 <dd><p class="first">
-<p>Return the result. </p>
-        </p>
+Return the result.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>size_t  <strong>Size</strong>()</dt>
 <dd><p class="first">
-<p>Return the length of the result string. </p>
-        </p>
+Return the length of the result string.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>const std::string &amp;  <strong>Str</strong>()</dt>
 <dd><p class="first">
-<p>Return the result. </p>
-        </p>
+Return the result.         </p>
 <p class="last">
         </p>
 </dd>
@@ -2751,22 +2452,18 @@
 <p id="tinyxmlclass_ti_xml_text"><em>class</em> <strong>TiXmlText</strong></p>
 <blockquote>
 <p>
-<p>XML text. </p>
-    </p>
+XML text.     </p>
 <p>
-<p>A text node can have 2 ways to output the next. &#8220;normal&#8221; output and CDATA. It will default to the mode it was parsed from the XML file and you generally want to leave it alone, but you can change the output mode with <a class="reference internal" href="#tinyxmlclass_ti_xml_text_11ccabb544de92fa67cd6236fddbfa6fb"><em>SetCDATA()</em></a> and query it with <a class="reference internal" href="#tinyxmlclass_ti_xml_text_10573d62d83e17eb91aa0758caaa1b214"><em>CDATA()</em></a>. </p>
-    </p>
+A text node can have 2 ways to output the next. &#8220;normal&#8221; output and CDATA. It will default to the mode it was parsed from the XML file and you generally want to leave it alone, but you can change the output mode with <a class="reference internal" href="#tinyxmlclass_ti_xml_text_1acb17ff7c5d09b2c839393445a3de5ea9"><em>SetCDATA()</em></a> and query it with <a class="reference internal" href="#tinyxmlclass_ti_xml_text_1ad1a6a6b83fa2271022dd97c072a2b586"><em>CDATA()</em></a>.     </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlText</strong>(const char * initValue)</dt>
 <dd><p class="first">
-<p>Constructor for text element. </p>
-        </p>
+Constructor for text element.         </p>
 <p class="last">
-<p>By default, it is treated as normal, encoded text. If you want it be output as a CDATA text element, set the parameter _cdata to &#8216;true&#8217; </p>
-        </p>
+By default, it is treated as normal, encoded text. If you want it be output as a CDATA text element, set the parameter _cdata to &#8216;true&#8217;         </p>
 </dd>
-<dt>virtual  <strong>~TiXmlText</strong>()</dt>
+<dt> <strong>~TiXmlText</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -2774,8 +2471,7 @@
 </dd>
 <dt> <strong>TiXmlText</strong>(const std::string &amp; initValue)</dt>
 <dd><p class="first">
-<p>Constructor. </p>
-        </p>
+Constructor.         </p>
 <p class="last">
         </p>
 </dd>
@@ -2793,25 +2489,19 @@
 </dd>
 <dt>void  <strong>Print</strong>(FILE * cfile, int depth)</dt>
 <dd><p class="first">
-<p>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </p>
-        </p>
+All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode.         </p>
 <p class="last">
-<p>) Either or both cfile and str can be null.</p>
-<p>This is a formatted print, and will insert tabs and newlines.</p>
-<p>(For an unformatted stream, use the &lt;&lt; operator.) </p>
-        </p>
+) Either or both cfile and str can be null.This is a formatted print, and will insert tabs and newlines.(For an unformatted stream, use the &lt;&lt; operator.)         </p>
 </dd>
 <dt>bool  <strong>CDATA</strong>()</dt>
 <dd><p class="first">
-<p>Queries whether this represents text using a CDATA section. </p>
-        </p>
+Queries whether this represents text using a CDATA section.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>SetCDATA</strong>(bool _cdata)</dt>
 <dd><p class="first">
-<p>Turns on or off a CDATA representation of text. </p>
-        </p>
+Turns on or off a CDATA representation of text.         </p>
 <p class="last">
         </p>
 </dd>
@@ -2823,22 +2513,19 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_text"><em>TiXmlText</em></a>  *  <strong>ToText</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_text"><em>TiXmlText</em></a>  *  <strong>ToText</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>Accept</strong>(<a class="reference internal" href="#tinyxmlclass_ti_xml_visitor"><em>TiXmlVisitor</em></a>  * content)</dt>
 <dd><p class="first">
-<p>Walk the XML tree visiting this node and all of its children. </p>
-        </p>
+Walk the XML tree visiting this node and all of its children.         </p>
 <p class="last">
         </p>
 </dd>
@@ -2848,8 +2535,7 @@
 <dl class="docutils">
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Clone</strong>()</dt>
 <dd><p class="first">
-<p>[internal use] Creates a new Element and returns it. </p>
-        </p>
+[internal use] Creates a new Element and returns it.         </p>
 <p class="last">
         </p>
 </dd>
@@ -2897,12 +2583,9 @@
 <p id="tinyxmlclass_ti_xml_unknown"><em>class</em> <strong>TiXmlUnknown</strong></p>
 <blockquote>
 <p>
-<p>Any tag that tinyXml doesn&#8217;t recognize is saved as an unknown. </p>
-    </p>
+Any tag that tinyXml doesn&#8217;t recognize is saved as an unknown.     </p>
 <p>
-<p>It is a tag of text, but should not be modified. It will be written back to the XML, unchanged, when the file is saved.</p>
-<p>DTD tags get thrown into TiXmlUnknowns. </p>
-    </p>
+It is a tag of text, but should not be modified. It will be written back to the XML, unchanged, when the file is saved.DTD tags get thrown into TiXmlUnknowns.     </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
 <dt> <strong>TiXmlUnknown</strong>()</dt>
@@ -2911,7 +2594,7 @@
 <p class="last">
         </p>
 </dd>
-<dt>virtual  <strong>~TiXmlUnknown</strong>()</dt>
+<dt> <strong>~TiXmlUnknown</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -2931,20 +2614,15 @@
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_node"><em>TiXmlNode</em></a>  *  <strong>Clone</strong>()</dt>
 <dd><p class="first">
-<p>Creates a copy of this Unknown and returns it. </p>
-        </p>
+Creates a copy of this Unknown and returns it.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>void  <strong>Print</strong>(FILE * cfile, int depth)</dt>
 <dd><p class="first">
-<p>All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode. </p>
-        </p>
+All TinyXml classes can print themselves to a filestream or the string class (TiXmlString in non-STL mode, std::string in STL mode.         </p>
 <p class="last">
-<p>) Either or both cfile and str can be null.</p>
-<p>This is a formatted print, and will insert tabs and newlines.</p>
-<p>(For an unformatted stream, use the &lt;&lt; operator.) </p>
-        </p>
+) Either or both cfile and str can be null.This is a formatted print, and will insert tabs and newlines.(For an unformatted stream, use the &lt;&lt; operator.)         </p>
 </dd>
 <dt>const char *  <strong>Parse</strong>(const char * p, TiXmlParsingData * data, TiXmlEncoding encoding)</dt>
 <dd><p class="first">
@@ -2954,22 +2632,19 @@
 </dd>
 <dt>const  <a class="reference internal" href="#tinyxmlclass_ti_xml_unknown"><em>TiXmlUnknown</em></a>  *  <strong>ToUnknown</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt><a class="reference internal" href="#tinyxmlclass_ti_xml_unknown"><em>TiXmlUnknown</em></a>  *  <strong>ToUnknown</strong>()</dt>
 <dd><p class="first">
-<p>Cast to a more defined type. Will return null not of the requested type. </p>
-        </p>
+Cast to a more defined type. Will return null not of the requested type.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>Accept</strong>(<a class="reference internal" href="#tinyxmlclass_ti_xml_visitor"><em>TiXmlVisitor</em></a>  * content)</dt>
 <dd><p class="first">
-<p>Walk the XML tree visiting this node and all of its children. </p>
-        </p>
+Walk the XML tree visiting this node and all of its children.         </p>
 <p class="last">
         </p>
 </dd>
@@ -2995,20 +2670,17 @@
 <p id="tinyxmlclass_ti_xml_visitor"><em>class</em> <strong>TiXmlVisitor</strong></p>
 <blockquote>
 <p>
-<p>If you call the Accept() method, it requires being passed a <a class="reference internal" href="#tinyxmlclass_ti_xml_visitor"><em>TiXmlVisitor</em></a> class to handle callbacks. </p>
-    </p>
+If you call the Accept() method, it requires being passed a <a class="reference internal" href="#tinyxmlclass_ti_xml_visitor"><em>TiXmlVisitor</em></a> class to handle callbacks.     </p>
 <p>
-<p>For nodes that contain other nodes (Document, Element) you will get called with a VisitEnter/VisitExit pair. Nodes that are always leaves are simple called with <a class="reference internal" href="#tinyxmlclass_ti_xml_visitor_166f2d2d867ee403c743c5d71d80c3d1d"><em>Visit()</em></a>.</p>
-<p>If you return &#8216;true&#8217; from a Visit method, recursive parsing will continue. If you return false,  will be Visited.</p>
-<p>All flavors of Visit methods have a default implementation that returns &#8216;true&#8217; (continue visiting). You need to only override methods that are interesting to you.</p>
-<p>Generally Accept() is called on the <a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a>, although all nodes suppert Visiting.</p>
-<p>You should never change the document from a callback.</p>
-<p>
-</p>
+For nodes that contain other nodes (Document, Element) you will get called with a VisitEnter/VisitExit pair. Nodes that are always leaves are simple called with <a class="reference internal" href="#tinyxmlclass_ti_xml_visitor_1afad71c71ce6473fb9b4b64cd92de4a19"><em>Visit()</em></a>.If you return &#8216;true&#8217; from a Visit method, recursive parsing will continue. If you return false,  will be Visited.All flavors of Visit methods have a default implementation that returns &#8216;true&#8217; (continue visiting). You need to only override methods that are interesting to you.Generally Accept() is called on the <a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a>, although all nodes suppert Visiting.You should never change the document from a callback.
+<dl class="docutils">
+<dt><em>See</em></dt>
+<dd><a class="reference internal" href="#tinyxmlclass_ti_xml_node_1acc0f88b7462c6cb73809d410a4f5bb86"><em>TiXmlNode::Accept()</em></a> </dd>
+</dl>
     </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt>virtual  <strong>~TiXmlVisitor</strong>()</dt>
+<dt> <strong>~TiXmlVisitor</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -3016,57 +2688,49 @@
 </dd>
 <dt>bool  <strong>VisitEnter</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a>  &amp; )</dt>
 <dd><p class="first">
-<p>Visit a document. </p>
-        </p>
+Visit a document.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>VisitExit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_document"><em>TiXmlDocument</em></a>  &amp; )</dt>
 <dd><p class="first">
-<p>Visit a document. </p>
-        </p>
+Visit a document.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>VisitEnter</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  &amp; , const  <a class="reference internal" href="#tinyxmlclass_ti_xml_attribute"><em>TiXmlAttribute</em></a>  * )</dt>
 <dd><p class="first">
-<p>Visit an element. </p>
-        </p>
+Visit an element.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>VisitExit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_element"><em>TiXmlElement</em></a>  &amp; )</dt>
 <dd><p class="first">
-<p>Visit an element. </p>
-        </p>
+Visit an element.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_declaration"><em>TiXmlDeclaration</em></a>  &amp; )</dt>
 <dd><p class="first">
-<p>Visit a declaration. </p>
-        </p>
+Visit a declaration.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_text"><em>TiXmlText</em></a>  &amp; )</dt>
 <dd><p class="first">
-<p>Visit a text node. </p>
-        </p>
+Visit a text node.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_comment"><em>TiXmlComment</em></a>  &amp; )</dt>
 <dd><p class="first">
-<p>Visit a comment node. </p>
-        </p>
+Visit a comment node.         </p>
 <p class="last">
         </p>
 </dd>
 <dt>bool  <strong>Visit</strong>(const  <a class="reference internal" href="#tinyxmlclass_ti_xml_unknown"><em>TiXmlUnknown</em></a>  &amp; )</dt>
 <dd><p class="first">
-<p>Visit an unknow node. </p>
-        </p>
+Visit an unknow node.         </p>
 <p class="last">
         </p>
 </dd>
@@ -3149,14 +2813,10 @@
 <p id="tinyxmldeprecated"><em>page</em> <strong>deprecated</strong></p>
 <blockquote>
 
-<p> 
-</p>
-<p> 
-</p>
-<p> 
-</p>
-<p> 
-</p>
+ 
+ 
+ 
+ 
     </blockquote>
 </div>
 
@@ -3205,7 +2865,7 @@
     </div>
     <div class="footer">
       &copy; Copyright 2009, Michael Jones.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.5.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.3.
     </div>
   </body>
 </html>
