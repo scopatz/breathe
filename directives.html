@@ -1,0 +1,220 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Directives &mdash; BreatheExample v0.0.1 documentation</title>
+    <link rel="stylesheet" href="static/default.css" type="text/css" />
+    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <link rel="top" title="BreatheExample v0.0.1 documentation" href="index.html" />
+    <link rel="next" title="doxygenfunction Directive Example" href="function.html" />
+    <link rel="prev" title="Quickstart" href="quickstart.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="function.html" title="doxygenfunction Directive Example"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="quickstart.html" title="Quickstart"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">BreatheExample v0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="directives">
+<h1>Directives<a class="headerlink" href="#directives" title="Permalink to this headline">¶</a></h1>
+<p>These directives are a work in progress and may change in syntax as the project
+develops.</p>
+<p>In each case the <tt class="docutils literal"><span class="pre">project</span></tt> and <tt class="docutils literal"><span class="pre">path</span></tt> options have the following meaning.</p>
+<p>Where:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">project</span></tt></dt>
+<dd>Specifies which project, as defined in the breathe_projects config value,
+should be used for this directive. This overrides the default project if one
+has been specified.</dd>
+<dt><tt class="docutils literal"><span class="pre">path</span></tt></dt>
+<dd>Directly specifies the path to the folder with the doxygen output. This
+overrides the project and default project if they have bee specified.</dd>
+</dl>
+<div class="section" id="doxygenindex-directive">
+<span id="doxygenindex"></span><h2>doxygenindex Directive<a class="headerlink" href="#doxygenindex-directive" title="Permalink to this headline">¶</a></h2>
+<p>This directive processes and produces output for everything described by the
+Doxygen xml output. It reads the <tt class="docutils literal"><span class="pre">index.xml</span></tt> file and process everything
+referenced by it.</p>
+<div class="highlight-python"><pre>.. doxygenindex::
+   :project: ...
+   :path: ...</pre>
+</div>
+</div>
+<div class="section" id="doxygenfunction-directive">
+<h2>doxygenfunction Directive<a class="headerlink" href="#doxygenfunction-directive" title="Permalink to this headline">¶</a></h2>
+<p>This directive generates the appropriate output for a single function. The
+function name is required to be unique in the project.</p>
+<div class="highlight-python"><pre>.. doxygenfunction:: &lt;function name&gt;
+   :project: ...
+   :path: ...</pre>
+</div>
+</div>
+<div class="section" id="doxygenstruct-directive">
+<h2>doxygenstruct Directive<a class="headerlink" href="#doxygenstruct-directive" title="Permalink to this headline">¶</a></h2>
+<p>This directive generates the appropriate output for a single struct. The struct
+name is required to be unique in the project.</p>
+<div class="highlight-python"><pre>.. doxygenstruct:: &lt;struct name&gt;
+   :project: ...
+   :path: ...</pre>
+</div>
+</div>
+<div class="section" id="doxygenenum-directive">
+<h2>doxygenenum Directive<a class="headerlink" href="#doxygenenum-directive" title="Permalink to this headline">¶</a></h2>
+<p>This directive generates the appropriate output for a single enum. It behaves
+the same as the doxygenstruct directive.</p>
+<div class="highlight-python"><pre>.. doxygenenum:: &lt;enum name&gt;
+   :project: ...
+   :path: ...</pre>
+</div>
+</div>
+<div class="section" id="doxygentypedef-directive">
+<h2>doxygentypedef Directive<a class="headerlink" href="#doxygentypedef-directive" title="Permalink to this headline">¶</a></h2>
+<p>This directive generates the appropriate output for a single typedef. It behaves
+the same as the doxygenstruct directive.</p>
+<div class="highlight-python"><pre>.. doxygentypedef:: &lt;typedef name&gt;
+   :project: ...
+   :path: ...</pre>
+</div>
+</div>
+<div class="section" id="doxygenclass-directive">
+<span id="doxygenclass"></span><h2>doxygenclass Directive<a class="headerlink" href="#doxygenclass-directive" title="Permalink to this headline">¶</a></h2>
+<p>This directive generates the appropriate output for a single class. It behaves
+the same as the doxygenstruct directive.</p>
+<div class="highlight-python"><pre>.. doxygenclass:: &lt;class name&gt;
+   :project: ...
+   :path: ...</pre>
+</div>
+<div class="section" id="config-values">
+<h3>Config Values<a class="headerlink" href="#config-values" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><strong>breathe_projects</strong></dt>
+<dd>This should be a dictionary in which the keys are project names and the values are
+paths to the folder containing the doxygen output for that project.</dd>
+<dt><strong>breathe_default_project</strong></dt>
+<dd>This should match one of the keys in the <strong>breathe_projects</strong> dictionary and
+indicates which project should be used when the project is not specified on
+the directive.</dd>
+</dl>
+</div>
+<div class="section" id="example-pages">
+<h3>Example pages<a class="headerlink" href="#example-pages" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="function.html">doxygenfunction Directive Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="struct.html">doxygenstruct Directive Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="typedef.html">doxygentypedef Directive Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enum.html">doxygenenum Directive Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class.html">doxygenclass Directive Example</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Directives</a><ul>
+<li><a class="reference internal" href="#doxygenindex-directive">doxygenindex Directive</a></li>
+<li><a class="reference internal" href="#doxygenfunction-directive">doxygenfunction Directive</a></li>
+<li><a class="reference internal" href="#doxygenstruct-directive">doxygenstruct Directive</a></li>
+<li><a class="reference internal" href="#doxygenenum-directive">doxygenenum Directive</a></li>
+<li><a class="reference internal" href="#doxygentypedef-directive">doxygentypedef Directive</a></li>
+<li><a class="reference internal" href="#doxygenclass-directive">doxygenclass Directive</a><ul>
+<li><a class="reference internal" href="#config-values">Config Values</a></li>
+<li><a class="reference internal" href="#example-pages">Example pages</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="quickstart.html"
+                        title="previous chapter">Quickstart</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="function.html"
+                        title="next chapter">doxygenfunction Directive Example</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="sources/directives.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="function.html" title="doxygenfunction Directive Example"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="quickstart.html" title="Quickstart"
+             >previous</a> |</li>
+        <li><a href="index.html">BreatheExample v0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2009, Michael Jones.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.4.
+    </div>
+  </body>
+</html>

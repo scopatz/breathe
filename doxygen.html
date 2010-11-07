@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -12,16 +14,18 @@
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
         VERSION:     '0.0.1',
-        COLLAPSE_MODINDEX: false,
+        COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
     </script>
     <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <link rel="top" title="BreatheExample v0.0.1 documentation" href="index.html" />
+    <link rel="up" title="Test Pages" href="testpages.html" />
     <link rel="next" title="TinyXML Test Suite" href="tinyxml.html" />
-    <link rel="prev" title="doxygenclass Directive Example" href="class.html" /> 
+    <link rel="prev" title="Test Pages" href="testpages.html" /> 
   </head>
   <body>
     <div class="related">
@@ -34,9 +38,10 @@
           <a href="tinyxml.html" title="TinyXML Test Suite"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="class.html" title="doxygenclass Directive Example"
+          <a href="testpages.html" title="Test Pages"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">BreatheExample v0.0.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">BreatheExample v0.0.1 documentation</a> &raquo;</li>
+          <li><a href="testpages.html" accesskey="U">Test Pages</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -52,9 +57,11 @@
 <p id="classclass_test"><em>class</em> <strong>Test</strong></p>
 <blockquote>
 <p>
-This is a test class.     </p>
+<p>This is a test class. </p>
+    </p>
 <p>
-Some details about the <a class="reference internal" href="#classclass_test"><em>Test</em></a> class     </p>
+<p>Some details about the <a class="reference internal" href="#classclass_test"><em>Test</em></a> class </p>
+    </p>
 </blockquote>
 <p id="classclass_8h"><em>file</em> <strong>class.h</strong></p>
 <blockquote>
@@ -69,28 +76,33 @@ Some details about the <a class="reference internal" href="#classclass_test"><em
 <p id="project0define_8h"><em>file</em> <strong>define.h</strong></p>
 <blockquote>
 <p>
-testing defines     </p>
+<p>testing defines </p>
+    </p>
 <p>
-This is to test the documentation of defines.     </p>
+<p>This is to test the documentation of defines. </p>
+    </p>
 <em>Defines</em><blockquote>
 <dl class="docutils">
-<dt> <strong>ABS</strong></dt>
+<dt id="project0define_8h_1a996f7be338ccb40d1a2a5abc1ad61759"> <strong>ABS</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
-Computes the absolute value of its argument .         </p>
+<p>Computes the absolute value of its argument <em>x</em>. </p>
+        </p>
 </dd>
-<dt> <strong>MAX</strong></dt>
+<dt id="project0define_8h_1aacc3ee1a7f283f8ef65cea31f4436a95"> <strong>MAX</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
-Computes the maximum of  and .         </p>
+<p>Computes the maximum of <em>x</em> and <em>y</em>. </p>
+        </p>
 </dd>
-<dt> <strong>MIN</strong></dt>
+<dt id="project0define_8h_1a74e75242132eaabbc1c512488a135926"> <strong>MIN</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
-Computes the minimum of  and .         </p>
+<p>Computes the minimum of <em>x</em> and <em>y</em>. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -103,20 +115,44 @@ Computes the minimum of  and .         </p>
 <p>
     </p>
 <p>
-The class description.     </p>
+<p>The class description. </p>
+    </p>
 <em>Public Type</em><blockquote>
 <dl class="docutils">
-<dt> <strong>TEnum</strong></dt>
+<dt id="project1class_test_1ad8d13fe56b896633273087859b89a1a3"><strong>TEnum enum</strong></dt>
 <dd><p class="first">
         </p>
-<p class="last">
-A description of the enum type.         </p>
+<p>
+<p>A description of the enum type. </p>
+        </p>
+<p><em>Values:</em></p>
+<ul class="breatheenumvalues last">
+<li><tt class="first docutils literal"><span class="pre">Val1</span></tt> - 
+          
+<p>The description of the first enum value. </p>
+          </li>
+<li><tt class="first docutils literal"><span class="pre">Val2</span></tt> - 
+          
+          </li>
+</ul>
 </dd>
-<dt> <strong>AnotherEnum</strong></dt>
+<dt id="project1class_test_1a34b5b35cdcd492c108e62275d647bcf4"><strong>AnotherEnum enum</strong></dt>
 <dd><p class="first">
         </p>
-<p class="last">
-Another enum, with inline docs         </p>
+<p>
+<p>Another enum, with inline docs </p>
+        </p>
+<p><em>Values:</em></p>
+<ul class="breatheenumvalues last">
+<li><tt class="first docutils literal"><span class="pre">V1</span></tt> - 
+          
+<p>value 1 </p>
+          </li>
+<li><tt class="first docutils literal"><span class="pre">V2</span></tt> - 
+          
+<p>value 2 </p>
+          </li>
+</ul>
 </dd>
 </dl>
 </blockquote>
@@ -134,16 +170,20 @@ Another enum, with inline docs         </p>
 <p id="project2file_8h"><em>file</em> <strong>file.h</strong></p>
 <blockquote>
 <p>
-A brief file description.     </p>
+<p>A brief file description. </p>
+    </p>
 <p>
-A more elaborated file description.     </p>
+<p>A more elaborated file description. </p>
+    </p>
 <em>Variables</em><blockquote>
 <dl class="docutils">
-<dt>int  <strong>globalValue</strong></dt>
+<dt id="project2file_8h_1a4a86bef4b6181cb3f53bd0461a9a511b">int  <strong>globalValue</strong></dt>
 <dd><p class="first">
-A global integer value.         </p>
+<p>A global integer value. </p>
+        </p>
 <p class="last">
-More details about this value.         </p>
+<p>More details about this value. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -154,24 +194,32 @@ More details about this value.         </p>
 <p id="project3class_test"><em>class</em> <strong>Test</strong></p>
 <blockquote>
 <p>
-<a class="reference internal" href="#project3class_test"><em>Test</em></a> class.     </p>
+<p><a class="reference internal" href="#project3class_test"><em>Test</em></a> class. </p>
+    </p>
 <p>
-Details about <a class="reference internal" href="#project3class_test"><em>Test</em></a>.     </p>
+<p>Details about <a class="reference internal" href="#project3class_test"><em>Test</em></a>. </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt>const char *  <strong>member</strong>(char c, int n)</dt>
+<dt id="project3class_test_1a45b6a232a4499f8ce37062eab5451570">const char *  <strong>member</strong>(char c, int n)</dt>
 <dd><p class="first">
-A member function.         </p>
+<p>A member function. </p>
+        </p>
 <p class="last">
-<em>Parameters</em><ul>
+<p><p><em>Parameters</em></p>
+<ul class="breatheparameterlist">
 <li><tt class="first docutils literal"><span class="pre">c</span></tt> - 
-a character. </li>
+<p>a character. </p>
+</li>
 <li><tt class="first docutils literal"><span class="pre">n</span></tt> - 
-an integer. </li>
+<p>an integer. </p>
+</li>
 </ul>
-<em>Exceptions</em><ul>
+<p><em>Exceptions</em></p>
+<ul class="breatheparameterlist">
 <li><tt class="first docutils literal"><span class="pre">std::out_of_range</span></tt> - 
-parameter is out of range. </li>
+<p>parameter is out of range. </p>
+</li>
 </ul>
 
 
@@ -180,6 +228,7 @@ parameter is out of range. </li>
 <dt><em>Return</em></dt>
 <dd>a character pointer. </dd>
 </dl>
+</p>
         </p>
 </dd>
 </dl>
@@ -205,12 +254,14 @@ parameter is out of range. </li>
 <p id="project4page1"><em>page</em> <strong>page1</strong></p>
 <blockquote>
 
-Leading text. 
+<p>Leading text. </p>
+
     </blockquote>
 <p id="project4page2"><em>page</em> <strong>page2</strong></p>
 <blockquote>
 
-Even more info.     </blockquote>
+<p>Even more info. </p>
+    </blockquote>
 </div>
 <div class="section" id="relates">
 <h2>Relates<a class="headerlink" href="#relates" title="Permalink to this headline">¶</a></h2>
@@ -219,24 +270,27 @@ Even more info.     </blockquote>
 <p>
     </p>
 <p>
-A <a class="reference internal" href="#project5class_string"><em>String</em></a> class.     </p>
+<p>A <a class="reference internal" href="#project5class_string"><em>String</em></a> class. </p>
+    </p>
 <em>Friends</em><blockquote>
 <dl class="docutils">
-<dt>friend int  <strong>strcmp</strong></dt>
+<dt id="project5class_string_1ae3c243f0bc797b9e4b15d2ef5e5aaa7c">friend int  <strong>strcmp</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
-Compares two strings.         </p>
+<p>Compares two strings. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
 <em>Related</em><blockquote>
 <dl class="docutils">
-<dt>void  <strong>stringDebug</strong>()</dt>
+<dt id="project5class_string_1a5c07384b505d25ae6f61fc7abf0b0e61">void  <strong>stringDebug</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-A string debug function.         </p>
+<p>A string debug function. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -249,11 +303,12 @@ A string debug function.         </p>
     </p>
 <em>Functions</em><blockquote>
 <dl class="docutils">
-<dt>int  <strong>strcmp</strong>(const  <a class="reference internal" href="#project5class_string"><em>String</em></a>  &amp; s1, const  <a class="reference internal" href="#project5class_string"><em>String</em></a>  &amp; s2)</dt>
+<dt id="project5relates_8cpp_1a7ceb7d379a52f7e26418e7a446b4a41a">int  <strong>strcmp</strong>(const  <a class="reference internal" href="#project5class_string"><em>String</em></a>  &amp; s1, const  <a class="reference internal" href="#project5class_string"><em>String</em></a>  &amp; s2)</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-Compares two strings.         </p>
+<p>Compares two strings. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -264,9 +319,10 @@ Compares two strings.         </p>
 <p id="project6class_windows_n_t"><em>class</em> <strong>WindowsNT</strong></p>
 <blockquote>
 <p>
-Windows Nice Try.     </p>
+<p>Windows Nice Try. </p>
+    </p>
 <p>
-
+<p>
 
 
 
@@ -284,6 +340,7 @@ Windows Nice Try.     </p>
 <p class="last">If you inherit anything from this class, you&#8217;re doomed. </p>
 </dd>
 </dl>
+</p>
     </p>
 </blockquote>
 <p id="project6author_8cpp"><em>file</em> <strong>author.cpp</strong></p>
@@ -296,7 +353,8 @@ Windows Nice Try.     </p>
 <p id="project6bug"><em>page</em> <strong>bug</strong></p>
 <blockquote>
 
- 
+<p> 
+</p>
     </blockquote>
 </div>
 <div class="section" id="par">
@@ -306,7 +364,8 @@ Windows Nice Try.     </p>
 <p>
     </p>
 <p>
-Normal text.
+<p>Normal text.</p>
+<p>
 
 
 
@@ -320,6 +379,7 @@ More normal text. <dl class="docutils">
 <dt><em>Par</em></dt>
 <dd>And this is the second paragraph.</dd>
 </dl>
+</p>
     </p>
 </blockquote>
 <p id="project7par_8cpp"><em>file</em> <strong>par.cpp</strong></p>
@@ -335,22 +395,26 @@ More normal text. <dl class="docutils">
 <p id="project8class_test"><em>class</em> <strong>Test</strong></p>
 <blockquote>
 <p>
-A short description.     </p>
+<p>A short description. </p>
+    </p>
 <p>
-More text.     </p>
+<p>More text. </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt>void  <strong>drawRect</strong>(int x, int y, int w, int h)</dt>
+<dt id="project8class_test_1a8e7b46ceaf7bd2ab94114b390b3288ca">void  <strong>drawRect</strong>(int x, int y, int w, int h)</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-This command draws a rectangle with a left upper corner at (  ,  ), width  and height .         </p>
+<p>This command draws a rectangle with a left upper corner at ( <em>x</em> , <em>y</em> ), width <em>w</em> and height <em>h</em>. </p>
+        </p>
 </dd>
-<dt>void  <strong>drawRect</strong>(const Rect &amp; r)</dt>
+<dt id="project8class_test_1ae87a6e26707e684c0d2d07bb3d4a9d7f">void  <strong>drawRect</strong>(const Rect &amp; r)</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.         </p>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -368,16 +432,20 @@ This is an overloaded member function, provided for convenience. It differs from
 <p id="project9class_test"><em>class</em> <strong>Test</strong></p>
 <blockquote>
 <p>
-A <a class="reference internal" href="#project9class_test"><em>Test</em></a> class.     </p>
+<p>A <a class="reference internal" href="#project9class_test"><em>Test</em></a> class. </p>
+    </p>
 <p>
-More details about this class.     </p>
+<p>More details about this class. </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt>void  <strong>example</strong>()</dt>
+<dt id="project9class_test_1a47b775f65718978f1ffcd96376f8ecfa">void  <strong>example</strong>()</dt>
 <dd><p class="first">
-An example member function.         </p>
+<p>An example member function. </p>
+        </p>
 <p class="last">
-More details about this function.         </p>
+<p>More details about this function. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -389,10 +457,11 @@ More details about this function.         </p>
 <p>
     </p>
 </blockquote>
-<p id="project9example__test.cpp-example"><em>example</em> <strong>example_test.cpp</strong></p>
+<p id="project9example_test_8cpp-example"><em>example</em> <strong>example_test.cpp</strong></p>
 <blockquote>
 
-This is an example of how to use the <a class="reference internal" href="#project9class_test"><em>Test</em></a> class. More details about this example.      </blockquote>
+<p>This is an example of how to use the <a class="reference internal" href="#project9class_test"><em>Test</em></a> class. More details about this example.  </p>
+    </blockquote>
 </div>
 <div class="section" id="include">
 <h2>Include<a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h2>
@@ -401,12 +470,14 @@ This is an example of how to use the <a class="reference internal" href="#projec
 <p>
     </p>
 <p>
-A test class.     </p>
+<p>A test class. </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt>void  <strong>example</strong>()</dt>
+<dt id="project10class_test_1a47b775f65718978f1ffcd96376f8ecfa">void  <strong>example</strong>()</dt>
 <dd><p class="first">
-a member function         </p>
+<p>a member function </p>
+        </p>
 <p class="last">
         </p>
 </dd>
@@ -423,49 +494,77 @@ a member function         </p>
 <p id="project10example"><em>page</em> <strong>example</strong></p>
 <blockquote>
 
- Our main function starts like this:  First we create a object  of the <a class="reference internal" href="#project10class_test"><em>Test</em></a> class.  Then we call the example member function  After that our little test routine ends.      </blockquote>
+<p> Our main function starts like this:  First we create a object <tt class="docutils literal"><span class="pre">t</span></tt> of the <a class="reference internal" href="#project10class_test"><em>Test</em></a> class.  Then we call the example member function  After that our little test routine ends.  </p>
+    </blockquote>
 </div>
 <div class="section" id="qtstyle">
 <h2>QtStyle<a class="headerlink" href="#qtstyle" title="Permalink to this headline">¶</a></h2>
 <p id="project11class_test"><em>class</em> <strong>Test</strong></p>
 <blockquote>
 <p>
-A test class.     </p>
+<p>A test class. </p>
+    </p>
 <p>
-A more elaborate class description.     </p>
+<p>A more elaborate class description. </p>
+    </p>
 <em>Public Type</em><blockquote>
 <dl class="docutils">
-<dt> <strong>TEnum</strong></dt>
+<dt id="project11class_test_1ad8d13fe56b896633273087859b89a1a3"><strong>TEnum enum</strong></dt>
 <dd><p class="first">
-An enum.         </p>
-<p class="last">
-More detailed enum description.         </p>
+<p>An enum. </p>
+        </p>
+<p>
+<p>More detailed enum description. </p>
+        </p>
+<p><em>Values:</em></p>
+<ul class="breatheenumvalues last">
+<li><tt class="first docutils literal"><span class="pre">TVal1</span></tt> - 
+          
+<p>Enum value TVal1. </p>
+          </li>
+<li><tt class="first docutils literal"><span class="pre">TVal2</span></tt> - 
+          
+<p>Enum value TVal2. </p>
+          </li>
+<li><tt class="first docutils literal"><span class="pre">TVal3</span></tt> - 
+          
+<p>Enum value TVal3. </p>
+          </li>
+</ul>
 </dd>
 </dl>
 </blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt> <strong>Test</strong>()</dt>
+<dt id="project11class_test_1a99f2bbfac6c95612322b0f10e607ebe5"> <strong>Test</strong>()</dt>
 <dd><p class="first">
-A constructor.         </p>
+<p>A constructor. </p>
+        </p>
 <p class="last">
-A more elaborate description of the constructor.         </p>
+<p>A more elaborate description of the constructor. </p>
+        </p>
 </dd>
-<dt> <strong>~Test</strong>()</dt>
+<dt id="project11class_test_1a2b0a62f1e667bbe8d8cb18d785bfa991"> <strong>~Test</strong>()</dt>
 <dd><p class="first">
-A destructor.         </p>
+<p>A destructor. </p>
+        </p>
 <p class="last">
-A more elaborate description of the destructor.         </p>
+<p>A more elaborate description of the destructor. </p>
+        </p>
 </dd>
-<dt>int  <strong>testMe</strong>(int a, const char * s)</dt>
+<dt id="project11class_test_1af7115d71dda64654a7104c24f130e8d0">int  <strong>testMe</strong>(int a, const char * s)</dt>
 <dd><p class="first">
-A normal member taking two arguments and returning an integer value.         </p>
+<p>A normal member taking two arguments and returning an integer value. </p>
+        </p>
 <p class="last">
-<em>Parameters</em><ul>
+<p><p><em>Parameters</em></p>
+<ul class="breatheparameterlist">
 <li><tt class="first docutils literal"><span class="pre">a</span></tt> - 
-an integer argument. </li>
+<p>an integer argument. </p>
+</li>
 <li><tt class="first docutils literal"><span class="pre">s</span></tt> - 
-a constant character pointer. </li>
+<p>a constant character pointer. </p>
+</li>
 </ul>
 
 
@@ -476,17 +575,22 @@ a constant character pointer. </li>
 <dt><em>See</em></dt>
 <dd><a class="reference internal" href="#project11class_test_1a99f2bbfac6c95612322b0f10e607ebe5"><em>Test()</em></a>, <a class="reference internal" href="#project11class_test_1a2b0a62f1e667bbe8d8cb18d785bfa991"><em>~Test()</em></a>, <a class="reference internal" href="#project11class_test_1a3edb9fdc1e9f0d5274b57386ab03704c"><em>testMeToo()</em></a> and <a class="reference internal" href="#project11class_test_1a3085f973ef857d85d647bf04e89760d0"><em>publicVar()</em></a> </dd>
 </dl>
+</p>
         </p>
 </dd>
-<dt>void  <strong>testMeToo</strong>(char c1, char c2)</dt>
+<dt id="project11class_test_1a3edb9fdc1e9f0d5274b57386ab03704c">void  <strong>testMeToo</strong>(char c1, char c2)</dt>
 <dd><p class="first">
-A pure virtual member.         </p>
+<p>A pure virtual member. </p>
+        </p>
 <p class="last">
-<em>Parameters</em><ul>
+<p><p><em>Parameters</em></p>
+<ul class="breatheparameterlist">
 <li><tt class="first docutils literal"><span class="pre">c1</span></tt> - 
-the first argument. </li>
+<p>the first argument. </p>
+</li>
 <li><tt class="first docutils literal"><span class="pre">c2</span></tt> - 
-the second argument. </li>
+<p>the second argument. </p>
+</li>
 </ul>
 
 
@@ -494,35 +598,44 @@ the second argument. </li>
 <dt><em>See</em></dt>
 <dd><a class="reference internal" href="#project11class_test_1af7115d71dda64654a7104c24f130e8d0"><em>testMe()</em></a> </dd>
 </dl>
+</p>
         </p>
 </dd>
 </dl>
 </blockquote>
 <em>Public Members</em><blockquote>
 <dl class="docutils">
-<dt>enum  <a class="reference internal" href="#project11class_test_1ad8d13fe56b896633273087859b89a1a3"><em>Test::TEnum</em></a>  *  <strong>enumPtr</strong></dt>
+<dt id="project11class_test_1a32644e6b56668bcacc57b47f0191b32d">enum  <a class="reference internal" href="#project11class_test_1ad8d13fe56b896633273087859b89a1a3"><em>Test::TEnum</em></a>  *  <strong>enumPtr</strong></dt>
 <dd><p class="first">
-An enum.         </p>
+<p>Enum pointer. </p>
+        </p>
 <p class="last">
-More detailed enum description. Enum pointer.Details.         </p>
+<p>Details. </p>
+        </p>
 </dd>
-<dt>enum  <a class="reference internal" href="#project11class_test_1ad8d13fe56b896633273087859b89a1a3"><em>Test::TEnum</em></a>  <strong>enumVar</strong></dt>
+<dt id="project11class_test_1a031c66497e6ae8337a2d4a7f95d9c844">enum  <a class="reference internal" href="#project11class_test_1ad8d13fe56b896633273087859b89a1a3"><em>Test::TEnum</em></a>  <strong>enumVar</strong></dt>
 <dd><p class="first">
-Enum variable.         </p>
+<p>Enum variable. </p>
+        </p>
 <p class="last">
-Details.         </p>
+<p>Details. </p>
+        </p>
 </dd>
-<dt>int  <strong>publicVar</strong></dt>
+<dt id="project11class_test_1a3085f973ef857d85d647bf04e89760d0">int  <strong>publicVar</strong></dt>
 <dd><p class="first">
-A public variable.         </p>
+<p>A public variable. </p>
+        </p>
 <p class="last">
-Details.         </p>
+<p>Details. </p>
+        </p>
 </dd>
-<dt>int(*  <strong>handler</strong></dt>
+<dt id="project11class_test_1a8bef142724c4059c18f752e630a4d925">int(*  <strong>handler</strong>)(int a, int b)</dt>
 <dd><p class="first">
-A function variable.         </p>
+<p>A function variable. </p>
+        </p>
 <p class="last">
-Details.         </p>
+<p>Details. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -540,42 +653,69 @@ Details.         </p>
 <p id="project12class_test"><em>class</em> <strong>Test</strong></p>
 <blockquote>
 <p>
-A test class.     </p>
+<p>A test class. </p>
+    </p>
 <p>
-A more elaborate class description.     </p>
+<p>A more elaborate class description. </p>
+    </p>
 <em>Public Type</em><blockquote>
 <dl class="docutils">
-<dt> <strong>TEnum</strong></dt>
+<dt id="project12class_test_1ad8d13fe56b896633273087859b89a1a3"><strong>TEnum enum</strong></dt>
 <dd><p class="first">
-An enum.         </p>
-<p class="last">
-More detailed enum description.         </p>
+<p>An enum. </p>
+        </p>
+<p>
+<p>More detailed enum description. </p>
+        </p>
+<p><em>Values:</em></p>
+<ul class="breatheenumvalues last">
+<li><tt class="first docutils literal"><span class="pre">TVal1</span></tt> - 
+<p>enum value TVal1. </p>
+          
+          </li>
+<li><tt class="first docutils literal"><span class="pre">TVal2</span></tt> - 
+<p>enum value TVal2. </p>
+          
+          </li>
+<li><tt class="first docutils literal"><span class="pre">TVal3</span></tt> - 
+<p>enum value TVal3. </p>
+          
+          </li>
+</ul>
 </dd>
 </dl>
 </blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt> <strong>Test</strong>()</dt>
+<dt id="project12class_test_1a99f2bbfac6c95612322b0f10e607ebe5"> <strong>Test</strong>()</dt>
 <dd><p class="first">
-A constructor.         </p>
+<p>A constructor. </p>
+        </p>
 <p class="last">
-A more elaborate description of the constructor.         </p>
+<p>A more elaborate description of the constructor. </p>
+        </p>
 </dd>
-<dt> <strong>~Test</strong>()</dt>
+<dt id="project12class_test_1a2b0a62f1e667bbe8d8cb18d785bfa991"> <strong>~Test</strong>()</dt>
 <dd><p class="first">
-A destructor.         </p>
+<p>A destructor. </p>
+        </p>
 <p class="last">
-A more elaborate description of the destructor.         </p>
+<p>A more elaborate description of the destructor. </p>
+        </p>
 </dd>
-<dt>int  <strong>testMe</strong>(int a, const char * s)</dt>
+<dt id="project12class_test_1af7115d71dda64654a7104c24f130e8d0">int  <strong>testMe</strong>(int a, const char * s)</dt>
 <dd><p class="first">
-a normal member taking two arguments and returning an integer value.         </p>
+<p>a normal member taking two arguments and returning an integer value. </p>
+        </p>
 <p class="last">
-<em>Parameters</em><ul>
+<p><p><em>Parameters</em></p>
+<ul class="breatheparameterlist">
 <li><tt class="first docutils literal"><span class="pre">a</span></tt> - 
-an integer argument. </li>
+<p>an integer argument. </p>
+</li>
 <li><tt class="first docutils literal"><span class="pre">s</span></tt> - 
-a constant character pointer. </li>
+<p>a constant character pointer. </p>
+</li>
 </ul>
 
 
@@ -590,17 +730,22 @@ a constant character pointer. </li>
 <dt><em>Return</em></dt>
 <dd>The test results </dd>
 </dl>
+</p>
         </p>
 </dd>
-<dt>void  <strong>testMeToo</strong>(char c1, char c2)</dt>
+<dt id="project12class_test_1a3edb9fdc1e9f0d5274b57386ab03704c">void  <strong>testMeToo</strong>(char c1, char c2)</dt>
 <dd><p class="first">
-A pure virtual member.         </p>
+<p>A pure virtual member. </p>
+        </p>
 <p class="last">
-<em>Parameters</em><ul>
+<p><p><em>Parameters</em></p>
+<ul class="breatheparameterlist">
 <li><tt class="first docutils literal"><span class="pre">c1</span></tt> - 
-the first argument. </li>
+<p>the first argument. </p>
+</li>
 <li><tt class="first docutils literal"><span class="pre">c2</span></tt> - 
-the second argument. </li>
+<p>the second argument. </p>
+</li>
 </ul>
 
 
@@ -608,35 +753,44 @@ the second argument. </li>
 <dt><em>See</em></dt>
 <dd><a class="reference internal" href="#project12class_test_1af7115d71dda64654a7104c24f130e8d0"><em>testMe()</em></a> </dd>
 </dl>
+</p>
         </p>
 </dd>
 </dl>
 </blockquote>
 <em>Public Members</em><blockquote>
 <dl class="docutils">
-<dt>enum  <a class="reference internal" href="#project12class_test_1ad8d13fe56b896633273087859b89a1a3"><em>Test::TEnum</em></a>  *  <strong>enumPtr</strong></dt>
+<dt id="project12class_test_1add1f72d205230e7bac3fcc70a65c1de2">enum  <a class="reference internal" href="#project12class_test_1ad8d13fe56b896633273087859b89a1a3"><em>Test::TEnum</em></a>  *  <strong>enumPtr</strong></dt>
 <dd><p class="first">
-An enum.         </p>
+<p>enum pointer. </p>
+        </p>
 <p class="last">
-More detailed enum description. enum pointer. Details.         </p>
+<p>Details. </p>
+        </p>
 </dd>
-<dt>enum  <a class="reference internal" href="#project12class_test_1ad8d13fe56b896633273087859b89a1a3"><em>Test::TEnum</em></a>  <strong>enumVar</strong></dt>
+<dt id="project12class_test_1a0bd371828a36ad7ea83dfd07b2a672b5">enum  <a class="reference internal" href="#project12class_test_1ad8d13fe56b896633273087859b89a1a3"><em>Test::TEnum</em></a>  <strong>enumVar</strong></dt>
 <dd><p class="first">
-enum variable.         </p>
+<p>enum variable. </p>
+        </p>
 <p class="last">
-Details.         </p>
+<p>Details. </p>
+        </p>
 </dd>
-<dt>int  <strong>publicVar</strong></dt>
+<dt id="project12class_test_1a3085f973ef857d85d647bf04e89760d0">int  <strong>publicVar</strong></dt>
 <dd><p class="first">
-a public variable.         </p>
+<p>a public variable. </p>
+        </p>
 <p class="last">
-Details.         </p>
+<p>Details. </p>
+        </p>
 </dd>
-<dt>int(*  <strong>handler</strong></dt>
+<dt id="project12class_test_1a8bef142724c4059c18f752e630a4d925">int(*  <strong>handler</strong>)(int a, int b)</dt>
 <dd><p class="first">
-a function variable.         </p>
+<p>a function variable. </p>
+        </p>
 <p class="last">
-Details.         </p>
+<p>Details. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -654,98 +808,128 @@ Details.         </p>
 <p id="project13structcmd_8h"><em>file</em> <strong>structcmd.h</strong></p>
 <blockquote>
 <p>
-A Documented file.     </p>
+<p>A Documented file. </p>
+    </p>
 <p>
-Details.     </p>
+<p>Details. </p>
+    </p>
 <em>Defines</em><blockquote>
 <dl class="docutils">
-<dt> <strong>MAX</strong></dt>
+<dt id="project13structcmd_8h_1afa99ec4acc4ecb2dc3c2d05da15d0e3f"> <strong>MAX</strong></dt>
 <dd><p class="first">
-A macro that returns the maximum of  and .         </p>
+<p>A macro that returns the maximum of <em>a</em> and <em>b</em>. </p>
+        </p>
 <p class="last">
-Details.         </p>
+<p>Details. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
 <em>Typedefs</em><blockquote>
 <dl class="docutils">
-<dt>unsigned int  <strong>UINT32</strong></dt>
+<dt id="project13structcmd_8h_1ae1e6edbbc26d6fbc71a90190d0266018">typedef unsigned int  <strong>UINT32</strong></dt>
 <dd><p class="first">
-A type definition for a .         </p>
+<p>A type definition for a . </p>
+        </p>
 <p class="last">
-Details.         </p>
+<p>Details. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
 <em>Functions</em><blockquote>
 <dl class="docutils">
-<dt>int  <strong>open</strong>(const char * pathname, int flags)</dt>
+<dt id="project13structcmd_8h_1a2c4414339f388561554c2deab11a1a07">int  <strong>open</strong>(const char * pathname, int flags)</dt>
 <dd><p class="first">
-Opens a file descriptor.         </p>
+<p>Opens a file descriptor. </p>
+        </p>
 <p class="last">
-<em>Parameters</em><ul>
+<p>Detailed description.</p>
+<p><p><em>Parameters</em></p>
+<ul class="breatheparameterlist">
 <li><tt class="first docutils literal"><span class="pre">pathname</span></tt> - 
-The name of the descriptor. </li>
+<p>The name of the descriptor. </p>
+</li>
 <li><tt class="first docutils literal"><span class="pre">flags</span></tt> - 
-Opening flags. </li>
+<p>Opening flags. </p>
+</li>
 </ul>
 
+</p>
         </p>
 </dd>
-<dt>int  <strong>close</strong>(int fd)</dt>
+<dt id="project13structcmd_8h_1ae152484c890a24e4d9b4980e7b965be0">int  <strong>close</strong>(int fd)</dt>
 <dd><p class="first">
-Closes the file descriptor .         </p>
+<p>Closes the file descriptor <em>fd</em>. </p>
+        </p>
 <p class="last">
-<em>Parameters</em><ul>
+<p><p><em>Parameters</em></p>
+<ul class="breatheparameterlist">
 <li><tt class="first docutils literal"><span class="pre">fd</span></tt> - 
-The descriptor to close. </li>
+<p>The descriptor to close. </p>
+</li>
 </ul>
 
+</p>
         </p>
 </dd>
-<dt>size_t  <strong>write</strong>(int fd, const char * buf, size_t count)</dt>
+<dt id="project13structcmd_8h_1af2a3ea719b83f672637febdd87c36c36">size_t  <strong>write</strong>(int fd, const char * buf, size_t count)</dt>
 <dd><p class="first">
-Writes  bytes from  to the filedescriptor .         </p>
+<p>Writes <em>count</em> bytes from <em>buf</em> to the filedescriptor <em>fd</em>. </p>
+        </p>
 <p class="last">
-<em>Parameters</em><ul>
+<p><p><em>Parameters</em></p>
+<ul class="breatheparameterlist">
 <li><tt class="first docutils literal"><span class="pre">fd</span></tt> - 
-The descriptor to write to. </li>
+<p>The descriptor to write to. </p>
+</li>
 <li><tt class="first docutils literal"><span class="pre">buf</span></tt> - 
-The data buffer to write. </li>
+<p>The data buffer to write. </p>
+</li>
 <li><tt class="first docutils literal"><span class="pre">count</span></tt> - 
-The number of bytes to write. </li>
+<p>The number of bytes to write. </p>
+</li>
 </ul>
 
+</p>
         </p>
 </dd>
-<dt>int  <strong>read</strong>(int fd, char * buf, size_t count)</dt>
+<dt id="project13structcmd_8h_1a9c7b76d5266903891c803132d51ccb90">int  <strong>read</strong>(int fd, char * buf, size_t count)</dt>
 <dd><p class="first">
-Read bytes from a file descriptor.         </p>
+<p>Read bytes from a file descriptor. </p>
+        </p>
 <p class="last">
-<em>Parameters</em><ul>
+<p><p><em>Parameters</em></p>
+<ul class="breatheparameterlist">
 <li><tt class="first docutils literal"><span class="pre">fd</span></tt> - 
-The descriptor to read from. </li>
+<p>The descriptor to read from. </p>
+</li>
 <li><tt class="first docutils literal"><span class="pre">buf</span></tt> - 
-The buffer to read into. </li>
+<p>The buffer to read into. </p>
+</li>
 <li><tt class="first docutils literal"><span class="pre">count</span></tt> - 
-The number of bytes to read. </li>
+<p>The number of bytes to read. </p>
+</li>
 </ul>
 
+</p>
         </p>
 </dd>
 </dl>
 </blockquote>
 <em>Variables</em><blockquote>
 <dl class="docutils">
-<dt>int  <strong>errno</strong></dt>
+<dt id="project13structcmd_8h_1ad65a8842cc674e3ddf69355898c0ecbf">int  <strong>errno</strong></dt>
 <dd><p class="first">
-Contains the last error code.         </p>
+<p>Contains the last error code. </p>
+        </p>
 <p class="last">
-
+<p>
 <dl class="docutils">
 <dt><em>Warning</em></dt>
 <dd>Not thread safe! </dd>
 </dl>
+</p>
         </p>
 </dd>
 </dl>
@@ -759,55 +943,91 @@ Contains the last error code.         </p>
 <p>
     </p>
 <p>
-Since this documentation block belongs to the class <a class="reference internal" href="#project14class_test"><em>Test</em></a> no link to <a class="reference internal" href="#project14class_test"><em>Test</em></a> is generated.Two ways to link to a constructor are: <a class="reference internal" href="#project14class_test"><em>Test</em></a> and <a class="reference internal" href="#project14class_test_1a99f2bbfac6c95612322b0f10e607ebe5"><em>Test()</em></a>.Links to the destructor are: <a class="reference internal" href="#project14class_test_1a2b0a62f1e667bbe8d8cb18d785bfa991"><em>~Test</em></a> and <a class="reference internal" href="#project14class_test_1a2b0a62f1e667bbe8d8cb18d785bfa991"><em>~Test()</em></a>.A link to a member in this class: <a class="reference internal" href="#project14class_test_1a557cfc252c843102af5404c1c260d4fc"><em>member()</em></a>.More specific links to the each of the overloaded members: <a class="reference internal" href="#project14class_test_1a557cfc252c843102af5404c1c260d4fc"><em>member(int)</em></a> and <a class="reference internal" href="#project14class_test_1a20150ce78c8b5b15a941dddf30ae9a4c"><em>member(int,int)</em></a>.A link to the variable <a class="reference internal" href="#project14class_test_1a4293aceea96ff87ce79cec7cafe731a6"><em>var</em></a>.A link to the global typedef <a class="reference internal" href="#project14autolink_8cpp_1ae0e289308b6d2cbb5c86e753741981dc"><em>B</em></a>.A link to the global enumeration type <a class="reference internal" href="#project14autolink_8cpp_1a656d63cf384d2a6f23c2c18523a7bc5e"><em>GlobEnum</em></a>.A link to the define <a class="reference internal" href="#project14autolink_8cpp_1a996f7be338ccb40d1a2a5abc1ad61759"><em>ABS(x)</em></a>.A link to a variable <a class="reference internal" href="#project14class_test_1a4293aceea96ff87ce79cec7cafe731a6"><em>using another text</em></a> as a link.A link to the enumeration type <a class="reference internal" href="#project14class_test_1a0653c5125502203305b6fe839e99ed01"><em>EType</em></a>.A link to some enumeration values: Val1  and GVal1.And last but not least a link to a file: <a class="reference internal" href="#project14autolink_8cpp"><em>autolink.cpp</em></a>.
+<p>Since this documentation block belongs to the class <a class="reference internal" href="#project14class_test"><em>Test</em></a> no link to <a class="reference internal" href="#project14class_test"><em>Test</em></a> is generated.</p>
+<p>Two ways to link to a constructor are: <a class="reference internal" href="#project14class_test"><em>Test</em></a> and <a class="reference internal" href="#project14class_test_1a99f2bbfac6c95612322b0f10e607ebe5"><em>Test()</em></a>.</p>
+<p>Links to the destructor are: <a class="reference internal" href="#project14class_test_1a2b0a62f1e667bbe8d8cb18d785bfa991"><em>~Test</em></a> and <a class="reference internal" href="#project14class_test_1a2b0a62f1e667bbe8d8cb18d785bfa991"><em>~Test()</em></a>.</p>
+<p>A link to a member in this class: <a class="reference internal" href="#project14class_test_1a557cfc252c843102af5404c1c260d4fc"><em>member()</em></a>.</p>
+<p>More specific links to the each of the overloaded members: <a class="reference internal" href="#project14class_test_1a557cfc252c843102af5404c1c260d4fc"><em>member(int)</em></a> and <a class="reference internal" href="#project14class_test_1a20150ce78c8b5b15a941dddf30ae9a4c"><em>member(int,int)</em></a>.</p>
+<p>A link to the variable <a class="reference internal" href="#project14class_test_1a4293aceea96ff87ce79cec7cafe731a6"><em>var</em></a>.</p>
+<p>A link to the global typedef <a class="reference internal" href="#project14autolink_8cpp_1ae0e289308b6d2cbb5c86e753741981dc"><em>B</em></a>.</p>
+<p>A link to the global enumeration type <a class="reference internal" href="#project14autolink_8cpp_1a656d63cf384d2a6f23c2c18523a7bc5e"><em>GlobEnum</em></a>.</p>
+<p>A link to the define <a class="reference internal" href="#project14autolink_8cpp_1a996f7be338ccb40d1a2a5abc1ad61759"><em>ABS(x)</em></a>.</p>
+<p>A link to a variable <a class="reference internal" href="#project14class_test_1a4293aceea96ff87ce79cec7cafe731a6"><em>using another text</em></a> as a link.</p>
+<p>A link to the enumeration type <a class="reference internal" href="#project14class_test_1a0653c5125502203305b6fe839e99ed01"><em>EType</em></a>.</p>
+<p>A link to some enumeration values: Val1  and GVal1.</p>
+<p>And last but not least a link to a  <a class="reference internal" href="#project14autolink_8cpp"><em>autolink.cpp</em></a>.</p>
+<p>
 <dl class="docutils">
 <dt><em>See</em></dt>
 <dd>Inside a see also section any word is checked, so <a class="reference internal" href="#project14class_test_1a0653c5125502203305b6fe839e99ed01"><em>EType</em></a>, Val1, GVal1, <a class="reference internal" href="#project14class_test_1a2b0a62f1e667bbe8d8cb18d785bfa991"><em>~Test</em></a> and <a class="reference internal" href="#project14class_test_1a557cfc252c843102af5404c1c260d4fc"><em>member</em></a> will be replaced by links in HTML. </dd>
 </dl>
+</p>
     </p>
 <em>Public Type</em><blockquote>
 <dl class="docutils">
-<dt> <strong>EType</strong></dt>
+<dt id="project14class_test_1a0653c5125502203305b6fe839e99ed01"><strong>EType enum</strong></dt>
 <dd><p class="first">
-An enum type.         </p>
-<p class="last">
-More details         </p>
+<p>An enum type. </p>
+        </p>
+<p>
+<p>More details </p>
+        </p>
+<p><em>Values:</em></p>
+<ul class="breatheenumvalues last">
+<li><tt class="first docutils literal"><span class="pre">Val1</span></tt> - 
+<p>enum value 1 </p>
+          
+          </li>
+<li><tt class="first docutils literal"><span class="pre">Val2</span></tt> - 
+<p>enum value 2 </p>
+          
+          </li>
+</ul>
 </dd>
 </dl>
 </blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt> <strong>Test</strong>()</dt>
+<dt id="project14class_test_1a99f2bbfac6c95612322b0f10e607ebe5"> <strong>Test</strong>()</dt>
 <dd><p class="first">
-constructor         </p>
+<p>constructor </p>
+        </p>
 <p class="last">
-details.         </p>
+<p>details. </p>
+        </p>
 </dd>
-<dt> <strong>~Test</strong>()</dt>
+<dt id="project14class_test_1a2b0a62f1e667bbe8d8cb18d785bfa991"> <strong>~Test</strong>()</dt>
 <dd><p class="first">
-destructor         </p>
+<p>destructor </p>
+        </p>
 <p class="last">
-details.         </p>
+<p>details. </p>
+        </p>
 </dd>
-<dt>void  <strong>member</strong>(int )</dt>
+<dt id="project14class_test_1a557cfc252c843102af5404c1c260d4fc">void  <strong>member</strong>(int )</dt>
 <dd><p class="first">
-A member function.         </p>
+<p>A member function. </p>
+        </p>
 <p class="last">
-Details.         </p>
+<p>Details. </p>
+        </p>
 </dd>
-<dt>void  <strong>member</strong>(int , int )</dt>
+<dt id="project14class_test_1a20150ce78c8b5b15a941dddf30ae9a4c">void  <strong>member</strong>(int , int )</dt>
 <dd><p class="first">
-An overloaded member function.         </p>
+<p>An overloaded member function. </p>
+        </p>
 <p class="last">
-Details         </p>
+<p>Details </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
 <em>Protected Attributes</em><blockquote>
 <dl class="docutils">
-<dt>int  <strong>var</strong></dt>
+<dt id="project14class_test_1a4293aceea96ff87ce79cec7cafe731a6">int  <strong>var</strong></dt>
 <dd><p class="first">
-A member variable.         </p>
+<p>A member variable. </p>
+        </p>
 <p class="last">
         </p>
 </dd>
@@ -819,44 +1039,69 @@ A member variable.         </p>
 <p>
     </p>
 <p>
-Testing automatic link generation.A link to a member of the <a class="reference internal" href="#project14class_test"><em>Test</em></a> class: <a class="reference internal" href="#project14class_test_1a557cfc252c843102af5404c1c260d4fc"><em>Test::member</em></a>,More specific links to the each of the overloaded members: <a class="reference internal" href="#project14class_test_1a557cfc252c843102af5404c1c260d4fc"><em>Test::member(int)</em></a> and <a class="reference internal" href="#project14class_test_1a20150ce78c8b5b15a941dddf30ae9a4c"><em>Test::member(int,int)</em></a>A link to a protected member variable of <a class="reference internal" href="#project14class_test"><em>Test</em></a>: <a class="reference internal" href="#project14class_test_1a4293aceea96ff87ce79cec7cafe731a6"><em>Test::var</em></a>,A link to the global enumeration type <a class="reference internal" href="#project14autolink_8cpp_1a656d63cf384d2a6f23c2c18523a7bc5e"><em>GlobEnum</em></a>.A link to the define <a class="reference internal" href="#project14autolink_8cpp_1a996f7be338ccb40d1a2a5abc1ad61759"><em>ABS(x)</em></a>.A link to the destructor of the <a class="reference internal" href="#project14class_test"><em>Test</em></a> class: <a class="reference internal" href="#project14class_test_1a2b0a62f1e667bbe8d8cb18d785bfa991"><em>Test::~Test</em></a>,A link to the typedef <a class="reference internal" href="#project14autolink_8cpp_1ae0e289308b6d2cbb5c86e753741981dc"><em>B</em></a>.A link to the enumeration type <a class="reference internal" href="#project14class_test_1a0653c5125502203305b6fe839e99ed01"><em>Test::EType</em></a>A link to some enumeration values Test::Val1 and GVal2     </p>
+<p>Testing automatic link generation.</p>
+<p>A link to a member of the <a class="reference internal" href="#project14class_test"><em>Test</em></a> class: <a class="reference internal" href="#project14class_test_1a557cfc252c843102af5404c1c260d4fc"><em>Test::member</em></a>,</p>
+<p>More specific links to the each of the overloaded members: <a class="reference internal" href="#project14class_test_1a557cfc252c843102af5404c1c260d4fc"><em>Test::member(int)</em></a> and <a class="reference internal" href="#project14class_test_1a20150ce78c8b5b15a941dddf30ae9a4c"><em>Test::member(int,int)</em></a></p>
+<p>A link to a protected member variable of <a class="reference internal" href="#project14class_test"><em>Test</em></a>: <a class="reference internal" href="#project14class_test_1a4293aceea96ff87ce79cec7cafe731a6"><em>Test::var</em></a>,</p>
+<p>A link to the global enumeration type <a class="reference internal" href="#project14autolink_8cpp_1a656d63cf384d2a6f23c2c18523a7bc5e"><em>GlobEnum</em></a>.</p>
+<p>A link to the define <a class="reference internal" href="#project14autolink_8cpp_1a996f7be338ccb40d1a2a5abc1ad61759"><em>ABS(x)</em></a>.</p>
+<p>A link to the destructor of the <a class="reference internal" href="#project14class_test"><em>Test</em></a> class: <a class="reference internal" href="#project14class_test_1a2b0a62f1e667bbe8d8cb18d785bfa991"><em>Test::~Test</em></a>,</p>
+<p>A link to the typedef <a class="reference internal" href="#project14autolink_8cpp_1ae0e289308b6d2cbb5c86e753741981dc"><em>B</em></a>.</p>
+<p>A link to the enumeration type <a class="reference internal" href="#project14class_test_1a0653c5125502203305b6fe839e99ed01"><em>Test::EType</em></a></p>
+<p>A link to some enumeration values Test::Val1 and GVal2 </p>
+    </p>
 <em>Defines</em><blockquote>
 <dl class="docutils">
-<dt> <strong>ABS</strong></dt>
+<dt id="project14autolink_8cpp_1a996f7be338ccb40d1a2a5abc1ad61759"> <strong>ABS</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
-A macro definition.         </p>
+<p>A macro definition. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
 <em>Typedefs</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#project14class_test"><em>Test</em></a>  <strong>B</strong></dt>
+<dt id="project14autolink_8cpp_1ae0e289308b6d2cbb5c86e753741981dc">typedef <a class="reference internal" href="#project14class_test"><em>Test</em></a>  <strong>B</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
-A type definition.         </p>
+<p>A type definition. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
 <em>Enums</em><blockquote>
 <dl class="docutils">
-<dt> <strong>GlobEnum</strong></dt>
+<dt id="project14autolink_8cpp_1a656d63cf384d2a6f23c2c18523a7bc5e"><strong>GlobEnum enum</strong></dt>
 <dd><p class="first">
         </p>
-<p class="last">
-A global enum.         </p>
+<p>
+<p>A global enum. </p>
+        </p>
+<p><em>Values:</em></p>
+<ul class="breatheenumvalues last">
+<li><tt class="first docutils literal"><span class="pre">GVal1</span></tt> - 
+          
+<p>global enum value 1 </p>
+          </li>
+<li><tt class="first docutils literal"><span class="pre">GVal2</span></tt> - 
+          
+<p>global enum value 2 </p>
+          </li>
+</ul>
 </dd>
 </dl>
 </blockquote>
 <em>Variables</em><blockquote>
 <dl class="docutils">
-<dt>int  <strong>globVar</strong></dt>
+<dt id="project14autolink_8cpp_1a88d0bae800d600a11d7bd60f0bc4b858">int  <strong>globVar</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
-A global variable.         </p>
+<p>A global variable. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -869,20 +1114,23 @@ A global variable.         </p>
 <p>
     </p>
 <p>
-A coordinate pair.     </p>
+<p>A coordinate pair. </p>
+    </p>
 <em>Public Members</em><blockquote>
 <dl class="docutils">
-<dt>float  <strong>x</strong></dt>
+<dt id="project15struct_coord_struct_1a183d7226fc5a8470ce9b9f04f9cb69bb">float  <strong>x</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
-The x coordinate         </p>
+<p>The x coordinate </p>
+        </p>
 </dd>
-<dt>float  <strong>y</strong></dt>
+<dt id="project15struct_coord_struct_1a1a5966a881bc3e76e9becf00639585ac">float  <strong>y</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
-The y coordinate         </p>
+<p>The y coordinate </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -892,24 +1140,27 @@ The y coordinate         </p>
 <p>
     </p>
 <p>
-An example of resolving typedefs.     </p>
+<p>An example of resolving typedefs. </p>
+    </p>
 <em>Typedefs</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#project15struct_coord_struct"><em>CoordStruct</em></a>  <strong>Coord</strong></dt>
+<dt id="project15restypedef_8cpp_1a013489fb99c6a5b012db8ec66544a507">typedef <a class="reference internal" href="#project15struct_coord_struct"><em>CoordStruct</em></a>  <strong>Coord</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
-Creates a type name for <a class="reference internal" href="#project15struct_coord_struct"><em>CoordStruct</em></a>         </p>
+<p>Creates a type name for <a class="reference internal" href="#project15struct_coord_struct"><em>CoordStruct</em></a> </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
 <em>Functions</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#project15struct_coord_struct"><em>Coord</em></a>  <strong>add</strong>(<a class="reference internal" href="#project15struct_coord_struct"><em>Coord</em></a> c1, <a class="reference internal" href="#project15struct_coord_struct"><em>Coord</em></a> c2)</dt>
+<dt id="project15restypedef_8cpp_1a102acaaa258e937adf910898c6133545"><a class="reference internal" href="#project15struct_coord_struct"><em>Coord</em></a>  <strong>add</strong>(<a class="reference internal" href="#project15struct_coord_struct"><em>Coord</em></a> c1, <a class="reference internal" href="#project15struct_coord_struct"><em>Coord</em></a> c2)</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-This function returns the addition of  and , i.e: (c1.x+c2.x,c1.y+c2.y)         </p>
+<p>This function returns the addition of <em>c1</em> and <em>c2</em>, i.e: (c1.x+c2.x,c1.y+c2.y) </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -922,22 +1173,37 @@ This function returns the addition of  and , i.e: (c1.x+c2.x,c1.y+c2.y)         
 <p>
     </p>
 <p>
-A test class     </p>
+<p>A test class </p>
+    </p>
 <em>Public Type</em><blockquote>
 <dl class="docutils">
-<dt> <strong>EnumType</strong></dt>
+<dt id="project16class_test_1a26bf93efdaea3c6e2cfa4119c3755d3f"><strong>EnumType enum</strong></dt>
 <dd><p class="first">
-An enum type.         </p>
-<p class="last">
-The documentation block cannot be put after the enum!         </p>
+<p>An enum type. </p>
+        </p>
+<p>
+<p>The documentation block cannot be put after the enum! </p>
+        </p>
+<p><em>Values:</em></p>
+<ul class="breatheenumvalues last">
+<li><tt class="first docutils literal"><span class="pre">EVal1</span></tt> - 
+<p>enum value 1 </p>
+          
+          </li>
+<li><tt class="first docutils literal"><span class="pre">EVal2</span></tt> - 
+<p>enum value 2 </p>
+          
+          </li>
+</ul>
 </dd>
 </dl>
 </blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt>void  <strong>member</strong>()</dt>
+<dt id="project16class_test_1ad86c7affdfb5ca8e720f44ef56169c50">void  <strong>member</strong>()</dt>
 <dd><p class="first">
-a member function.         </p>
+<p>a member function. </p>
+        </p>
 <p class="last">
         </p>
 </dd>
@@ -945,11 +1211,12 @@ a member function.         </p>
 </blockquote>
 <em>Protected Attributes</em><blockquote>
 <dl class="docutils">
-<dt>int  <strong>value</strong></dt>
+<dt id="project16class_test_1ad55002283eba8ffa062dfb849f6c077c">int  <strong>value</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
-an integer value         </p>
+<p>an integer value </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -969,20 +1236,23 @@ an integer value         </p>
 <p>
     </p>
 <p>
-A template class     </p>
+<p>A template class </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt> <strong>Test</strong>()</dt>
+<dt id="project17class_test_1a44e3a28c552193de099601e2910531f1"> <strong>Test</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-The constructor of the template class         </p>
+<p>The constructor of the template class </p>
+        </p>
 </dd>
-<dt> <strong>Test</strong>(const  <a class="reference internal" href="#project17class_test"><em>Test</em></a>  &amp; t)</dt>
+<dt id="project17class_test_1adcf1bc755df94c4d07519c0a02aa1cc0"> <strong>Test</strong>(const  <a class="reference internal" href="#project17class_test"><em>Test</em></a>  &amp; t)</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-The copy constructor         </p>
+<p>The copy constructor </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -992,14 +1262,16 @@ The copy constructor         </p>
 <p>
     </p>
 <p>
-A partial template specialization     </p>
+<p>A partial template specialization </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt> <strong>Test</strong>()</dt>
+<dt id="project17class_test_3_01_t_01_5_01_4_1a474e8a1211308b3f810f9eafced6cbe7"> <strong>Test</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-The constructor of the partial specilization         </p>
+<p>The constructor of the partial specilization </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -1009,14 +1281,16 @@ The constructor of the partial specilization         </p>
 <p>
     </p>
 <p>
-complete specialization     </p>
+<p>complete specialization </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt> <strong>Test</strong>()</dt>
+<dt id="project17class_test_3_01void_01_5_00_01200_01_4_1aef160085cc11406b872b45fa871c7692"> <strong>Test</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-The constructor of the specilization         </p>
+<p>The constructor of the specilization </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -1036,14 +1310,16 @@ The constructor of the specilization         </p>
 <p>
     </p>
 <p>
-A class that is inherited from the external class Test.     </p>
+<p>A class that is inherited from the external class Test. </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt>void  <strong>example</strong>()</dt>
+<dt id="project18class_tag_1acc641ffae34e2c4c03a6edf0a513be28">void  <strong>example</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-an overloaded member.         </p>
+<p>an overloaded member. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -1061,73 +1337,84 @@ an overloaded member.         </p>
 <p id="project19class_c1"><em>class</em> <strong>C1</strong></p>
 <blockquote>
 <p>
-class <a class="reference internal" href="#project19class_c1"><em>C1</em></a> in group 1     </p>
+<p>class <a class="reference internal" href="#project19class_c1"><em>C1</em></a> in group 1 </p>
+    </p>
 <p>
     </p>
 </blockquote>
 <p id="project19class_c2"><em>class</em> <strong>C2</strong></p>
 <blockquote>
 <p>
-class <a class="reference internal" href="#project19class_c2"><em>C2</em></a> in group 1     </p>
+<p>class <a class="reference internal" href="#project19class_c2"><em>C2</em></a> in group 1 </p>
+    </p>
 <p>
     </p>
 </blockquote>
 <p id="project19class_c3"><em>class</em> <strong>C3</strong></p>
 <blockquote>
 <p>
-class <a class="reference internal" href="#project19class_c3"><em>C3</em></a> in group 2     </p>
+<p>class <a class="reference internal" href="#project19class_c3"><em>C3</em></a> in group 2 </p>
+    </p>
 <p>
     </p>
 </blockquote>
 <p id="project19class_c4"><em>class</em> <strong>C4</strong></p>
 <blockquote>
 <p>
-class <a class="reference internal" href="#project19class_c4"><em>C4</em></a> in group 2     </p>
+<p>class <a class="reference internal" href="#project19class_c4"><em>C4</em></a> in group 2 </p>
+    </p>
 <p>
     </p>
 </blockquote>
 <p id="project19class_c5"><em>class</em> <strong>C5</strong></p>
 <blockquote>
 <p>
-class <a class="reference internal" href="#project19class_c5"><em>C5</em></a> in <a class="reference internal" href="#project19group__group3"><em>the third group</em></a>.     </p>
+<p>class <a class="reference internal" href="#project19class_c5"><em>C5</em></a> in <a class="reference internal" href="#project19group__group3"><em>the third group</em></a>. </p>
+    </p>
 <p>
     </p>
 </blockquote>
 <p id="project19namespace_n1"><em>namespace</em> <strong>N1</strong></p>
 <blockquote>
 <p>
-namespace <a class="reference internal" href="#project19namespace_n1"><em>N1</em></a> is in four groups     </p>
+<p>namespace <a class="reference internal" href="#project19namespace_n1"><em>N1</em></a> is in four groups </p>
+    </p>
 <p>
-
+<p>
 Also see <a class="reference internal" href="#project19group__group5"><em>This is another section in group 5</em></a> <dl class="docutils">
 <dt><em>See</em></dt>
 <dd><a class="reference internal" href="#project19group__group1"><em>The first group</em></a>, <a class="reference internal" href="#project19group__group2"><em>The Second Group</em></a>, <a class="reference internal" href="#project19group__group3"><em>The Third Group</em></a>, <a class="reference internal" href="#project19group__group4"><em>The Fourth Group</em></a></dd>
 </dl>
+</p>
     </p>
 </blockquote>
 <p id="project19group_8cpp"><em>file</em> <strong>group.cpp</strong></p>
 <blockquote>
 <p>
-this file in group 3     </p>
+<p>this file in group 3 </p>
+    </p>
 <p>
     </p>
 <em>Functions</em><blockquote>
 <dl class="docutils">
-<dt>void  <strong>func</strong>()</dt>
+<dt id="project19group__group1_1ga24f647174760cac13d2624b5ad74b00c">void  <strong>func</strong>()</dt>
 <dd><p class="first">
-function in group 1         </p>
+<p>function in group 1 </p>
+        </p>
 <p class="last">
         </p>
 </dd>
-<dt>void  <strong>func2</strong>()</dt>
+<dt id="project19group__group1_1ga053929c0809a5f56f7548fd7d9968f31">void  <strong>func2</strong>()</dt>
 <dd><p class="first">
-another function in group 1         </p>
+<p>another function in group 1 </p>
+        </p>
 <p class="last">
         </p>
 </dd>
-<dt>void  <strong>func3</strong>()</dt>
+<dt id="project19group__group1_1gadbf675591ff057ec48ce35b0d5cdf755">void  <strong>func3</strong>()</dt>
 <dd><p class="first">
-yet another function in group 1         </p>
+<p>yet another function in group 1 </p>
+        </p>
 <p class="last">
         </p>
 </dd>
@@ -1137,26 +1424,31 @@ yet another function in group 1         </p>
 <p id="project19group__group1"><em>group</em> <strong>group1</strong></p>
 <blockquote>
 <p>
-This is the first group.     </p>
+<p>This is the first group. </p>
+    </p>
 <p>
-More documentation for the first group.     </p>
+<p>More documentation for the first group. </p>
+    </p>
 <em>Functions</em><blockquote>
 <dl class="docutils">
-<dt>void  <strong>func</strong>()</dt>
+<dt id="project19group__group1_1ga24f647174760cac13d2624b5ad74b00c">void  <strong>func</strong>()</dt>
 <dd><p class="first">
-function in group 1         </p>
+<p>function in group 1 </p>
+        </p>
 <p class="last">
         </p>
 </dd>
-<dt>void  <strong>func2</strong>()</dt>
+<dt id="project19group__group1_1ga053929c0809a5f56f7548fd7d9968f31">void  <strong>func2</strong>()</dt>
 <dd><p class="first">
-another function in group 1         </p>
+<p>another function in group 1 </p>
+        </p>
 <p class="last">
         </p>
 </dd>
-<dt>void  <strong>func3</strong>()</dt>
+<dt id="project19group__group1_1gadbf675591ff057ec48ce35b0d5cdf755">void  <strong>func3</strong>()</dt>
 <dd><p class="first">
-yet another function in group 1         </p>
+<p>yet another function in group 1 </p>
+        </p>
 <p class="last">
         </p>
 </dd>
@@ -1166,39 +1458,45 @@ yet another function in group 1         </p>
 <p id="project19group__group2"><em>group</em> <strong>group2</strong></p>
 <blockquote>
 <p>
-This is the second group.     </p>
+<p>This is the second group. </p>
+    </p>
 <p>
     </p>
 </blockquote>
 <p id="project19group__group3"><em>group</em> <strong>group3</strong></p>
 <blockquote>
 <p>
-This is the third group.     </p>
+<p>This is the third group. </p>
+    </p>
 <p>
     </p>
 </blockquote>
 <p id="project19group__group4"><em>group</em> <strong>group4</strong></p>
 <blockquote>
 <p>
-Group 4 is a subgroup of group 3.     </p>
+<p>Group 4 is a subgroup of group 3. </p>
+    </p>
 <p>
     </p>
 </blockquote>
 <p id="project19group__group5"><em>group</em> <strong>group5</strong></p>
 <blockquote>
 <p>
-This is the fifth group.     </p>
+<p>This is the fifth group. </p>
+    </p>
 <p>
     </p>
 </blockquote>
 <p id="project19group__group5_mypage1"><em>page</em> <strong>mypage1</strong></p>
 <blockquote>
 
-Text of the first section     </blockquote>
+<p>Text of the first section </p>
+    </blockquote>
 <p id="project19group__group5_mypage2"><em>page</em> <strong>mypage2</strong></p>
 <blockquote>
 
-Text of the second section     </blockquote>
+<p>Text of the second section </p>
+    </blockquote>
 </div>
 <div class="section" id="diagrams">
 <h2>Diagrams<a class="headerlink" href="#diagrams" title="Permalink to this headline">¶</a></h2>
@@ -1210,7 +1508,7 @@ Text of the second section     </blockquote>
     </p>
 <em>Public Members</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#project20class_a"><em>A</em></a>  *  <strong>m_self</strong></dt>
+<dt id="project20class_a_1a086d3a4efc697dba0601b9fef3d082ad"><a class="reference internal" href="#project20class_a"><em>A</em></a>  *  <strong>m_self</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -1227,7 +1525,7 @@ Text of the second section     </blockquote>
     </p>
 <em>Public Members</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#project20class_a"><em>A</em></a>  *  <strong>m_a</strong></dt>
+<dt id="project20class_b_1a26c70b64fe7cf17fcced7755ecff7537"><a class="reference internal" href="#project20class_a"><em>A</em></a>  *  <strong>m_a</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -1244,7 +1542,7 @@ Text of the second section     </blockquote>
     </p>
 <em>Public Members</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#project20class_d"><em>D</em></a>  *  <strong>m_d</strong></dt>
+<dt id="project20class_c_1a4ef972d28b73ff78eba3ab4f54c3b449"><a class="reference internal" href="#project20class_d"><em>D</em></a>  *  <strong>m_d</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -1261,7 +1559,7 @@ Text of the second section     </blockquote>
     </p>
 <em>Public Members</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#project20class_c"><em>C</em></a>  <strong>m_c</strong></dt>
+<dt id="project20class_d_1a9d877c7aa092f423f2a073f3c62fef9c"><a class="reference internal" href="#project20class_c"><em>C</em></a>  <strong>m_c</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -1318,32 +1616,40 @@ Text of the second section     </blockquote>
 <p id="project21class_test"><em>class</em> <strong>Test</strong></p>
 <blockquote>
 <p>
-A class.     </p>
+<p>A class. </p>
+    </p>
 <p>
-Details     </p>
+<p>Details </p>
+    </p>
 <em>User Defined</em><blockquote>
 <dl class="docutils">
-<dt>void  <strong>func1InGroup2</strong>()</dt>
+<dt id="project21class_test_1a8abb152293691f39d2560a74eff5322b">void  <strong>func1InGroup2</strong>()</dt>
 <dd><p class="first">
-Function 1 in group 2.         </p>
+<p>Function 1 in group 2. </p>
+        </p>
 <p class="last">
-Details.         </p>
+<p>Details. </p>
+        </p>
 </dd>
-<dt>void  <strong>func2InGroup2</strong>()</dt>
+<dt id="project21class_test_1a884a6563190420fe025d611fe2e5e909">void  <strong>func2InGroup2</strong>()</dt>
 <dd><p class="first">
-Function 2 in group 2.         </p>
+<p>Function 2 in group 2. </p>
+        </p>
 <p class="last">
-Details.         </p>
+<p>Details. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt>void  <strong>ungroupedFunction</strong>()</dt>
+<dt id="project21class_test_1a4c111d6093bba0683dda9e4de5bd9bac">void  <strong>ungroupedFunction</strong>()</dt>
 <dd><p class="first">
-Function without group.         </p>
+<p>Function without group. </p>
+        </p>
 <p class="last">
-Details.         </p>
+<p>Details. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -1353,24 +1659,28 @@ Details.         </p>
 <p>
     </p>
 <p>
-docs for this file     </p>
+<p>docs for this file </p>
+    </p>
 <em>User Defined</em><blockquote>
 <dl class="docutils">
-<dt> <strong>A</strong></dt>
+<dt id="project21memgrp_8cpp_1a955f504eccf76b4eb2489c0adab03121"> <strong>A</strong></dt>
 <dd><p class="first">
-one description for all members of this group (because DISTRIBUTE_GROUP_DOC is YES in the config file)         </p>
+<p>one description for all members of this group (because DISTRIBUTE_GROUP_DOC is YES in the config file) </p>
+        </p>
 <p class="last">
         </p>
 </dd>
-<dt> <strong>B</strong></dt>
+<dt id="project21memgrp_8cpp_1a111da81ae5883147168bbb8366377b10"> <strong>B</strong></dt>
 <dd><p class="first">
-one description for all members of this group (because DISTRIBUTE_GROUP_DOC is YES in the config file)         </p>
+<p>one description for all members of this group (because DISTRIBUTE_GROUP_DOC is YES in the config file) </p>
+        </p>
 <p class="last">
         </p>
 </dd>
-<dt>void  <strong>glob_func</strong>()</dt>
+<dt id="project21memgrp_8cpp_1a36cb413747454fcdba9dd7b8f972fcf3">void  <strong>glob_func</strong>()</dt>
 <dd><p class="first">
-one description for all members of this group (because DISTRIBUTE_GROUP_DOC is YES in the config file)         </p>
+<p>one description for all members of this group (because DISTRIBUTE_GROUP_DOC is YES in the config file) </p>
+        </p>
 <p class="last">
         </p>
 </dd>
@@ -1385,26 +1695,29 @@ one description for all members of this group (because DISTRIBUTE_GROUP_DOC is Y
 <p>
     </p>
 <p>
-     </p>
+<p> </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt>def  <strong>__init__</strong>()</dt>
+<dt id="project22classdocstring_1_1PyClass_1ab9371d84572f9597933e59cb8b182c03">def  <strong>__init__</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-         </p>
+<p> </p>
+        </p>
 </dd>
-<dt>def  <strong>PyMethod</strong>()</dt>
+<dt id="project22classdocstring_1_1PyClass_1af76b8e03a20349e4d467aa37e65035bc">def  <strong>PyMethod</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-         </p>
+<p> </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
 <em>Private Members</em><blockquote>
 <dl class="docutils">
-<dt> <strong>_memVar</strong></dt>
+<dt id="project22classdocstring_1_1PyClass_1a263074a6bad2aa5bb40ef63b886d42ef"> <strong>_memVar</strong></dt>
 <dd><p class="first">
         </p>
 <p class="last">
@@ -1418,14 +1731,16 @@ one description for all members of this group (because DISTRIBUTE_GROUP_DOC is Y
 <p>
     </p>
 <p>
-     </p>
+<p> </p>
+    </p>
 <em>Functions</em><blockquote>
 <dl class="docutils">
-<dt>def  <strong>func</strong>()</dt>
+<dt id="project22namespacedocstring_1a42b0412b60ca63ac2471cb70760efa24">def  <strong>func</strong>()</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-         </p>
+<p> </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -1443,35 +1758,43 @@ one description for all members of this group (because DISTRIBUTE_GROUP_DOC is Y
 <p id="project23classpyexample_1_1PyClass"><em>class</em> <strong>pyexample::PyClass</strong></p>
 <blockquote>
 <p>
-Documentation for a class.     </p>
+<p>Documentation for a class. </p>
+    </p>
 <p>
-More details.     </p>
+<p>More details. </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt>def  <strong>__init__</strong>()</dt>
+<dt id="project23classpyexample_1_1PyClass_1aa030fc201e82d9ac3fdb3e8afda712cc">def  <strong>__init__</strong>()</dt>
 <dd><p class="first">
-The constructor.         </p>
+<p>The constructor. </p>
+        </p>
 <p class="last">
         </p>
 </dd>
-<dt>def  <strong>PyMethod</strong>()</dt>
+<dt id="project23classpyexample_1_1PyClass_1aa60932a2e75f67ddbe84dda601be6327">def  <strong>PyMethod</strong>()</dt>
 <dd><p class="first">
-Documentation for a method.         </p>
+<p>Documentation for a method. </p>
+        </p>
 <p class="last">
-<em>Parameters</em><ul>
+<p><p><em>Parameters</em></p>
+<ul class="breatheparameterlist">
 <li><tt class="first docutils literal"><span class="pre">self</span></tt> - 
-The object pointer. </li>
+<p>The object pointer. </p>
+</li>
 </ul>
 
+</p>
         </p>
 </dd>
 </dl>
 </blockquote>
 <em>Public Static Attributes</em><blockquote>
 <dl class="docutils">
-<dt>int  <strong>classVar</strong></dt>
+<dt id="project23classpyexample_1_1PyClass_1a3fc7b9df3a3e5e68b595593d425da952">int  <strong>classVar</strong></dt>
 <dd><p class="first">
-A class variable.         </p>
+<p>A class variable. </p>
+        </p>
 <p class="last">
         </p>
 </dd>
@@ -1479,9 +1802,10 @@ A class variable.         </p>
 </blockquote>
 <em>Private Members</em><blockquote>
 <dl class="docutils">
-<dt> <strong>_memVar</strong></dt>
+<dt id="project23classpyexample_1_1PyClass_1a9165738cd516769e4fcd274219e9d255"> <strong>_memVar</strong></dt>
 <dd><p class="first">
-a member variable         </p>
+<p>a member variable </p>
+        </p>
 <p class="last">
         </p>
 </dd>
@@ -1491,16 +1815,20 @@ a member variable         </p>
 <p id="project23namespacepyexample"><em>namespace</em> <strong>pyexample</strong></p>
 <blockquote>
 <p>
-Documentation for this module.     </p>
+<p>Documentation for this module. </p>
+    </p>
 <p>
-More details.     </p>
+<p>More details. </p>
+    </p>
 <em>Functions</em><blockquote>
 <dl class="docutils">
-<dt>def  <strong>func</strong>()</dt>
+<dt id="project23namespacepyexample_1af9e0bc3325d440ebbf67d585382f78e9">def  <strong>func</strong>()</dt>
 <dd><p class="first">
-Documentation for a function.         </p>
+<p>Documentation for a function. </p>
+        </p>
 <p class="last">
-More details.         </p>
+<p>More details. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -1518,51 +1846,61 @@ More details.         </p>
 <p id="project24classmux__using__with_1_1behavior"><em>class</em> <strong>mux_using_with::behavior</strong></p>
 <blockquote>
 <p>
-Architure definition of the MUX.     </p>
+<p>Architure definition of the MUX. </p>
+    </p>
 <p>
-More details about this mux element.     </p>
+<p>More details about this mux element. </p>
+    </p>
 </blockquote>
 <p id="project24classmux__using__with"><em>class</em> <strong>mux_using_with</strong></p>
 <blockquote>
 <p>
-Mux entity brief description.     </p>
+<p>Mux entity brief description. </p>
+    </p>
 <p>
-Detailed description of this mux design element.     </p>
+<p>Detailed description of this mux design element. </p>
+    </p>
 <em>Public Members</em><blockquote>
 <dl class="docutils">
-<dt>in  <strong>din_0</strong></dt>
+<dt id="project24classmux__using__with_1af1a1ec7c6c9f700e1aab44a45be2f255">in  <strong>din_0</strong>std_logic;</dt>
 <dd><p class="first">
-Mux first input.         </p>
+<p>Mux first input. </p>
+        </p>
 <p class="last">
         </p>
 </dd>
-<dt>in  <strong>din_1</strong></dt>
+<dt id="project24classmux__using__with_1afdaa7a023348348a4891c94a41471b2b">in  <strong>din_1</strong>std_logic;</dt>
 <dd><p class="first">
-Mux Second input.         </p>
+<p>Mux Second input. </p>
+        </p>
 <p class="last">
         </p>
 </dd>
-<dt>in  <strong>sel</strong></dt>
+<dt id="project24classmux__using__with_1a0bafca15f54703bc84ec308996d4a7ce">in  <strong>sel</strong>std_logic;</dt>
 <dd><p class="first">
-Select input.         </p>
+<p>Select input. </p>
+        </p>
 <p class="last">
         </p>
 </dd>
-<dt>out  <strong>mux_out</strong></dt>
+<dt id="project24classmux__using__with_1abde1bd89fd99d6a6559b8b47b31bf6aa">out  <strong>mux_out</strong>std_logic;</dt>
 <dd><p class="first">
-Mux output.         </p>
+<p>Mux output. </p>
+        </p>
 <p class="last">
         </p>
 </dd>
-<dt>library  <strong>ieee</strong></dt>
+<dt id="project24classmux__using__with_1acbe0bfecfa56fa4103ea80a491bfdbc8">library  <strong>ieee</strong></dt>
 <dd><p class="first">
-Use standard library.         </p>
+<p>Use standard library. </p>
+        </p>
 <p class="last">
         </p>
 </dd>
-<dt>package  <strong>std_logic_1164</strong></dt>
+<dt id="project24classmux__using__with_1a75f07bd8bde6f849270ce9de65573a4f">package  <strong>std_logic_1164</strong></dt>
 <dd><p class="first">
-Use logic elements.         </p>
+<p>Use logic elements. </p>
+        </p>
 <p class="last">
         </p>
 </dd>
@@ -1572,7 +1910,8 @@ Use logic elements.         </p>
 <p id="project24mux_8vhdl"><em>file</em> <strong>mux.vhdl</strong></p>
 <blockquote>
 <p>
-2:1 Mux using with-select     </p>
+<p>2:1 Mux using with-select </p>
+    </p>
 <p>
     </p>
 </blockquote>
@@ -1582,14 +1921,17 @@ Use logic elements.         </p>
 <p id="project25struct_car"><em>struct</em> <strong>Car</strong></p>
 <blockquote>
 <p>
-<a class="reference internal" href="#project25struct_car"><em>Car</em></a> type.     </p>
+<p><a class="reference internal" href="#project25struct_car"><em>Car</em></a> type. </p>
+    </p>
 <p>
-<a class="reference internal" href="#project25struct_car"><em>Car</em></a> class.     </p>
+<p><a class="reference internal" href="#project25struct_car"><em>Car</em></a> class. </p>
+    </p>
 <em>Protected Attributes</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#project25struct_vehicle"><em>Vehicle</em></a>  <strong>base</strong></dt>
+<dt id="project25struct_car_1ab8ff28306286da5a8b14fa9bdccaafaa"><a class="reference internal" href="#project25struct_vehicle"><em>Vehicle</em></a>  <strong>base</strong></dt>
 <dd><p class="first">
-Base class.         </p>
+<p>Base class. </p>
+        </p>
 <p class="last">
         </p>
 </dd>
@@ -1599,30 +1941,35 @@ Base class.         </p>
 <p id="project25struct_object"><em>struct</em> <strong>Object</strong></p>
 <blockquote>
 <p>
-<a class="reference internal" href="#project25struct_object"><em>Object</em></a> type.     </p>
+<p><a class="reference internal" href="#project25struct_object"><em>Object</em></a> type. </p>
+    </p>
 <p>
-Base object class.     </p>
+<p>Base object class. </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#project25struct_object"><em>Object</em></a>  *  <strong>objRef</strong>(<a class="reference internal" href="#project25struct_object"><em>Object</em></a>  * obj)</dt>
+<dt id="project25struct_object_1a71225073d06a793b9a6ea9263ed37b12"><a class="reference internal" href="#project25struct_object"><em>Object</em></a>  *  <strong>objRef</strong>(<a class="reference internal" href="#project25struct_object"><em>Object</em></a>  * obj)</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-Increments object reference count by one.         </p>
+<p>Increments object reference count by one. </p>
+        </p>
 </dd>
-<dt><a class="reference internal" href="#project25struct_object"><em>Object</em></a>  *  <strong>objUnref</strong>(<a class="reference internal" href="#project25struct_object"><em>Object</em></a>  * obj)</dt>
+<dt id="project25struct_object_1a924ee0cecc906d148022b3f0d6325cfb"><a class="reference internal" href="#project25struct_object"><em>Object</em></a>  *  <strong>objUnref</strong>(<a class="reference internal" href="#project25struct_object"><em>Object</em></a>  * obj)</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-Decrements object reference count by one.         </p>
+<p>Decrements object reference count by one. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
 <em>Private Members</em><blockquote>
 <dl class="docutils">
-<dt>int  <strong>ref</strong></dt>
+<dt id="project25struct_object_1a1b6037fba835e83243ababce426ff9af">int  <strong>ref</strong></dt>
 <dd><p class="first">
-Reference count.         </p>
+<p>Reference count. </p>
+        </p>
 <p class="last">
         </p>
 </dd>
@@ -1632,14 +1979,17 @@ Reference count.         </p>
 <p id="project25struct_truck"><em>struct</em> <strong>Truck</strong></p>
 <blockquote>
 <p>
-<a class="reference internal" href="#project25struct_truck"><em>Truck</em></a> type.     </p>
+<p><a class="reference internal" href="#project25struct_truck"><em>Truck</em></a> type. </p>
+    </p>
 <p>
-<a class="reference internal" href="#project25struct_truck"><em>Truck</em></a> class.     </p>
+<p><a class="reference internal" href="#project25struct_truck"><em>Truck</em></a> class. </p>
+    </p>
 <em>Protected Attributes</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#project25struct_vehicle"><em>Vehicle</em></a>  <strong>base</strong></dt>
+<dt id="project25struct_truck_1ad0ac321609dda1a6c552488b05ec7ac8"><a class="reference internal" href="#project25struct_vehicle"><em>Vehicle</em></a>  <strong>base</strong></dt>
 <dd><p class="first">
-Base class.         </p>
+<p>Base class. </p>
+        </p>
 <p class="last">
         </p>
 </dd>
@@ -1649,30 +1999,35 @@ Base class.         </p>
 <p id="project25struct_vehicle"><em>struct</em> <strong>Vehicle</strong></p>
 <blockquote>
 <p>
-<a class="reference internal" href="#project25struct_vehicle"><em>Vehicle</em></a> type.     </p>
+<p><a class="reference internal" href="#project25struct_vehicle"><em>Vehicle</em></a> type. </p>
+    </p>
 <p>
-<a class="reference internal" href="#project25struct_vehicle"><em>Vehicle</em></a> class.     </p>
+<p><a class="reference internal" href="#project25struct_vehicle"><em>Vehicle</em></a> class. </p>
+    </p>
 <em>Public Functions</em><blockquote>
 <dl class="docutils">
-<dt>void  <strong>vehicleStart</strong>(<a class="reference internal" href="#project25struct_vehicle"><em>Vehicle</em></a>  * obj)</dt>
+<dt id="project25struct_vehicle_1a6891d3d28853bc3fdd075596dc6de9f8">void  <strong>vehicleStart</strong>(<a class="reference internal" href="#project25struct_vehicle"><em>Vehicle</em></a>  * obj)</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-Starts the vehicle.         </p>
+<p>Starts the vehicle. </p>
+        </p>
 </dd>
-<dt>void  <strong>vehicleStop</strong>(<a class="reference internal" href="#project25struct_vehicle"><em>Vehicle</em></a>  * obj)</dt>
+<dt id="project25struct_vehicle_1a4dcbcba43792dcd673a552b14479ab77">void  <strong>vehicleStop</strong>(<a class="reference internal" href="#project25struct_vehicle"><em>Vehicle</em></a>  * obj)</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-Stops the vehicle.         </p>
+<p>Stops the vehicle. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
 <em>Protected Attributes</em><blockquote>
 <dl class="docutils">
-<dt><a class="reference internal" href="#project25struct_object"><em>Object</em></a>  <strong>base</strong></dt>
+<dt id="project25struct_vehicle_1ad7970f528d429f6fc1725173e93a77c2"><a class="reference internal" href="#project25struct_object"><em>Object</em></a>  <strong>base</strong></dt>
 <dd><p class="first">
-Base class.         </p>
+<p>Base class. </p>
+        </p>
 <p class="last">
         </p>
 </dd>
@@ -1687,11 +2042,13 @@ Base class.         </p>
     </p>
 <em>Functions</em><blockquote>
 <dl class="docutils">
-<dt>int  <strong>main</strong>(void )</dt>
+<dt id="project25manual_8c_1a840291bc02cba5474a4cb46a9b9566fe">int  <strong>main</strong>(void )</dt>
 <dd><p class="first">
         </p>
 <p class="last">
-Main function.Ref <a class="reference internal" href="#project25struct_vehicle_1a6891d3d28853bc3fdd075596dc6de9f8"><em>vehicleStart()</em></a>, <a class="reference internal" href="#project25struct_object_1a71225073d06a793b9a6ea9263ed37b12"><em>objRef()</em></a>, <a class="reference internal" href="#project25struct_object_1a924ee0cecc906d148022b3f0d6325cfb"><em>objUnref()</em></a>.         </p>
+<p>Main function.</p>
+<p>Ref <a class="reference internal" href="#project25struct_vehicle_1a6891d3d28853bc3fdd075596dc6de9f8"><em>vehicleStart()</em></a>, <a class="reference internal" href="#project25struct_object_1a71225073d06a793b9a6ea9263ed37b12"><em>objRef()</em></a>, <a class="reference internal" href="#project25struct_object_1a924ee0cecc906d148022b3f0d6325cfb"><em>objUnref()</em></a>. </p>
+        </p>
 </dd>
 </dl>
 </blockquote>
@@ -1705,64 +2062,64 @@ Main function.Ref <a class="reference internal" href="#project25struct_vehicle_1
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-            <h3><a href="index.html">Table Of Contents</a></h3>
-            <ul>
-<li><a class="reference external" href="">Doxygen Test Suite</a><ul>
-<li><a class="reference external" href="#class">Class</a></li>
-<li><a class="reference external" href="#define">Define</a></li>
-<li><a class="reference external" href="#enum">Enum</a></li>
-<li><a class="reference external" href="#file">File</a></li>
-<li><a class="reference external" href="#func">Func</a></li>
-<li><a class="reference external" href="#page">Page</a></li>
-<li><a class="reference external" href="#relates">Relates</a></li>
-<li><a class="reference external" href="#author">Author</a></li>
-<li><a class="reference external" href="#par">Par</a></li>
-<li><a class="reference external" href="#overload">Overload</a></li>
-<li><a class="reference external" href="#example">Example</a></li>
-<li><a class="reference external" href="#include">Include</a></li>
-<li><a class="reference external" href="#qtstyle">QtStyle</a></li>
-<li><a class="reference external" href="#jdstyle">JdStyle</a></li>
-<li><a class="reference external" href="#structcmd">StructCmd</a></li>
-<li><a class="reference external" href="#autolink">Autolink</a></li>
-<li><a class="reference external" href="#restypedef">ResTypeDef</a></li>
-<li><a class="reference external" href="#afterdoc">AfterDoc</a></li>
-<li><a class="reference external" href="#template">Template</a></li>
-<li><a class="reference external" href="#tag">Tag</a></li>
-<li><a class="reference external" href="#group">Group</a></li>
-<li><a class="reference external" href="#diagrams">Diagrams</a></li>
-<li><a class="reference external" href="#memgrp">Memgrp</a></li>
-<li><a class="reference external" href="#docstring">Docstring</a></li>
-<li><a class="reference external" href="#pyexample">PyExample</a></li>
-<li><a class="reference external" href="#mux">Mux</a></li>
-<li><a class="reference external" href="#manual">Manual</a></li>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Doxygen Test Suite</a><ul>
+<li><a class="reference internal" href="#class">Class</a></li>
+<li><a class="reference internal" href="#define">Define</a></li>
+<li><a class="reference internal" href="#enum">Enum</a></li>
+<li><a class="reference internal" href="#file">File</a></li>
+<li><a class="reference internal" href="#func">Func</a></li>
+<li><a class="reference internal" href="#page">Page</a></li>
+<li><a class="reference internal" href="#relates">Relates</a></li>
+<li><a class="reference internal" href="#author">Author</a></li>
+<li><a class="reference internal" href="#par">Par</a></li>
+<li><a class="reference internal" href="#overload">Overload</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
+<li><a class="reference internal" href="#include">Include</a></li>
+<li><a class="reference internal" href="#qtstyle">QtStyle</a></li>
+<li><a class="reference internal" href="#jdstyle">JdStyle</a></li>
+<li><a class="reference internal" href="#structcmd">StructCmd</a></li>
+<li><a class="reference internal" href="#autolink">Autolink</a></li>
+<li><a class="reference internal" href="#restypedef">ResTypeDef</a></li>
+<li><a class="reference internal" href="#afterdoc">AfterDoc</a></li>
+<li><a class="reference internal" href="#template">Template</a></li>
+<li><a class="reference internal" href="#tag">Tag</a></li>
+<li><a class="reference internal" href="#group">Group</a></li>
+<li><a class="reference internal" href="#diagrams">Diagrams</a></li>
+<li><a class="reference internal" href="#memgrp">Memgrp</a></li>
+<li><a class="reference internal" href="#docstring">Docstring</a></li>
+<li><a class="reference internal" href="#pyexample">PyExample</a></li>
+<li><a class="reference internal" href="#mux">Mux</a></li>
+<li><a class="reference internal" href="#manual">Manual</a></li>
 </ul>
 </li>
 </ul>
 
-            <h4>Previous topic</h4>
-            <p class="topless"><a href="class.html"
-                                  title="previous chapter">doxygenclass Directive Example</a></p>
-            <h4>Next topic</h4>
-            <p class="topless"><a href="tinyxml.html"
-                                  title="next chapter">TinyXML Test Suite</a></p>
-            <h3>This Page</h3>
-            <ul class="this-page-menu">
-              <li><a href="sources/doxygen.txt"
-                     rel="nofollow">Show Source</a></li>
-            </ul>
-          <div id="searchbox" style="display: none">
-            <h3>Quick search</h3>
-              <form class="search" action="search.html" method="get">
-                <input type="text" name="q" size="18" />
-                <input type="submit" value="Go" />
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-              </form>
-              <p class="searchtip" style="font-size: 90%">
-              Enter search terms or a module, class or function name.
-              </p>
-          </div>
-          <script type="text/javascript">$('#searchbox').show(0);</script>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="testpages.html"
+                        title="previous chapter">Test Pages</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tinyxml.html"
+                        title="next chapter">TinyXML Test Suite</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="sources/doxygen.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -1777,14 +2134,15 @@ Main function.Ref <a class="reference internal" href="#project25struct_vehicle_1
           <a href="tinyxml.html" title="TinyXML Test Suite"
              >next</a> |</li>
         <li class="right" >
-          <a href="class.html" title="doxygenclass Directive Example"
+          <a href="testpages.html" title="Test Pages"
              >previous</a> |</li>
-        <li><a href="index.html">BreatheExample v0.0.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">BreatheExample v0.0.1 documentation</a> &raquo;</li>
+          <li><a href="testpages.html" >Test Pages</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-      &copy; Copyright 2009, Michael Jones.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.3.
+        &copy; Copyright 2009, Michael Jones.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.4.
     </div>
   </body>
 </html>
