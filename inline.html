@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>doxygenfunction Directive Example &mdash; BreatheExample v0.0.1 documentation</title>
+    <title>Inline Parameter Documentation &mdash; BreatheExample v0.0.1 documentation</title>
     <link rel="stylesheet" href="static/default.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -23,9 +23,8 @@
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
     <link rel="top" title="BreatheExample v0.0.1 documentation" href="index.html" />
-    <link rel="up" title="Directives" href="directives.html" />
-    <link rel="next" title="doxygenstruct Directive Example" href="struct.html" />
-    <link rel="prev" title="Directives" href="directives.html" /> 
+    <link rel="up" title="Test Pages" href="testpages.html" />
+    <link rel="prev" title="Embedded Rst" href="embeddedrst.html" /> 
   </head>
   <body>
     <div class="related">
@@ -35,13 +34,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="struct.html" title="doxygenstruct Directive Example"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="directives.html" title="Directives"
+          <a href="embeddedrst.html" title="Embedded Rst"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">BreatheExample v0.0.1 documentation</a> &raquo;</li>
-          <li><a href="directives.html" accesskey="U">Directives</a> &raquo;</li> 
+          <li><a href="testpages.html" accesskey="U">Test Pages</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -50,46 +46,63 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="doxygenfunction-directive-example">
-<h1>doxygenfunction Directive Example<a class="headerlink" href="#doxygenfunction-directive-example" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="working-example">
-<h2>Working Example<a class="headerlink" href="#working-example" title="Permalink to this headline">¶</a></h2>
-<p>This should work:</p>
-<div class="highlight-python"><pre>.. doxygenfunction:: open
-   :project: structcmd</pre>
-</div>
-<p>It produces this output:</p>
-<dt id="open__cCP.i"><span id="structcmdstructcmd_8h_1a2c4414339f388561554c2deab11a1a07"></span>int  <strong>open</strong>(const char * pathname, int flags)</dt>
+  <div class="section" id="inline-parameter-documentation">
+<h1>Inline Parameter Documentation<a class="headerlink" href="#inline-parameter-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This is currently flawed as it doesn&#8217;t know where to sensibly put the parameters
+in the final description.</p>
+<p>It currently defaults to the top of the detail description block which means it
+comes between the brief description text and the detailed description text which
+is less than ideal, but attempts to programmatically figure out where the detail
+description text ends have failed. Something for future work.</p>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p id="project29class_test"><em>class</em> <strong>Test</strong></p>
+<blockquote>
+<p>
+    </p>
+<p>
+    </p>
+<em>Public Functions</em><blockquote>
+<dl class="docutils">
+<dt id="Test::member__c.i"><span id="project29class_test_1a026dd3a51320a7359a07742af50cbf21"></span>const char *  <strong>member</strong>(char c, int n)</dt>
 <dd><p class="first">
-<p>Opens a file descriptor. </p>
+<p>A member function. </p>
         </p>
-<p class="last">
-<p>Detailed description.</p>
-<p><p><em>Parameters</em></p>
+<p class="last"><p><p><em>Parameters</em></p>
 <ul class="breatheparameterlist">
-<li><tt class="first docutils literal"><span class="pre">pathname</span></tt> - 
-<p>The name of the descriptor. </p>
+<li><tt class="first docutils literal"><span class="pre">c</span></tt> - <p>c a character. </p>
 </li>
-<li><tt class="first docutils literal"><span class="pre">flags</span></tt> - 
-<p>Opening flags. </p>
+<li><tt class="first docutils literal"><span class="pre">n</span></tt> - <p>n an integer. </p>
+</li>
+</ul>
+</p>
+
+<p>Details about member function</p>
+<p><p><em>Exceptions</em></p>
+<ul class="breatheparameterlist">
+<li><tt class="first docutils literal"><span class="pre">std::out_of_range</span></tt> - 
+<p>parameter is out of range. </p>
 </li>
 </ul>
 
+
+<dl class="docutils">
+<dt><em>Return</em></dt>
+<dd>a character pointer. </dd>
+</dl>
 </p>
         </p>
 </dd>
-</div>
-<div class="section" id="failing-example">
-<h2>Failing Example<a class="headerlink" href="#failing-example" title="Permalink to this headline">¶</a></h2>
-<p>This intentionally fails:</p>
-<div class="highlight-python"><pre>.. doxygenfunction:: made_up_function
-   :project: structcmd</pre>
-</div>
-<p>It produces the following warning message:</p>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">doxygenfunction: Cannot find function &#8220;made_up_function&#8221; in doxygen xml output</p>
-</div>
+</dl>
+</blockquote>
+</blockquote>
+<p id="project29inline_8h"><em>file</em> <strong>inline.h</strong></p>
+<blockquote>
+<p>
+    </p>
+<p>
+    </p>
+</blockquote>
 </div>
 </div>
 
@@ -101,22 +114,18 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">doxygenfunction Directive Example</a><ul>
-<li><a class="reference internal" href="#working-example">Working Example</a></li>
-<li><a class="reference internal" href="#failing-example">Failing Example</a></li>
+<li><a class="reference internal" href="#">Inline Parameter Documentation</a><ul>
+<li><a class="reference internal" href="#example">Example</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="directives.html"
-                        title="previous chapter">Directives</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="struct.html"
-                        title="next chapter">doxygenstruct Directive Example</a></p>
+  <p class="topless"><a href="embeddedrst.html"
+                        title="previous chapter">Embedded Rst</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="sources/function.txt"
+    <li><a href="sources/inline.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -143,13 +152,10 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="struct.html" title="doxygenstruct Directive Example"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="directives.html" title="Directives"
+          <a href="embeddedrst.html" title="Embedded Rst"
              >previous</a> |</li>
         <li><a href="index.html">BreatheExample v0.0.1 documentation</a> &raquo;</li>
-          <li><a href="directives.html" >Directives</a> &raquo;</li> 
+          <li><a href="testpages.html" >Test Pages</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
