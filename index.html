@@ -7,30 +7,30 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Breathe’s documentation &mdash; Breathe v0.9.0 documentation</title>
-    <link rel="stylesheet" href="static/haiku.css" type="text/css" />
-    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="static/breathe.css" type="text/css" />
+    <title>Breathe’s documentation &mdash; Breathe v0.6.0 documentation</title>
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/breathe.css" type="text/css" />
     <link rel="stylesheet" href="_static/print.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.9.0',
+        VERSION:     '0.6.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="static/jquery.js"></script>
-    <script type="text/javascript" src="static/underscore.js"></script>
-    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/theme_extras.js"></script>
-    <link rel="top" title="Breathe v0.9.0 documentation" href="#" />
+    <link rel="top" title="Breathe v0.6.0 documentation" href="#" />
     <link rel="next" title="Quickstart" href="quickstart.html" /> 
   </head>
   <body>
       <div class="header"><h1 class="heading"><a href="#">
-          <span>Breathe v0.9.0 documentation</span></a></h1>
+          <span>Breathe v0.6.0 documentation</span></a></h1>
         <h2 class="heading"><span>Breathe’s documentation</span></h2>
       </div>
       <div class="topnav">
@@ -84,43 +84,43 @@ standard Sphinx domain references, like, <tt class="docutils literal"><span clas
 <div class="section" id="in-a-nutshell">
 <h2>In a Nutshell<a class="headerlink" href="#in-a-nutshell" title="Permalink to this headline">¶</a></h2>
 <p>You write code that looks a little like this:</p>
-<div class="highlight-cpp"><div class="highlight"><pre><span class="c">//! An overly extended example of how to use breathe</span>
-<span class="c">/*!</span>
-<span class="c">    With a little bit of a elaboration, should you feel it necessary.</span>
-<span class="c">*/</span>
+<div class="highlight-cpp"><div class="highlight"><pre><span class="c1">//! An overly extended example of how to use breathe</span>
+<span class="cm">/*!</span>
+<span class="cm">    With a little bit of a elaboration, should you feel it necessary.</span>
+<span class="cm">*/</span>
 <span class="k">class</span> <span class="nc">Nutshell</span>
 <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
 
-    <span class="c">//! Our toolset</span>
-    <span class="c">/*! The various tools we can opt to use to crack this particular nut */</span>
+    <span class="c1">//! Our toolset</span>
+    <span class="cm">/*! The various tools we can opt to use to crack this particular nut */</span>
     <span class="k">enum</span> <span class="n">Tool</span>
     <span class="p">{</span>
-        <span class="n">kHammer</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="c">//!&lt; What? It does the job</span>
-        <span class="n">kNutCrackers</span><span class="p">,</span>         <span class="c">//!&lt; Boring</span>
-        <span class="n">kNinjaThrowingStars</span>   <span class="c">//!&lt; Stealthy</span>
+        <span class="n">kHammer</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>          <span class="c1">//!&lt; What? It does the job</span>
+        <span class="n">kNutCrackers</span><span class="p">,</span>         <span class="c1">//!&lt; Boring</span>
+        <span class="n">kNinjaThrowingStars</span>   <span class="c1">//!&lt; Stealthy</span>
     <span class="p">};</span>
 
-    <span class="c">//! Nutshell constructor</span>
+    <span class="c1">//! Nutshell constructor</span>
     <span class="n">Nutshell</span><span class="p">();</span>
 
-    <span class="c">//! Nutshell destructor</span>
+    <span class="c1">//! Nutshell destructor</span>
     <span class="o">~</span><span class="n">Nutshell</span><span class="p">();</span>
 
-    <span class="c">/*! Crack that shell with specified tool</span>
+    <span class="cm">/*! Crack that shell with specified tool</span>
 
-<span class="c">      \param tool - the tool with which to crack the nut</span>
-<span class="c">    */</span>
+<span class="cm">      \param tool - the tool with which to crack the nut</span>
+<span class="cm">    */</span>
     <span class="kt">void</span> <span class="n">crack</span><span class="p">(</span> <span class="n">Tool</span> <span class="n">tool</span> <span class="p">);</span>
 
-    <span class="c">/*!</span>
-<span class="c">      \return Whether or not the nut is cracked</span>
-<span class="c">    */</span>
+    <span class="cm">/*!</span>
+<span class="cm">      \return Whether or not the nut is cracked</span>
+<span class="cm">    */</span>
     <span class="kt">bool</span> <span class="n">isCracked</span><span class="p">();</span>
 
 <span class="k">private</span><span class="o">:</span>
 
-    <span class="c">//! Our cracked state</span>
+    <span class="c1">//! Our cracked state</span>
     <span class="kt">bool</span> <span class="n">m_isCracked</span><span class="p">;</span>
 
 <span class="p">};</span>
@@ -136,7 +136,8 @@ standard Sphinx domain references, like, <tt class="docutils literal"><span clas
 </div>
 <p>Then in your Sphinx documentation, you add something like this:</p>
 <div class="highlight-python"><pre>.. doxygenclass:: Nutshell
-   :project: nutshell</pre>
+   :project: nutshell
+   :members:</pre>
 </div>
 <p>With a <tt class="docutils literal"><span class="pre">conf.py</span></tt> setting like this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">breathe_projects</span> <span class="o">=</span> <span class="p">{</span>
@@ -147,16 +148,16 @@ standard Sphinx domain references, like, <tt class="docutils literal"><span clas
 <p>And you get something like this:</p>
 <hr class="docutils" />
 <blockquote>
-<p id="nutshellclass_nutshell"><em>class</em> <strong>Nutshell</strong></p>
+<div><p id="nutshellclass_nutshell"><em>class</em> <strong>Nutshell</strong></p>
 <blockquote>
-<p>
+<div><p>
 <p>An overly extended example of how to use breathe. </p>
     </p>
 <p>
 <p>With a little bit of a elaboration, should you feel it necessary. </p>
     </p>
 <em>Public Type</em><blockquote>
-<dl class="docutils">
+<div><dl class="docutils">
 <dt id=""><span id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79"></span><strong>Tool enum</strong></dt>
 <dd><p class="first">
 <p>Our toolset. </p>
@@ -181,9 +182,9 @@ standard Sphinx domain references, like, <tt class="docutils literal"><span clas
 </ul>
 </dd>
 </dl>
-</blockquote>
+</div></blockquote>
 <em>Public Functions</em><blockquote>
-<dl class="docutils">
+<div><dl class="docutils">
 <dt id="Nutshell::Nutshell"><span id="nutshellclass_nutshell_1a68edae1c44c7a85b889b0cf88e79939f"></span> <strong>Nutshell</strong>()</dt>
 <dd><p class="first">
 <p><a class="reference internal" href="#nutshellclass_nutshell"><em>Nutshell</em></a> constructor. </p>
@@ -226,20 +227,9 @@ standard Sphinx domain references, like, <tt class="docutils literal"><span clas
         </p>
 </dd>
 </dl>
-</blockquote>
-<em>Private Members</em><blockquote>
-<dl class="docutils">
-<dt id=""><span id="nutshellclass_nutshell_1a144928f8a485dbe64a4db63c2ca5a200"></span>bool  <strong>m_isCracked</strong></dt>
-<dd><p class="first">
-<p>Our cracked state. </p>
-        </p>
-<p class="last">
-        </p>
-</dd>
-</dl>
-</blockquote>
-</blockquote>
-</blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
 <hr class="docutils" />
 <p>Sound reasonable? To get started, go checkout the <a class="reference internal" href="quickstart.html"><em>quickstart guide</em></a>.</p>
 </div>
@@ -259,7 +249,7 @@ standard Sphinx domain references, like, <tt class="docutils literal"><span clas
 
     <div class="footer">
         &copy; Copyright 2009-2010, Michael Jones.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.4.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
   </body>
 </html>
