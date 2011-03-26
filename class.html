@@ -51,8 +51,21 @@
         
   <div class="section" id="doxygenclass-directive-example">
 <span id="class-example"></span><h1>doxygenclass Directive Example<a class="headerlink" href="#doxygenclass-directive-example" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="working-example">
-<h2>Working Example<a class="headerlink" href="#working-example" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-without-members">
+<h2>Example without Members<a class="headerlink" href="#example-without-members" title="Permalink to this headline">¶</a></h2>
+<p>This should work:</p>
+<div class="highlight-python"><pre>.. doxygenclass:: Nutshell
+   :project: nutshell</pre>
+</div>
+<p>It produces this output:</p>
+<p id="nutshellclass_nutshell"><em>class</em> <strong>Nutshell</strong></p>
+<blockquote>
+<div><p>An overly extended example of how to use breathe. </p>
+<p>With a little bit of a elaboration, should you feel it necessary. </p>
+</div></blockquote>
+</div>
+<div class="section" id="example-with-members">
+<h2>Example with Members<a class="headerlink" href="#example-with-members" title="Permalink to this headline">¶</a></h2>
 <p>This should work:</p>
 <div class="highlight-python"><pre>.. doxygenclass:: Nutshell
    :project: nutshell
@@ -61,81 +74,64 @@
 <p>It produces this output:</p>
 <p id="nutshellclass_nutshell"><em>class</em> <strong>Nutshell</strong></p>
 <blockquote>
-<div><p>
-<p>An overly extended example of how to use breathe. </p>
-    </p>
-<p>
+<div><p>An overly extended example of how to use breathe. </p>
 <p>With a little bit of a elaboration, should you feel it necessary. </p>
-    </p>
 <em>Public Type</em><blockquote>
 <div><dl class="docutils">
 <dt id=""><span id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79"></span><strong>Tool enum</strong></dt>
-<dd><p class="first">
-<p>Our toolset. </p>
-        </p>
-<p>
+<dd><p class="first">Our toolset. </p>
 <p>The various tools we can opt to use to crack this particular nut </p>
-        </p>
 <p><em>Values:</em></p>
 <ul class="breatheenumvalues last">
-<li><tt class="first docutils literal"><span class="pre">kHammer</span></tt><tt class="docutils literal"> <span class="pre">=</span>  <span class="pre">0</span> </tt> - 
-<p>What? It does the job. </p>
-          
-          </li>
-<li><tt class="first docutils literal"><span class="pre">kNutCrackers</span></tt> - 
-<p>Boring. </p>
-          
-          </li>
-<li><tt class="first docutils literal"><span class="pre">kNinjaThrowingStars</span></tt> - 
-<p>Stealthy. </p>
-          
-          </li>
+<li><tt class="first docutils literal"><span class="pre">kHammer</span></tt><tt class="docutils literal"> <span class="pre">=</span>  <span class="pre">0</span> </tt> - <p>What? It does the job. </p>
+</li>
+<li><tt class="first docutils literal"><span class="pre">kNutCrackers</span></tt> - <p>Boring. </p>
+</li>
+<li><tt class="first docutils literal"><span class="pre">kNinjaThrowingStars</span></tt> - <p>Stealthy. </p>
+</li>
 </ul>
 </dd>
 </dl>
 </div></blockquote>
 <em>Public Functions</em><blockquote>
 <div><dl class="docutils">
-<dt id="Nutshell::Nutshell"><span id="nutshellclass_nutshell_1a68edae1c44c7a85b889b0cf88e79939f"></span> <strong>Nutshell</strong>()</dt>
-<dd><p class="first">
-<p><a class="reference internal" href="index.html#nutshellclass_nutshell"><em>Nutshell</em></a> constructor. </p>
-        </p>
-<p class="last">
-        </p>
+<dt id=""><span id="nutshellclass_nutshell_1a68edae1c44c7a85b889b0cf88e79939f"></span> <strong>Nutshell</strong>()</dt>
+<dd><p class="first"><a class="reference internal" href="index.html#nutshellclass_nutshell"><em>Nutshell</em></a> constructor. </p>
+<p class="last"></p>
 </dd>
-<dt id="Nutshell::~Nutshell"><span id="nutshellclass_nutshell_1aa7e84b812e4489584093a76da864297e"></span> <strong>~Nutshell</strong>()</dt>
-<dd><p class="first">
-<p><a class="reference internal" href="index.html#nutshellclass_nutshell"><em>Nutshell</em></a> destructor. </p>
-        </p>
-<p class="last">
-        </p>
+<dt id=""><span id="nutshellclass_nutshell_1aa7e84b812e4489584093a76da864297e"></span> <strong>~Nutshell</strong>()</dt>
+<dd><p class="first"><a class="reference internal" href="index.html#nutshellclass_nutshell"><em>Nutshell</em></a> destructor. </p>
+<p class="last"></p>
 </dd>
-<dt id="Nutshell::crack__Tool"><span id="nutshellclass_nutshell_1a57fc2641156575ef8d655b6c90a1a17d"></span>void  <strong>crack</strong>(<a class="reference internal" href="index.html#nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79"><em>Tool</em></a> tool)</dt>
-<dd><p class="first">
-        </p>
-<p class="last">
-<p>Crack that shell with specified tool</p>
-<p><p><em>Parameters</em></p>
-<ul class="breatheparameterlist">
-<li><tt class="first docutils literal"><span class="pre">tool</span></tt> - 
-<p>- the tool with which to crack the nut </p>
+<dt id=""><span id="nutshellclass_nutshell_1a57fc2641156575ef8d655b6c90a1a17d"></span>void  <strong>crack</strong>(<a class="reference internal" href="index.html#nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79"><em>Tool</em></a> tool)</dt>
+<dd><p class="first"></p>
+<p class="last"><p>Crack that shell with specified tool</p>
+<p><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="breatheparameterlist first last">
+<li><tt class="first docutils literal"><span class="pre">tool</span></tt> - <p>- the tool with which to crack the nut </p>
 </li>
 </ul>
-
+</td>
+</tr>
+</tbody>
+</table>
 </p>
-        </p>
+</p>
 </dd>
-<dt id="Nutshell::isCracked"><span id="nutshellclass_nutshell_1a510c746ef3f7c1b54139124afa657b66"></span>bool  <strong>isCracked</strong>()</dt>
-<dd><p class="first">
-        </p>
-<p class="last">
-<p>
-<dl class="docutils">
-<dt><em>Return</em></dt>
-<dd>Whether or not the nut is cracked </dd>
-</dl>
+<dt id=""><span id="nutshellclass_nutshell_1a510c746ef3f7c1b54139124afa657b66"></span>bool  <strong>isCracked</strong>()</dt>
+<dd><p class="first"></p>
+<p class="last"><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return:</th><td class="field-body">Whether or not the nut is cracked </td>
+</tr>
+</tbody>
+</table>
 </p>
-        </p>
 </dd>
 </dl>
 </div></blockquote>
@@ -146,46 +142,93 @@
 <p>This should work:</p>
 <div class="highlight-python"><pre>.. doxygenclass:: Nutshell
    :project: nutshell
-   :members: crack, isCracked
-   :no-link:</pre>
+   :members: crack, isCracked</pre>
 </div>
 <p>It produces this output:</p>
 <p id="nutshellclass_nutshell"><em>class</em> <strong>Nutshell</strong></p>
 <blockquote>
-<div><p>
-<p>An overly extended example of how to use breathe. </p>
-    </p>
-<p>
+<div><p>An overly extended example of how to use breathe. </p>
 <p>With a little bit of a elaboration, should you feel it necessary. </p>
-    </p>
 <em>Public Functions</em><blockquote>
 <div><dl class="docutils">
-<dt id="Nutshell::crack__Tool"><span id="nutshellclass_nutshell_1a57fc2641156575ef8d655b6c90a1a17d"></span>void  <strong>crack</strong>(<a class="reference internal" href="index.html#nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79"><em>Tool</em></a> tool)</dt>
-<dd><p class="first">
-        </p>
-<p class="last">
-<p>Crack that shell with specified tool</p>
-<p><p><em>Parameters</em></p>
-<ul class="breatheparameterlist">
-<li><tt class="first docutils literal"><span class="pre">tool</span></tt> - 
-<p>- the tool with which to crack the nut </p>
+<dt id=""><span id="nutshellclass_nutshell_1a57fc2641156575ef8d655b6c90a1a17d"></span>void  <strong>crack</strong>(<a class="reference internal" href="index.html#nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79"><em>Tool</em></a> tool)</dt>
+<dd><p class="first"></p>
+<p class="last"><p>Crack that shell with specified tool</p>
+<p><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="breatheparameterlist first last">
+<li><tt class="first docutils literal"><span class="pre">tool</span></tt> - <p>- the tool with which to crack the nut </p>
 </li>
 </ul>
-
+</td>
+</tr>
+</tbody>
+</table>
 </p>
-        </p>
+</p>
 </dd>
-<dt id="Nutshell::isCracked"><span id="nutshellclass_nutshell_1a510c746ef3f7c1b54139124afa657b66"></span>bool  <strong>isCracked</strong>()</dt>
-<dd><p class="first">
-        </p>
-<p class="last">
-<p>
-<dl class="docutils">
-<dt><em>Return</em></dt>
-<dd>Whether or not the nut is cracked </dd>
-</dl>
+<dt id=""><span id="nutshellclass_nutshell_1a510c746ef3f7c1b54139124afa657b66"></span>bool  <strong>isCracked</strong>()</dt>
+<dd><p class="first"></p>
+<p class="last"><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return:</th><td class="field-body">Whether or not the nut is cracked </td>
+</tr>
+</tbody>
+</table>
 </p>
-        </p>
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="example-as-outline">
+<h2>Example as Outline<a class="headerlink" href="#example-as-outline" title="Permalink to this headline">¶</a></h2>
+<p>This should work:</p>
+<div class="highlight-python"><pre>.. doxygenclass:: Nutshell
+   :project: nutshell
+   :outline:
+   :members:</pre>
+</div>
+<p>It produces this output:</p>
+<p id="nutshellclass_nutshell"><em>class</em> <strong>Nutshell</strong></p>
+<blockquote>
+<div><p></p>
+<p></p>
+<em>Public Type</em><blockquote>
+<div><dl class="docutils">
+<dt id=""><span id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79"></span><strong>Tool enum</strong></dt>
+<dd><p class="first"></p>
+<p></p>
+<p><em>Values:</em></p>
+<ul class="breatheenumvalues last">
+<li><tt class="first docutils literal"><span class="pre">kHammer</span></tt><tt class="docutils literal"> <span class="pre">=</span>  <span class="pre">0</span> </tt> - </li>
+<li><tt class="first docutils literal"><span class="pre">kNutCrackers</span></tt> - </li>
+<li><tt class="first docutils literal"><span class="pre">kNinjaThrowingStars</span></tt> - </li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<em>Public Functions</em><blockquote>
+<div><dl class="docutils">
+<dt id=""><span id="nutshellclass_nutshell_1a68edae1c44c7a85b889b0cf88e79939f"></span> <strong>Nutshell</strong>()</dt>
+<dd><p class="first"></p>
+<p class="last"></p>
+</dd>
+<dt id=""><span id="nutshellclass_nutshell_1aa7e84b812e4489584093a76da864297e"></span> <strong>~Nutshell</strong>()</dt>
+<dd><p class="first"></p>
+<p class="last"></p>
+</dd>
+<dt id=""><span id="nutshellclass_nutshell_1a57fc2641156575ef8d655b6c90a1a17d"></span>void  <strong>crack</strong>(<a class="reference internal" href="index.html#nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79"><em>Tool</em></a> tool)</dt>
+<dd><p class="first"></p>
+<p class="last"></p>
+</dd>
+<dt id=""><span id="nutshellclass_nutshell_1a510c746ef3f7c1b54139124afa657b66"></span>bool  <strong>isCracked</strong>()</dt>
+<dd><p class="first"></p>
+<p class="last"></p>
 </dd>
 </dl>
 </div></blockquote>

@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Supported Markups &mdash; Breathe v0.6.0 documentation</title>
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/breathe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.6.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="top" title="Breathe v0.6.0 documentation" href="index.html" />
+    <link rel="next" title="Contributing to Breathe" href="contributing.html" />
+    <link rel="prev" title="doxygentypedef Directive Example" href="typedef.html" /> 
+  </head>
+  <body>
+      <div class="header"><h1 class="heading"><a href="index.html">
+          <span>Breathe v0.6.0 documentation</span></a></h1>
+        <h2 class="heading"><span>Supported Markups</span></h2>
+      </div>
+      <div class="topnav">
+      
+        <p>
+        «&#160;&#160;<a href="typedef.html">doxygentypedef Directive Example</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="contributing.html">Contributing to Breathe</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="supported-markups">
+<h1>Supported Markups<a class="headerlink" href="#supported-markups" title="Permalink to this headline">¶</a></h1>
+<p>All comments in your code must be formatted in a doxygen-compliant way so that
+doxygen can do its job. Doxygen provides support for formatting your text with
+tags, such as <tt class="docutils literal"><span class="pre">\b</span></tt> for adding bold text, this information appears in the xml
+output and Breathe attempts to reproduce it accurately.</p>
+<p>In addition to this, is it possible to add restructured text into your comments
+within appropriately demarcated sections.</p>
+<div class="section" id="restructured-text">
+<h2>Restructured Text<a class="headerlink" href="#restructured-text" title="Permalink to this headline">¶</a></h2>
+<p>Breathe supports restructed text within doxygen <strong>verbatim</strong> blocks which begin
+with the markup <strong>embed:rst</strong>. This means that a comment block like this:</p>
+<div class="highlight-python"><pre>/*!
+Inserting additional restructured text information.
+\verbatim embed:rst
+.. note::
+
+   This restructured text has been handled correctly.
+\endverbatim
+*/</pre>
+</div>
+<p>Will be rendered as:</p>
+<dt id=""><span id="rstclass_test_class_1ac338ea1b9d0ec4afad7402f8042d28ee"></span>void  <strong>rawVerbatim</strong>()</dt>
+<dd><p class="first"></p>
+<p class="last">Inserting additional restructured text information. <div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This restructured text has been handled correctly.</p>
+</div>
+</p>
+</dd>
+<div class="section" id="aliases">
+<h3>Aliases<a class="headerlink" href="#aliases" title="Permalink to this headline">¶</a></h3>
+<p>To make these blocks appears as more appropriate doxygen-like markup in your
+comments you can add the following aliases to your doxygen cofiguration file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ALIASES</span> <span class="o">=</span> <span class="s">&quot;rst=</span><span class="se">\v</span><span class="s">erbatim embed:rst&quot;</span>
+<span class="n">ALIASES</span> <span class="o">+=</span> <span class="s">&quot;endrst=\endverbatim&quot;</span>
+</pre></div>
+</div>
+<p>Which allow you to write comments like:</p>
+<div class="highlight-python"><pre>/*!
+Inserting additional restructured text information.
+
+\rst
+
+This is some funky non-xml compliant text: &lt;&amp; !&gt;&lt;
+
+.. note::
+
+   This restructured text has been handled correctly.
+\endrst
+
+This is just a standard verbatim block with code:
+
+\verbatim
+    child = 0;
+    while( child = parent-&gt;IterateChildren( child ) )
+\endverbatim
+
+*/</pre>
+</div>
+<p>Which will be rendered as:</p>
+<dt id=""><span id="rstclass_test_class_1adb6dc395f016e6c4b3c3df8057558143"></span>void  <strong>function</strong>()</dt>
+<dd><p class="first"></p>
+<p class="last"><p>Inserting additional restructured text information.</p>
+<p><p>This is some funky non-xml compliant text: &lt;&amp; !&gt;&lt;</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This restructured text has been handled correctly.</p>
+</div>
+</p>
+<p>This is just a standard verbatim block with code:</p>
+<p><div class="highlight-python"><pre>
+        child = 0;
+        while( child = parent-&gt;IterateChildren( child ) )</pre>
+</div>
+</p>
+</p>
+</dd>
+</div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav">
+      
+        <p>
+        «&#160;&#160;<a href="typedef.html">doxygentypedef Directive Example</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="contributing.html">Contributing to Breathe</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer">
+        &copy; Copyright 2009-2010, Michael Jones.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>
