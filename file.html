@@ -1,0 +1,173 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>doxygenfile Directive Example &mdash; Breathe v0.6.0 documentation</title>
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/breathe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.6.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="top" title="Breathe v0.6.0 documentation" href="index.html" />
+    <link rel="up" title="Directives &amp; Config Variables" href="directives.html" />
+    <link rel="next" title="Supported Markups" href="markups.html" />
+    <link rel="prev" title="doxygentypedef Directive Example" href="typedef.html" /> 
+  </head>
+  <body>
+      <div class="header"><h1 class="heading"><a href="index.html">
+          <span>Breathe v0.6.0 documentation</span></a></h1>
+        <h2 class="heading"><span>doxygenfile Directive Example</span></h2>
+      </div>
+      <div class="topnav">
+      
+        <p>
+        «&#160;&#160;<a href="typedef.html">doxygentypedef Directive Example</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="markups.html">Supported Markups</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="doxygenfile-directive-example">
+<span id="file-example"></span><h1>doxygenfile Directive Example<a class="headerlink" href="#doxygenfile-directive-example" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>This should work:</p>
+<div class="highlight-python"><pre>.. doxygenfile:: nutshell.h
+   :project: nutshell</pre>
+</div>
+<p>It produces this output:</p>
+<p id="nutshellnutshell_8h"><em>file</em> <strong>nutshell.h</strong></p>
+<blockquote>
+<div><p></p>
+<p></p>
+<p><p id="nutshellclass_nutshell"><em>class</em> <strong>Nutshell</strong></p>
+<blockquote>
+<div><p>An overly extended example of how to use breathe. </p>
+<p>With a little bit of a elaboration, should you feel it necessary. </p>
+<em>Public Type</em><blockquote>
+<div><dl class="docutils">
+<dt id=""><span id="nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79"></span><strong>Tool enum</strong></dt>
+<dd><p class="first">Our toolset. </p>
+<p>The various tools we can opt to use to crack this particular nut </p>
+<p><em>Values:</em></p>
+<ul class="breatheenumvalues last">
+<li><tt class="first docutils literal"><span class="pre">kHammer</span></tt><tt class="docutils literal"> <span class="pre">=</span>  <span class="pre">0</span> </tt> - <p>What? It does the job. </p>
+</li>
+<li><tt class="first docutils literal"><span class="pre">kNutCrackers</span></tt> - <p>Boring. </p>
+</li>
+<li><tt class="first docutils literal"><span class="pre">kNinjaThrowingStars</span></tt> - <p>Stealthy. </p>
+</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<em>Public Functions</em><blockquote>
+<div><dl class="docutils">
+<dt id=""><span id="nutshellclass_nutshell_1a68edae1c44c7a85b889b0cf88e79939f"></span> <strong>Nutshell</strong>()</dt>
+<dd><p class="first"><a class="reference internal" href="index.html#nutshellclass_nutshell"><em>Nutshell</em></a> constructor. </p>
+<p class="last"></p>
+</dd>
+<dt id=""><span id="nutshellclass_nutshell_1aa7e84b812e4489584093a76da864297e"></span> <strong>~Nutshell</strong>()</dt>
+<dd><p class="first"><a class="reference internal" href="index.html#nutshellclass_nutshell"><em>Nutshell</em></a> destructor. </p>
+<p class="last"></p>
+</dd>
+<dt id=""><span id="nutshellclass_nutshell_1a57fc2641156575ef8d655b6c90a1a17d"></span>void  <strong>crack</strong>(<a class="reference internal" href="index.html#nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79"><em>Tool</em></a> tool)</dt>
+<dd><p class="first"></p>
+<p class="last"><p>Crack that shell with specified tool</p>
+<p><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="breatheparameterlist first last">
+<li><tt class="first docutils literal"><span class="pre">tool</span></tt> - <p>- the tool with which to crack the nut </p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p>
+</dd>
+<dt id=""><span id="nutshellclass_nutshell_1a510c746ef3f7c1b54139124afa657b66"></span>bool  <strong>isCracked</strong>()</dt>
+<dd><p class="first"></p>
+<p class="last"><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Return:</th><td class="field-body">Whether or not the nut is cracked </td>
+</tr>
+</tbody>
+</table>
+</p>
+</dd>
+</dl>
+</div></blockquote>
+<em>Private Members</em><blockquote>
+<div><dl class="docutils">
+<dt id=""><span id="nutshellclass_nutshell_1a144928f8a485dbe64a4db63c2ca5a200"></span>bool  <strong>m_isCracked</strong></dt>
+<dd><p class="first">Our cracked state. </p>
+<p class="last"></p>
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+</p>
+</div></blockquote>
+</div>
+<div class="section" id="failing-example">
+<h2>Failing Example<a class="headerlink" href="#failing-example" title="Permalink to this headline">¶</a></h2>
+<p>This intentionally fails:</p>
+<div class="highlight-python"><pre>.. doxygenfile:: made_up_file.h
+   :project: nutshell</pre>
+</div>
+<p>It produces the following warning message:</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">doxygenclass: Cannot find file &#8220;made_up_file&#8221; in doxygen xml output</p>
+</div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav">
+      
+        <p>
+        «&#160;&#160;<a href="typedef.html">doxygentypedef Directive Example</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="markups.html">Supported Markups</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer">
+        &copy; Copyright 2009-2010, Michael Jones.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

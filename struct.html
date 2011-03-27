@@ -51,8 +51,8 @@
         
   <div class="section" id="doxygenstruct-directive-example">
 <span id="struct-example"></span><h1>doxygenstruct Directive Example<a class="headerlink" href="#doxygenstruct-directive-example" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="working-example">
-<h2>Working Example<a class="headerlink" href="#working-example" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-with-full-description">
+<h2>Example with Full Description<a class="headerlink" href="#example-with-full-description" title="Permalink to this headline">¶</a></h2>
 <p>This should work:</p>
 <div class="highlight-python"><pre>.. doxygenstruct:: CoordStruct
    :project: restypedef</pre>
@@ -71,6 +71,32 @@
 <dt id=""><span id="restypedefstruct_coord_struct_1a1a5966a881bc3e76e9becf00639585ac"></span>float  <strong>y</strong></dt>
 <dd><p class="first"></p>
 <p class="last">The y coordinate </p>
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="example-with-outline">
+<h2>Example with Outline<a class="headerlink" href="#example-with-outline" title="Permalink to this headline">¶</a></h2>
+<p>This should work:</p>
+<div class="highlight-python"><pre>.. doxygenstruct:: CoordStruct
+   :project: restypedef
+   :outline:</pre>
+</div>
+<p>It produces this output:</p>
+<p id="restypedefstruct_coord_struct"><em>struct</em> <strong>CoordStruct</strong></p>
+<blockquote>
+<div><p></p>
+<p></p>
+<em>Public Members</em><blockquote>
+<div><dl class="docutils">
+<dt id=""><span id="restypedefstruct_coord_struct_1a183d7226fc5a8470ce9b9f04f9cb69bb"></span>float  <strong>x</strong></dt>
+<dd><p class="first"></p>
+<p class="last"></p>
+</dd>
+<dt id=""><span id="restypedefstruct_coord_struct_1a1a5966a881bc3e76e9becf00639585ac"></span>float  <strong>y</strong></dt>
+<dd><p class="first"></p>
+<p class="last"></p>
 </dd>
 </dl>
 </div></blockquote>
