@@ -58,13 +58,12 @@
    :project: nutshell</pre>
 </div>
 <p>It produces this output:</p>
-<p id="nutshellnutshell_8h"><em>file</em> <strong>nutshell.h</strong></p>
 <blockquote>
-<div><p></p>
+<div><p>An overly extended example of how to use breathe. </p>
 <p></p>
 <p><p id="nutshellclass_nutshell"><em>class</em> <strong>Nutshell</strong></p>
 <blockquote>
-<div><p>An overly extended example of how to use breathe. </p>
+<div><p></p>
 <p>With a little bit of a elaboration, should you feel it necessary. </p>
 <em>Public Type</em><blockquote>
 <div><dl class="docutils">
@@ -137,6 +136,21 @@
 </p>
 </div></blockquote>
 </div>
+<div class="section" id="example-for-multiple-files">
+<h2>Example for Multiple Files<a class="headerlink" href="#example-for-multiple-files" title="Permalink to this headline">¶</a></h2>
+<p>When there are multiple files with the same name in the project, you need to be
+more specific with the filename you provide. For example, in a project with the
+following two files:</p>
+<div class="highlight-python"><pre>/some/long/project/path/parser/Util.h
+/some/long/project/path/finder/Util.h</pre>
+</div>
+<p>You should specify:</p>
+<div class="highlight-python"><pre>.. doxygenfile:: parser/Util.h
+
+.. doxygenfile:: finder/Util.h</pre>
+</div>
+<p>To uniquely identify them.</p>
+</div>
 <div class="section" id="failing-example">
 <h2>Failing Example<a class="headerlink" href="#failing-example" title="Permalink to this headline">¶</a></h2>
 <p>This intentionally fails:</p>
@@ -146,7 +160,7 @@
 <p>It produces the following warning message:</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">doxygenclass: Cannot find file &#8220;made_up_file&#8221; in doxygen xml output</p>
+<p class="last">Cannot find file &#8220;made_up_file.h&#8221; in doxygen xml output for project &#8220;nutshell&#8221; from directory: ../examples/specific/nutshell/xml/</p>
 </div>
 </div>
 </div>
