@@ -136,6 +136,96 @@
 </p>
 </div></blockquote>
 </div>
+<div class="section" id="example-with-nested-namespaces">
+<h2>Example with Nested Namespaces<a class="headerlink" href="#example-with-nested-namespaces" title="Permalink to this headline">¶</a></h2>
+<p>This should work:</p>
+<div class="highlight-python"><pre>.. doxygenfile:: namespacefile.h
+   :project: namespacefile</pre>
+</div>
+<p>It produces this output:</p>
+<blockquote>
+<div><p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p><p id="namespacefilenamespacefoo"><em>namespace</em> <strong>foo</strong></p>
+<blockquote>
+<div><p></p>
+<p></p>
+<em>Functions</em><blockquote>
+<div><dl class="docutils">
+<dt id=""><span id="namespacefilenamespacefoo_1a5e555a632c85f009cd88665b2d01c065"></span>int  <strong>baz</strong>()</dt>
+<dd><p class="first">This also appears. </p>
+<p class="last"></p>
+</dd>
+</dl>
+</div></blockquote>
+<p><p id="namespacefileclassfoo_1_1_bar"><em>class</em> <strong>Bar</strong></p>
+<blockquote>
+<div><p>This appears in the documentation. </p>
+<p></p>
+<p><p id="namespacefileclassfoo_1_1_bar_1_1_inner_bar"><em>class</em> <strong>InnerBar</strong></p>
+<blockquote>
+<div><p>This appears as a sub class. </p>
+<p></p>
+</div></blockquote>
+</p>
+</div></blockquote>
+</p>
+<p><p id="namespacefilenamespacefoo_1_1ns"><em>namespace</em> <strong>ns</strong></p>
+<blockquote>
+<div><p>More examples in a nested namespace. </p>
+<p></p>
+<em>Typedefs</em><blockquote>
+<div><dl class="docutils">
+<dt id=""><span id="namespacefilenamespacefoo_1_1ns_1a4cf8d490905e65657416c79786684a6e"></span>typedef int  <strong>MyInt</strong></dt>
+<dd><p class="first"></p>
+<p class="last"></p>
+</dd>
+</dl>
+</div></blockquote>
+<em>Enums</em><blockquote>
+<div><dl class="docutils">
+<dt id=""><span id="namespacefilenamespacefoo_1_1ns_1a9c4aa7a6f0ba47c8af0933d48174a954"></span><strong>Letters enum</strong></dt>
+<dd><p class="first"></p>
+<p></p>
+<p><em>Values:</em></p>
+<ul class="breatheenumvalues last">
+<li><tt class="first docutils literal"><span class="pre">A</span></tt> - </li>
+<li><tt class="first docutils literal"><span class="pre">B</span></tt> - </li>
+<li><tt class="first docutils literal"><span class="pre">C</span></tt> - </li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p><p id="namespacefilestructfoo_1_1ns_1_1_foo_struct"><em>class</em> <strong>FooStruct</strong></p>
+<blockquote>
+<div><p>Documentation here. </p>
+<p></p>
+</div></blockquote>
+</p>
+<p><p id="namespacefileclassfoo_1_1ns_1_1_foo_class"><em>class</em> <strong>FooClass</strong></p>
+<blockquote>
+<div><p></p>
+<p></p>
+<p><p id="namespacefileclassfoo_1_1ns_1_1_foo_class_1_1_inner_foo"><em>class</em> <strong>InnerFoo</strong></p>
+<blockquote>
+<div><p></p>
+<p></p>
+</div></blockquote>
+</p>
+</div></blockquote>
+</p>
+</div></blockquote>
+</p>
+</div></blockquote>
+</p>
+<p></p>
+</div></blockquote>
+</div>
 <div class="section" id="example-for-multiple-files">
 <h2>Example for Multiple Files<a class="headerlink" href="#example-for-multiple-files" title="Permalink to this headline">¶</a></h2>
 <p>When there are multiple files with the same name in the project, you need to be
