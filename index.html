@@ -64,8 +64,8 @@ projects and refence them by name or path for each directive.</li>
 <li><strong>Allows embedded restructured text in doxygen markup</strong> - some extra doxygen
 aliases allow you to add <tt class="docutils literal"><span class="pre">\rst</span></tt> - <tt class="docutils literal"><span class="pre">\endrst</span></tt> blocks to your comments and have
 the contents interpreted as restructured text.</li>
-<li><strong>Plays well with Sphinx domains</strong> - Link to entries in the breathe output with
-standard Sphinx domain references, like, <tt class="docutils literal"><span class="pre">:c:func:&lt;my_function&gt;</span></tt>.</li>
+<li><strong>Basic support for Sphinx domains</strong> - Link to functions in the breathe output
+with a standard Sphinx domain reference.</li>
 </ul>
 </div>
 <div class="section" id="contents">
@@ -75,6 +75,7 @@ standard Sphinx domain references, like, <tt class="docutils literal"><span clas
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="directives.html">Directives &amp; Config Variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markups.html">Supported Markups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to Breathe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="codeguide.html">How It Works</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testpages.html">Test Pages</a></li>
@@ -153,7 +154,7 @@ standard Sphinx domain references, like, <tt class="docutils literal"><span clas
 <p>And you get something like this:</p>
 <hr class="docutils" />
 <blockquote>
-<div><p id="nutshellclass_nutshell"><em>class</em> <strong>Nutshell</strong></p>
+<div><p id="Nutshell"><span id="nutshellclass_nutshell"></span><em>class</em> <strong>Nutshell</strong></p>
 <blockquote>
 <div><p></p>
 <p>With a little bit of a elaboration, should you feel it necessary. </p>
@@ -176,15 +177,15 @@ standard Sphinx domain references, like, <tt class="docutils literal"><span clas
 </div></blockquote>
 <em>Public Functions</em><blockquote>
 <div><dl class="docutils">
-<dt id=""><span id="nutshellclass_nutshell_1a68edae1c44c7a85b889b0cf88e79939f"></span> <strong>Nutshell</strong>()</dt>
+<dt id="Nutshell::Nutshell"><span id="nutshellclass_nutshell_1a68edae1c44c7a85b889b0cf88e79939f"></span> <strong>Nutshell</strong>()</dt>
 <dd><p class="first"><a class="reference internal" href="#nutshellclass_nutshell"><em>Nutshell</em></a> constructor. </p>
 <p class="last"></p>
 </dd>
-<dt id=""><span id="nutshellclass_nutshell_1aa7e84b812e4489584093a76da864297e"></span> <strong>~Nutshell</strong>()</dt>
+<dt id="Nutshell::~Nutshell"><span id="nutshellclass_nutshell_1aa7e84b812e4489584093a76da864297e"></span> <strong>~Nutshell</strong>()</dt>
 <dd><p class="first"><a class="reference internal" href="#nutshellclass_nutshell"><em>Nutshell</em></a> destructor. </p>
 <p class="last"></p>
 </dd>
-<dt id=""><span id="nutshellclass_nutshell_1a57fc2641156575ef8d655b6c90a1a17d"></span>void  <strong>crack</strong>(<a class="reference internal" href="#nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79"><em>Tool</em></a> tool)</dt>
+<dt id="Nutshell::crack__Tool"><span id="nutshellclass_nutshell_1a57fc2641156575ef8d655b6c90a1a17d"></span>void  <strong>crack</strong>(<a class="reference internal" href="#nutshellclass_nutshell_1ae42034231cf912d095d57cbeed6cda79"><em>Tool</em></a> tool)</dt>
 <dd><p class="first"></p>
 <p class="last"><p>Crack that shell with specified tool</p>
 <p><table class="docutils field-list" frame="void" rules="none">
@@ -202,7 +203,7 @@ standard Sphinx domain references, like, <tt class="docutils literal"><span clas
 </p>
 </p>
 </dd>
-<dt id=""><span id="nutshellclass_nutshell_1a510c746ef3f7c1b54139124afa657b66"></span>bool  <strong>isCracked</strong>()</dt>
+<dt id="Nutshell::isCracked"><span id="nutshellclass_nutshell_1a510c746ef3f7c1b54139124afa657b66"></span>bool  <strong>isCracked</strong>()</dt>
 <dd><p class="first"></p>
 <p class="last"><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
