@@ -54,27 +54,27 @@
 doxygen can do its job. Doxygen provides support for formatting your text with
 tags, such as <tt class="docutils literal"><span class="pre">\b</span></tt> for adding bold text, this information appears in the xml
 output and Breathe attempts to reproduce it accurately.</p>
-<p>In addition to this, is it possible to add restructured text into your comments
+<p>In addition to this, is it possible to add reStructuredText into your comments
 within appropriately demarcated sections.</p>
-<div class="section" id="restructured-text">
-<h2>Restructured Text<a class="headerlink" href="#restructured-text" title="Permalink to this headline">¶</a></h2>
-<p>Breathe supports restructed text within doxygen <strong>verbatim</strong> blocks which begin
+<div class="section" id="restructuredtext">
+<h2>reStructuredText<a class="headerlink" href="#restructuredtext" title="Permalink to this headline">¶</a></h2>
+<p>Breathe supports reStructuredText within doxygen <strong>verbatim</strong> blocks which begin
 with the markup <strong>embed:rst</strong>. This means that a comment block like this:</p>
 <div class="highlight-python"><pre>/*!
-Inserting additional restructured text information.
+Inserting additional reStructuredText information.
 \verbatim embed:rst
 .. note::
 
-   This restructured text has been handled correctly.
+   This reStructuredText has been handled correctly.
 \endverbatim
 */</pre>
 </div>
 <p>Will be rendered as:</p>
 <dt id=""><span id="rstclass_test_class_1ac338ea1b9d0ec4afad7402f8042d28ee"></span>void  <strong>rawVerbatim</strong>()</dt>
 <dd><p class="first"></p>
-<p class="last">Inserting additional restructured text information. <div class="admonition note">
+<p class="last">Inserting additional reStructuredText information. <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This restructured text has been handled correctly.</p>
+<p class="last">This reStructuredText has been handled correctly.</p>
 </div>
 </p>
 </dd>
@@ -88,7 +88,7 @@ comments you can add the following aliases to your doxygen cofiguration file:</p
 </div>
 <p>Which allow you to write comments like:</p>
 <div class="highlight-python"><pre>/*!
-Inserting additional restructured text information.
+Inserting additional reStructuredText information.
 
 \rst
 
@@ -96,7 +96,7 @@ This is some funky non-xml compliant text: &lt;&amp; !&gt;&lt;
 
 .. note::
 
-   This restructured text has been handled correctly.
+   This reStructuredText has been handled correctly.
 \endrst
 
 This is just a standard verbatim block with code:
@@ -111,11 +111,11 @@ This is just a standard verbatim block with code:
 <p>Which will be rendered as:</p>
 <dt id=""><span id="rstclass_test_class_1adb6dc395f016e6c4b3c3df8057558143"></span>void  <strong>function</strong>()</dt>
 <dd><p class="first"></p>
-<p class="last"><p>Inserting additional restructured text information.</p>
+<p class="last"><p>Inserting additional reStructuredText information.</p>
 <p><p>This is some funky non-xml compliant text: &lt;&amp; !&gt;&lt;</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This restructured text has been handled correctly.</p>
+<p class="last">This reStructuredText has been handled correctly.</p>
 </div>
 </p>
 <p>This is just a standard verbatim block with code:</p>

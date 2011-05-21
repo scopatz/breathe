@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>doxygendefine Directive Example &mdash; Breathe v0.6.0 documentation</title>
+    <title>doxygenvariable Directive Example &mdash; Breathe v0.6.0 documentation</title>
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/breathe.css" type="text/css" />
@@ -27,53 +27,52 @@
     <script type="text/javascript" src="_static/theme_extras.js"></script>
     <link rel="top" title="Breathe v0.6.0 documentation" href="index.html" />
     <link rel="up" title="Directives &amp; Config Variables" href="directives.html" />
-    <link rel="next" title="doxygenvariable Directive Example" href="variable.html" />
-    <link rel="prev" title="doxygentypedef Directive Example" href="typedef.html" /> 
+    <link rel="next" title="doxygenfile Directive Example" href="file.html" />
+    <link rel="prev" title="doxygendefine Directive Example" href="define.html" /> 
   </head>
   <body>
       <div class="header"><h1 class="heading"><a href="index.html">
           <span>Breathe v0.6.0 documentation</span></a></h1>
-        <h2 class="heading"><span>doxygendefine Directive Example</span></h2>
+        <h2 class="heading"><span>doxygenvariable Directive Example</span></h2>
       </div>
       <div class="topnav">
       
         <p>
-        «&#160;&#160;<a href="typedef.html">doxygentypedef Directive Example</a>
+        «&#160;&#160;<a href="define.html">doxygendefine Directive Example</a>
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="variable.html">doxygenvariable Directive Example</a>&#160;&#160;»
+        <a href="file.html">doxygenfile Directive Example</a>&#160;&#160;»
         </p>
 
       </div>
       <div class="content">
         
         
-  <div class="section" id="doxygendefine-directive-example">
-<span id="define-example"></span><h1>doxygendefine Directive Example<a class="headerlink" href="#doxygendefine-directive-example" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="doxygenvariable-directive-example">
+<span id="variable-example"></span><h1>doxygenvariable Directive Example<a class="headerlink" href="#doxygenvariable-directive-example" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="working-example">
 <h2>Working Example<a class="headerlink" href="#working-example" title="Permalink to this headline">¶</a></h2>
 <p>This should work:</p>
-<div class="highlight-python"><pre>.. doxygendefine:: WRITE_TREE_MISSING_OK
+<div class="highlight-python"><pre>.. doxygenvariable:: global_cache_tree
    :project: c_file</pre>
 </div>
 <p>It produces this output:</p>
-<dt id=""><span id="c_filec__file_8h_1a42df1800f897807468fd3fdf742c4745"></span><strong>WRITE_TREE_MISSING_OK</strong></dt>
-<dd><p class="first">bitmasks to write_cache_as_tree flags </p>
+<dt id=""><span id="c_filec__file_8h_1a9563e61e59c043530449f9b4da1d8ecf"></span>struct  cache_tree  <strong>global_cache_tree</strong></dt>
+<dd><p class="first">Shared cache tree instance. </p>
 <p class="last"></p>
 </dd>
 </div>
 <div class="section" id="failing-example">
 <h2>Failing Example<a class="headerlink" href="#failing-example" title="Permalink to this headline">¶</a></h2>
 <p>This intentionally fails:</p>
-<div class="highlight-python"><pre>.. doxygendefine:: MADEUPDEFINE
+<div class="highlight-python"><pre>.. doxygenvariable:: made_up_variable
    :project: define</pre>
 </div>
 <p>It produces the following warning message:</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">doxygendefine: Cannot find define &#8220;MADEUPDEFINE&#8221; in doxygen xml
-output for project &#8220;define&#8221; in directory: ../examples/specific/define/xml</p>
+<p class="last">doxygenvariable: Cannot find variable “made_up_variable” in doxygen xml output for project “tinyxml” from directory: ../examples/tinyxml/tinyxml/xml/</p>
 </div>
 </div>
 </div>
@@ -83,11 +82,11 @@ output for project &#8220;define&#8221; in directory: ../examples/specific/defin
       <div class="bottomnav">
       
         <p>
-        «&#160;&#160;<a href="typedef.html">doxygentypedef Directive Example</a>
+        «&#160;&#160;<a href="define.html">doxygendefine Directive Example</a>
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="variable.html">doxygenvariable Directive Example</a>&#160;&#160;»
+        <a href="file.html">doxygenfile Directive Example</a>&#160;&#160;»
         </p>
 
       </div>

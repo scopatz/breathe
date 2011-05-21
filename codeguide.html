@@ -61,7 +61,7 @@ representing the data. Found in <tt class="docutils literal"><span class="pre">b
 <dd>Responsible for finding reference objects within the output from the
 parser. Found in <tt class="docutils literal"><span class="pre">breathe.finder</span></tt>.</dd>
 <dt><strong>renderers</strong></dt>
-<dd>Responsible for producing restructured text nodes to represent the objects
+<dd>Responsible for producing reStructuredText nodes to represent the objects
 that the finders have found. The renderers generally descend through the
 object hierarchies rendering the objects, their children, their children&#8217;s
 children and so on. Found in <tt class="docutils literal"><span class="pre">breathe.renderer</span></tt>.</dd>
@@ -187,13 +187,13 @@ module. And the search goes on until we find an object to return for rendering.<
 <p>If the <strong>CompoundTypeSubItemFinder</strong> fails to find any deeper levels to match
 against then it returns itself as it must be the target we&#8217;re interested in.</p>
 <p>As stated, the job of the finder is to find a single node for the renderers to
-starting rendering to restructured text. That is all the finder does.</p>
+starting rendering to reStructuredText. That is all the finder does.</p>
 </div>
 </div>
 <div class="section" id="renderers">
 <h2>Renderers<a class="headerlink" href="#renderers" title="Permalink to this headline">¶</a></h2>
 <p>Finally, the bit that really does something we care about. Rendering is the art
-of turning whatever object we&#8217;ve found in the hierarchy into restructured text
+of turning whatever object we&#8217;ve found in the hierarchy into reStructuredText
 nodes. This almost invariably means most of its children as well.</p>
 <p>Much like with the finder classes, we start off creating a renderer for a
 particular parser object and then it looks at its children and uses the renderer
@@ -202,22 +202,22 @@ render and they look at their object&#8217;s children and create appropriate ren
 for those and so on and so forth.</p>
 <p>The node we start at is determined by the finder and ultimately by the user. The
 whole process is kicked off by the <tt class="docutils literal"><span class="pre">Builder</span></tt> class, though it doesn&#8217;t really
-do much. The aim of the renderers is to return a list of restructured text nodes
+do much. The aim of the renderers is to return a list of reStructuredText nodes
 which is passed back to Sphinx to render into whatever you&#8217;re final output
 format is.</p>
 <p>There are two complicated bits here. All the different renderers and all the
-different restructured text nodes.</p>
+different reStructuredText nodes.</p>
 <div class="section" id="different-renderers">
 <h3>Different Renderers<a class="headerlink" href="#different-renderers" title="Permalink to this headline">¶</a></h3>
 <p>Just like with the parsers, there is one renderer per node type. In fact there
 is one renderer class per parser class and they are named almost the same and
 are designed to match up. The renderers look at the data on the instance
 of the corresponding parser class that they have been given and grab the
-interesting bits and return restructured text nodes.</p>
+interesting bits and return reStructuredText nodes.</p>
 <p>For reference on what there is to render, you can look at the parser class
 definitions or at the raw xml to see what attributes there are to render.
 Sometimes if something isn&#8217;t appearing in the final output, it is because the
-renderer isn&#8217;t returning an restructured text representation of it so the
+renderer isn&#8217;t returning an reStructuredText representation of it so the
 rendering code needs to be updated, and sometimes it is because the parser
 classes are not picking it up properly so both the parser and the renderer code
 needs to be updated.</p>
@@ -225,9 +225,9 @@ needs to be updated.</p>
 the parser classes and the corresponding renderers to figure out where all the
 information is ending up.</p>
 </div>
-<div class="section" id="restructured-text-nodes">
-<h3>Restructured Text Nodes<a class="headerlink" href="#restructured-text-nodes" title="Permalink to this headline">¶</a></h3>
-<p>We use the restructured text API as provided by the fabulous docutils project
+<div class="section" id="restructuredtext-nodes">
+<h3>reStructuredText Nodes<a class="headerlink" href="#restructuredtext-nodes" title="Permalink to this headline">¶</a></h3>
+<p>We use the reStructuredText API as provided by the fabulous docutils project
 and extended by Sphinx itself. For the most part, they are fairly straight
 forward and they are certainly well named.</p>
 <p>Unfortunately there are a lot of nodes and only certain ways of combining them.
