@@ -291,13 +291,14 @@ More normal text. <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Par:</th><td class="field-body">Contents of the paragraph.</td>
+<tr class="field"><th class="field-name" colspan="2">User defined paragraph::</th></tr>
+<tr><td>&nbsp;</td><td class="field-body">Contents of the paragraph.</td>
 </tr>
-<tr class="field"><th class="field-name">Par:</th><td class="field-body">New paragraph under the same heading.</td>
+<tr class="field"><th class="field-name">:</th><td class="field-body">New paragraph under the same heading.</td>
 </tr>
 <tr class="field"><th class="field-name">Note:</th><td class="field-body">This note consists of two paragraphs. This is the first paragraph.</td>
 </tr>
-<tr class="field"><th class="field-name">Par:</th><td class="field-body">And this is the second paragraph.</td>
+<tr class="field"><th class="field-name">:</th><td class="field-body">And this is the second paragraph.</td>
 </tr>
 </tbody>
 </table>
@@ -1198,7 +1199,20 @@ Also see <a class="reference internal" href="#project21group__group5"><em>This i
 <blockquote>
 <div><p>A class. </p>
 <p>Details </p>
-<em>User Defined</em><blockquote>
+<em>Group2</em><blockquote>
+<div><dl class="docutils">
+<p>Description of group 2. </p>
+<dt id=""><span id="project23class_test_1a8abb152293691f39d2560a74eff5322b"></span>void  <strong>func1InGroup2</strong>()</dt>
+<dd><p class="first">Function 1 in group 2. </p>
+<p class="last">Details. </p>
+</dd>
+<dt id=""><span id="project23class_test_1a884a6563190420fe025d611fe2e5e909"></span>void  <strong>func2InGroup2</strong>()</dt>
+<dd><p class="first">Function 2 in group 2. </p>
+<p class="last">Details. </p>
+</dd>
+</dl>
+</div></blockquote>
+<em>Unnamed Group</em><blockquote>
 <div><dl class="docutils">
 <dt id=""><span id="project23class_test_1a6bc6dad89e6579a1e5b13b73005627c6"></span>void  <strong>func1InGroup1</strong>()</dt>
 <dd><p class="first">Same documentation for both members. </p>
@@ -1223,7 +1237,7 @@ Also see <a class="reference internal" href="#project21group__group5"><em>This i
 <blockquote>
 <div><p></p>
 <p>docs for this file </p>
-<em>User Defined</em><blockquote>
+<em>Unnamed Group</em><blockquote>
 <div><dl class="docutils">
 <dt id=""><span id="project23memgrp_8cpp_1a955f504eccf76b4eb2489c0adab03121"></span><strong>A</strong></dt>
 <dd><p class="first">one description for all members of this group (because DISTRIBUTE_GROUP_DOC is YES in the config file) </p>

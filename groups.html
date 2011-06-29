@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Groups &mdash; Breathe v0.6.0 documentation</title>
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/breathe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.6.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="top" title="Breathe v0.6.0 documentation" href="index.html" />
+    <link rel="next" title="Contributing to Breathe" href="contributing.html" />
+    <link rel="prev" title="Domains" href="domains.html" /> 
+  </head>
+  <body>
+      <div class="header"><h1 class="heading"><a href="index.html">
+          <span>Breathe v0.6.0 documentation</span></a></h1>
+        <h2 class="heading"><span>Groups</span></h2>
+      </div>
+      <div class="topnav">
+      
+        <p>
+        «&#160;&#160;<a href="domains.html">Domains</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="contributing.html">Contributing to Breathe</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="groups">
+<h1>Groups<a class="headerlink" href="#groups" title="Permalink to this headline">¶</a></h1>
+<p>Breathe has basic support for the grouping functionality that Doxygen provides.</p>
+<p>Using the example from the Doxygen docs:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span class="c1">// Example from Doxygen documentation</span>
+
+<span class="cm">/** A class. More details about the Test class */</span>
+<span class="k">class</span> <span class="nc">Test</span>
+<span class="p">{</span>
+  <span class="k">public</span><span class="o">:</span>
+    <span class="c1">//@{</span>
+    <span class="cm">/** Same documentation for both members. Details */</span>
+    <span class="kt">void</span> <span class="n">func1InGroup1</span><span class="p">();</span>
+    <span class="kt">void</span> <span class="n">func2InGroup1</span><span class="p">();</span>
+    <span class="c1">//@}</span>
+
+    <span class="cm">/** Function without group. Details. */</span>
+    <span class="kt">void</span> <span class="n">ungroupedFunction</span><span class="p">();</span>
+    <span class="kt">void</span> <span class="n">func1InCustomGroup</span><span class="p">();</span>
+  <span class="k">protected</span><span class="o">:</span>
+    <span class="kt">void</span> <span class="n">func2InCustomGroup</span><span class="p">();</span>
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="n">Test</span><span class="o">::</span><span class="n">func1InGroup1</span><span class="p">()</span> <span class="p">{}</span>
+<span class="kt">void</span> <span class="n">Test</span><span class="o">::</span><span class="n">func2InGroup1</span><span class="p">()</span> <span class="p">{}</span>
+
+<span class="cm">/** @name Custom Group</span>
+<span class="cm"> *  Description of custom group</span>
+<span class="cm"> */</span>
+<span class="c1">//@{</span>
+<span class="cm">/** Function 2 in custom group. Details. */</span>
+<span class="kt">void</span> <span class="n">Test</span><span class="o">::</span><span class="n">func2InCustomGroup</span><span class="p">()</span> <span class="p">{}</span>
+<span class="cm">/** Function 1 in custom group. Details. */</span>
+<span class="kt">void</span> <span class="n">Test</span><span class="o">::</span><span class="n">func1InCustomGroup</span><span class="p">()</span> <span class="p">{}</span>
+<span class="c1">//@}</span>
+</pre></div>
+</div>
+<p>If we reference this with a directive, for example:</p>
+<div class="highlight-python"><pre>.. doxygenclass:: Test
+   :project: userdefined
+   :members:</pre>
+</div>
+<p>It renders as:</p>
+<p id="Test"><span id="userdefinedclass_test"></span><em>class</em> <strong>Test</strong></p>
+<blockquote>
+<div><p>A class. </p>
+<p>More details about the <a class="reference internal" href="#userdefinedclass_test"><em>Test</em></a> class </p>
+<em>Custom Group</em><blockquote>
+<div><dl class="docutils">
+<p>Description of custom group </p>
+<dt id="Test::func1InCustomGroup"><span id="userdefinedclass_test_1a70ef926b89c8a5651d825de9cdf5a67b"></span>void  <strong>func1InCustomGroup</strong>()</dt>
+<dd><p class="first">Function 1 in custom group. </p>
+<p class="last">Details. </p>
+</dd>
+<dt id="Test::func2InCustomGroup"><span id="userdefinedclass_test_1a8a96a2602db430f4a568a0e21cc5f58f"></span>void  <strong>func2InCustomGroup</strong>()</dt>
+<dd><p class="first">Function 2 in custom group. </p>
+<p class="last">Details. </p>
+</dd>
+</dl>
+</div></blockquote>
+<em>Unnamed Group</em><blockquote>
+<div><dl class="docutils">
+<dt id="Test::func1InGroup1"><span id="userdefinedclass_test_1a6bc6dad89e6579a1e5b13b73005627c6"></span>void  <strong>func1InGroup1</strong>()</dt>
+<dd><p class="first">Same documentation for both members. </p>
+<p class="last">Details </p>
+</dd>
+<dt id="Test::func2InGroup1"><span id="userdefinedclass_test_1aef9e77656cc32dfe502e92f07855b2ba"></span>void  <strong>func2InGroup1</strong>()</dt>
+<dd><p class="first">Same documentation for both members. </p>
+<p class="last">Details </p>
+</dd>
+</dl>
+</div></blockquote>
+<em>Public Functions</em><blockquote>
+<div><dl class="docutils">
+<dt id="Test::ungroupedFunction"><span id="userdefinedclass_test_1a4c111d6093bba0683dda9e4de5bd9bac"></span>void  <strong>ungroupedFunction</strong>()</dt>
+<dd><p class="first">Function without group. </p>
+<p class="last">Details. </p>
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Any groups which are not named in the original source code will appear as
+<strong>Unnamed Group</strong> in the final output. This is different to Doxygen which
+will number the groups and so name them as Group1, Group2, Group3, etc.</p>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav">
+      
+        <p>
+        «&#160;&#160;<a href="domains.html">Domains</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="contributing.html">Contributing to Breathe</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer">
+        &copy; Copyright 2009-2010, Michael Jones.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>
