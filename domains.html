@@ -66,7 +66,9 @@ domain roles like <tt class="docutils literal"><span class="pre">:c:func:`foo`</
 </div>
 <p>Which create formatted output like:</p>
 <blockquote>
-<div><p id="testnamespace::NamespacedClassTest"><span id="project0classtestnamespace_1_1_namespaced_class_test"></span><em>class</em> <strong>testnamespace::NamespacedClassTest</strong></p>
+<div><div class="line-block">
+<div class="line"><em>class</em> <strong>testnamespace::NamespacedClassTest</strong></div>
+</div>
 <blockquote>
 <div><p>first class inside of namespace </p>
 <p></p>
@@ -91,11 +93,20 @@ domain roles like <tt class="docutils literal"><span class="pre">:c:func:`foo`</
 </div>
 <p>Which create formatted output like:</p>
 <blockquote>
-<div><dt id="testnamespace::NamespacedClassTest::functionC"><span id="project0classtestnamespace_1_1_namespaced_class_test_1a7f70f6d7d019b0f464487517376613ef"></span>void  <strong>function</strong>()</dt>
+<div><dl class="docutils">
+<dt id="testnamespace::NamespacedClassTest::functionC"><span id="project0classtestnamespace_1_1_namespaced_class_test_1a7f70f6d7d019b0f464487517376613ef"></span><div class="line-block">
+<div class="line">void <strong>function</strong>()</div>
+</div>
+</dt>
 <dd><p class="first">namespaced class function </p>
 <p class="last"></p>
 </dd>
-<dt id="frob_foos"><span id="project1alias_8h_1a98fbb400a6ae708a61cc6296ed127cf2"></span>void  <strong>frob_foos</strong>(void )</dt>
+</dl>
+<dl class="docutils">
+<dt id="frob_foos"><span id="project1alias_8h_1a98fbb400a6ae708a61cc6296ed127cf2"></span><div class="line-block">
+<div class="line">void <strong>frob_foos</strong>(void)</div>
+</div>
+</dt>
 <dd><p class="first">Foo frob routine. </p>
 <p class="last"><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -107,6 +118,7 @@ domain roles like <tt class="docutils literal"><span class="pre">:c:func:`foo`</
 </table>
 </p>
 </dd>
+</dl>
 </div></blockquote>
 <p>We can refer to <strong>function</strong> using:</p>
 <div class="highlight-python"><pre>:cpp:func:`testnamespace::NamespacedClassTest::function()`</pre>
